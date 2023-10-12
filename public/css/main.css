@@ -1,0 +1,52 @@
+/*  import couleur.css file */
+@import url("couleur.css");
+@import url("font.css");
+@import url("nav.css");
+@import url("accueil.css");
+@import url("footer.css");
+@import url("compte.css");
+@import url("profil.css");
+@import url("form.css");
+@import url("magasin.css");
+@import url("produit.css");
+
+body{
+    margin: 0;
+}
+
+.button-center{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.button-submit{
+    margin-top: 20px;
+    background-color: #91cf05;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.button-submit:hover{
+    background-color: #7ab304;
+}
+
+.margin-top{
+    margin-top: 80px;
+}
+
+.margin-bottom{
+    margin-bottom: 80px;
+}

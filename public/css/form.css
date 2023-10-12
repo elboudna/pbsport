@@ -1,0 +1,29 @@
+.form_input {
+    width: 240px; 
+    padding: 8px 0px 8px 4px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form_select {
+    width: 240px; 
+    padding: 8px 0px 8px 4px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: white; /* Adjust the background color as needed */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Optional: Style the dropdown arrow */
+.form_select::after {
+    content: '\25BC'; /* Unicode character for downward arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}

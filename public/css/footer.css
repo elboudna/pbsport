@@ -1,0 +1,205 @@
+footer {
+    height: 400px;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    color: white;
+    font-family: "Noto";
+    height: 100%;
+}
+
+#logo-footer {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+#logo-footer img {
+    width: 200px;
+}
+
+#RS-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#RS-footer img {
+    width: 30px;
+    height: 30px;
+    border: wheat solid 1px;
+}
+
+#articles-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#articles-footer img{
+    width: 75px;
+    height: 75px;
+}
+
+.article-footer {
+    display: flex;
+    gap: 20px;
+    height: 75px;
+}
+
+.article-footer p{
+    margin: 0;
+}
+
+.article-footer > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#copyrights {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+}
+
+#contact-footer p{
+    margin: 5px;
+}
+
+#contact-footer p:first-of-type{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* les <p> paire de #contact-footer */
+#contact-footer p:nth-of-type(even){
+    font-weight: bold;
+    color: rgb(180, 180, 180);
+    text-decoration: underline;
+    margin-top: 30px;
+}
+
+
+/* responsive */
+
+/* Responsive CSS for screen sizes from 1200px to 1000px */
+@media screen and (max-width: 1200px) {
+    #footer {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #footer {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+/* Responsive CSS for screen sizes from 1000px to 768px */
+@media screen and (max-width: 1000px) {
+    footer {
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        }
+    #footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+    }
+
+    #logo-footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #RS-footer {
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #articles-footer {
+        margin-top: 20px;
+    }
+    
+    #contact-footer p {
+        text-align: center;
+    }
+
+    #footer img,
+    #RS-footer img,
+    #articles-footer img {
+        width: auto;
+        height: 50px;
+    }
+}
+
+/* Responsive CSS for screen sizes from 768px to 480px */
+@media screen and (max-width: 768px) {
+    #footer {
+        padding: 10px;
+    }
+
+    #footer img,
+    #RS-footer img,
+    #articles-footer img {
+        height: 40px;
+    }
+
+    #contact-footer p:first-of-type {
+        font-size: 18px;
+    }
+
+    #contact-footer p:nth-of-type(even) {
+        margin-top: 20px;
+    }
+}
+
+/* Responsive CSS for screen sizes from 480px to 320px (phone size) */
+@media screen and (max-width: 480px) {
+    #footer {
+        padding: 5px;
+    }
+
+    #footer img,
+    #RS-footer img,
+    #articles-footer img {
+        height: 30px;
+    }
+
+    #contact-footer p:first-of-type {
+        font-size: 16px;
+    }
+
+    #contact-footer p {
+        font-size: 14px;
+    }
+
+    #contact-footer p:nth-of-type(even) {
+        margin-top: 15px;
+    }
+
+    #articles-footer p {
+        font-size: 14px;
+    }
+}
+

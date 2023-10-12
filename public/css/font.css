@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Noto';
+    src: url('/font/Noto_Sans_Vithkuqi/NotoSansVithkuqi-VariableFont_wght.ttf');
+  }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/font/Montserrat/Montserrat-VariableFont_wght.ttf');
+}

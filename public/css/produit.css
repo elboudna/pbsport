@@ -1,0 +1,62 @@
+#produit{
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+#produit-image{
+    width: 50%;
+}
+
+#produit-image img{
+    border: rgb(212, 212, 212) solid .1px;
+    width:500px;
+    height: 500px;
+}
+
+#produit-info{
+    width: 50%;
+}
+
+#produit-info p{
+    margin-bottom: 40px;
+}
+
+.nom-produit{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.prix-produit{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.description-produit{
+    font-size: 18px;
+    color: rgb(158, 158, 158);
+}
+
+.quant-ajouter{
+    display: flex;
+    gap: 30px;
+}
+
+.quantite{
+    width: 80px;
+    background-color: rgb(241, 241, 241);
+    padding: 5px;
+    border: none;
+    text-align: center;
+}
+
+
+.quantite::-webkit-inner-spin-button,
+.quantite::-webkit-outer-spin-button {
+  margin-left: 10px;
+}
+
+.btn-ajouter{
+    padding: 10px 20px;
+    color: white;
+    
+}

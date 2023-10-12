@@ -1,0 +1,52 @@
+header{
+    height: 50px;
+    font-family: "Noto";
+    display: flex;
+    align-items: center;
+}
+
+header > div{
+    margin-left: 300px;
+    margin-right: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+} 
+
+header p {
+    margin:0;
+}
+
+header img{
+    width: 20px;
+    height: 20px;
+}
+
+header > div div{
+    display: flex;
+    gap: 20px;
+}
+
+#navigation{
+    margin-left: 300px;
+    margin-right: 300px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo-nav img{
+    width: 180px;
+}
+
+
+nav {
+    font-family: "Montserrat";
+}
+
+nav a{
+    text-decoration: none;
+    color: #464646;
+    margin-left: 45px;
+}
