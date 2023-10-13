@@ -13,12 +13,26 @@ class ProfilController extends Controller
 {
     //
 
+    // public function index()
+    // {
+    //     $user = auth()->user();
+    //     $user_img = $user->image->chemin;
+    //     $imageFileName = basename($user_img);
+    //     // dd($user->image->id);
+    //     return view('profil', compact('user', 'imageFileName'));
+    // }
+
     public function index()
     {
         $user = auth()->user();
-        $user_img = $user->image->chemin;
-        $imageFileName = basename($user_img);
-        // dd($user->image->id);
+
+        if ($user->image) {
+            $user_img = $user->image->chemin;
+            $imageFileName = basename($user_img);
+        } else {
+            $imageFileName = null; // ou une valeur par défaut si nécessaire
+        }
+
         return view('profil', compact('user', 'imageFileName'));
     }
 
@@ -54,9 +68,8 @@ class ProfilController extends Controller
 
         // Redirect back or to a success page
         // return view('profil', compact('user'));
-        
-        return redirect()->back()->with('success', 'Profile updated successfully.');
 
+        return redirect()->back()->with('success', 'Profile updated successfully.');
     }
 
     public function modifierimage(Request $request)

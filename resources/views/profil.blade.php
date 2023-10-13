@@ -9,6 +9,11 @@
         @csrf
         <button type="submit">Logout</button>
     </form>
+
+    @if(auth()->user()->role_id == 3)
+        <a href="{{ route('admin.gestion') }}">Accéder à la gestion</a>
+    @endif
+
     <div class="flex-row">
         <form method="POST" action="{{ route('modifierimage') }}" enctype="multipart/form-data">
             @csrf

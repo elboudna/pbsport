@@ -5,6 +5,7 @@ use App\Http\Controllers\UtilisateurController;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +48,18 @@ Route::post('/modifierimage', [ProfilController::class, 'modifierimage'])->name(
 
 // produits
 Route::get('/magasin', [ProduitController::class, 'index'])->name('magasin');
+
+Route::post('/produit', [ProduitController::class, 'store'])->name('produit.store');
+
+
+// admin 
+
+Route::get('/admin/gestion', [AdminController::class, 'index'])->name('admin.gestion');
+Route::get('/admin/ajouter-produit', [AdminController::class, 'ajouterProduit'])->name('admin.ajouter-produit');
+Route::get('/admin/liste-produit', [AdminController::class, 'listeProduit'])->name('admin.liste-produit');
+
+Route::get('/admin/modifier-produit/{id}', [AdminController::class, 'modifierProduit'])->name('admin.modifier-produit');
+Route::post('/admin/modifier-produit/{id}', [AdminController::class, 'modifierProduit'])->name('admin.modifier-produit');
+
+Route::get('/admin/stock-produit/{id}', [AdminController::class, 'stockProduit'])->name('admin.stock-produit');
+Route::post('/admin/stock-produit/{id}', [AdminController::class, 'stockProduit'])->name('admin.stock-produit');
