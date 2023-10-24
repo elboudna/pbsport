@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class RolesTableSeeder extends Seeder
+class TypesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,15 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        // Insert the predefined roles
-        DB::table('roles')->insert([
-            ['id' => 1, 'role' => 'joueur'],
-            ['id' => 2, 'role' => 'coach'],
-            ['id' => 3, 'role' => 'admin'],
+        // Insert the predefined types
+        DB::table('produit_types')->insert([
+            ['id' => 1, 'type' => 'Vetement'],
+            ['id' => 2, 'type' => 'Chaussure'],
+            ['id' => 3, 'type' => 'Raquette'],
+            ['id' => 4, 'type' => 'Balle'],
+            ['id' => 5, 'type' => 'Accessoire'],
+            ['id' => 6, 'type' => 'Sac'],
+            ['id' => 7, 'type' => 'Autre'],
         ]);
     }
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('produit_id');
             $table->integer('stock');
             $table->string('taille');
+            $table->string('couleur');
             $table->timestamps();
 
             $table->foreign('produit_id')->references('id')->on('produit')->onDelete('cascade');

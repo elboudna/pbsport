@@ -24,14 +24,17 @@ class ProduitController extends Controller
         $produit->nom = $request->input('nom');
         $produit->description = $request->input('description');
         $produit->prix = $request->input('prix');
-        $produit->couleur = $request->input('couleur');
-        $produit->dimension = $request->input('dimension');
+        $produit->type_id = $request->input('type_id');
 
         $produit->save();
 
-        // Récupérez la liste de produits depuis la base de données
-        $produits = Produit::all();
-        dd($produits); // Ajoutez cette ligne pour déboguer
-        return view('admin.liste_produit', compact('produits'));
+
+        return redirect()->route('admin.liste-produit');
+
+        // // Récupérez la liste de produits depuis la base de données
+        // $produits = Produit::all();
+
+
+        // return view('admin.liste-produit', compact('produits'));
     }
 }

@@ -14,4 +14,9 @@ class Produit extends Model
     {
         return $this->morphMany(Image::class, 'imageable');
     }
+
+    public function type()
+    {
+        return $this->belongsTo(ProduitType::class, 'type_id');
+    }
 }
