@@ -64,7 +64,6 @@
                 <div class="form-gau-dro">
                     <label for="sexe">Sexe</label>
                     <select class="form_select" id="sexe" name="sexe" required>
-                        <option value="autre" {{ $user->sexe === 'autre' ? 'selected' : '' }}>Autre</option>
                         <option value="homme" {{ $user->sexe === 'homme' ? 'selected' : '' }}>Homme</option>
                         <option value="femme" {{ $user->sexe === 'femme' ? 'selected' : '' }}>Femme</option>
                     </select><br>
@@ -73,9 +72,13 @@
                 <div class="form-gau-dro">
                     <label for="niveau">Niveau</label>
                     <select class="form_select" id="niveau" name="niveau" required>
-                        <option value="débutant" {{ $user->niveau === 'débutant' ? 'selected' : '' }}>Débutant</option>
-                        <option value="intermédiaire" {{ $user->niveau === 'intermédiaire' ? 'selected' : '' }}>Intermédiaire</option>
-                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>Avancé</option>
+                        <option value="débutant" {{ $user->niveau === 'débutant' ? 'selected' : '' }}>2.0</option>
+                        <option value="intermédiaire" {{ $user->niveau === 'intermédiaire' ? 'selected' : '' }}>2.5</option>
+                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>3.0</option>
+                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>3.5</option>
+                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>4.0</option>
+                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>4.5</option>
+                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>5.0</option>
                     </select><br>
                 </div>
 

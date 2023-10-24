@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->string('role')->default('user'); // Default role is 'user'
+            $table->string('role')->default('joueur'); // Default role is 'user'
             $table->timestamps();
         });
     }

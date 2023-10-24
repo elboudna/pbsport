@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('produits', function (Blueprint $table) {
+        Schema::create('produit_types', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->text('description');
-            $table->decimal('prix', 10, 2);
-            $table->unsignedBigInteger('type_id'); // Add the 'type_id' column to the 'produits' table
-            $table->foreign('type_id')->references('id')->on('produit_types')->default(1); // Define the foreign key relationship
-
+            $table->string('type'); // Default role is 'user'
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produits');
+        Schema::dropIfExists('produit_types');
     }
 };
