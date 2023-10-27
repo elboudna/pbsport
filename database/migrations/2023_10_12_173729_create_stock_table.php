@@ -25,8 +25,8 @@ return new class extends Migration
 
             // Ajoutez d'autres colonnes au besoin.
 
-            // Exemple d'index si nécessaire
-            $table->index(['produit_id', 'taille']);
+            // // Exemple d'index si nécessaire
+            // $table->index(['produit_id', 'taille']);
         });
     }
 
