@@ -8,8 +8,8 @@
             <tr>
                 <th>Nom du Produit</th>
                 <th>Prix</th>
-                <th>Actions</th>
                 <th>Type</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>

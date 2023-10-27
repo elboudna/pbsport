@@ -4,69 +4,51 @@
 
 @section('content')
 <section class="margin-bottom margin-top" id="magasin">
-        <h2>Nos produits</h2>
-        <div class="flex-row">
-            <div id="magasin-gauche">
-                <div>
-                    <h3>Categorie</h3>
-                    <p>Raquettes</p>
-                    <p>Balles</p>
-                    <p>Vetements</p>
-                    <p>Accessoires</p>
-                </div>
-                <div>
-                    <h3>Couleur</h3>
-                    <p>Noir</p>
-                    <p>Rouge</p>
-                    <p>Vert</p>
-                    <p>Blanc</p>
-                </div>
+    <h2>Nos produits</h2>
+    <div class="flex-row">
+        <div id="magasin-gauche">
+            <div>
+                <h3>Categorie</h3>
+                <p>Raquettes</p>
+                <p>Balles</p>
+                <p>Vetements</p>
+                <p>Accessoires</p>
             </div>
-            <div id="magasin-droite">
-
-                <div id="tri-magasin">
-                    <select name="tri">
-                        <option value="">Trier par</option>
-                        <option value="">Dernier arrivage</option>
-                        <option value="">Prix croissant</option>
-                        <option value="">Prix décroissant</option>
-                    </select>
-                </div>
-
-                <div id="produits-magasin">
-                    <div class="produit-magasin">
-                        <img src="" alt="">
-                        <p class="nom-produit-accueil">Nom produit</p>
-                        <p class="prix-produit-accueil vert">90$</p>
-                        <a class="button-submit" href="">Ajouter au panier</a>
-                    </div>
-                    <div class="produit-magasin">
-                        <img src="" alt="">
-                        <p class="nom-produit-accueil">Nom produit</p>
-                        <p class="prix-produit-accueil vert">90$</p>
-                        <a class="button-submit" href="">Ajouter au panier</a>
-                    </div>
-                    <div class="produit-magasin">
-                        <img src="" alt="">
-                        <p class="nom-produit-accueil">Nom produit</p>
-                        <p class="prix-produit-accueil vert">90$</p>
-                        <a class="button-submit" href="">Ajouter au panier</a>
-                    </div>
-                    <div class="produit-magasin">
-                        <img src="" alt="">
-                        <p class="nom-produit-accueil">Nom produit</p>
-                        <p class="prix-produit-accueil vert">90$</p>
-                        <a class="button-submit" href="">Ajouter au panier</a>
-                    </div>
-                    <div class="produit-magasin">
-                        <img src="" alt="">
-                        <p class="nom-produit-accueil">Nom produit</p>
-                        <p class="prix-produit-accueil vert">90$</p>
-                        <a class="button-submit" href="">Ajouter au panier</a>
-                    </div>
-
-                </div>
+            <div>
+                <h3>Couleur</h3>
+                <p>Noir</p>
+                <p>Rouge</p>
+                <p>Vert</p>
+                <p>Blanc</p>
             </div>
         </div>
-    </section>
+        <div id="magasin-droite">
+
+            <div id="tri-magasin">
+                <select name="tri">
+                    <option value="">Trier par</option>
+                    <option value="">Dernier arrivage</option>
+                    <option value="">Prix croissant</option>
+                    <option value="">Prix décroissant</option>
+                </select>
+            </div>
+
+            <div id="produits-magasin">
+                @foreach ($produits as $produit)
+                <div class="produit-magasin">
+                    @if ($produit->images->isNotEmpty())
+                    <img src="{{ asset('storage/produit_images/' . $produit->images->first()->chemin) }}" alt="{{ $produit->nom }}">
+                    @else
+                    <img src="{{ asset('placeholder.jpg') }}" alt="{{ $produit->nom }}">
+                    @endif
+                    <p class="nom-produit-accueil">{{ $produit->nom }}</p>
+                    <p class="prix-produit-accueil vert">{{ $produit->prix }}$</p>
+                    <a class="button-submit" href="">Ajouter au panier</a>
+                </div>
+                @endforeach
+            </div>
+
+        </div>
+    </div>
+</section>
 @endsection
