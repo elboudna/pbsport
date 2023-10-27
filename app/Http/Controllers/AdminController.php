@@ -28,4 +28,12 @@ class AdminController extends Controller
 
         return view('admin.liste-produit', compact('produits'));
     }
+
+    public function stockProduit(Produit $produit)
+    {
+        // by using the id of the produit, you can fetch the stock records with the produit_id
+        $stocks = DB::table('stock')->where('produit_id', $produit->id)->orderBy('couleur')->get();
+        // $stocks = $produit->stock;
+        return view('admin.stock-produit', compact('produit', 'stocks'));
+    }
 }
