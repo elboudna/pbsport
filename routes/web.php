@@ -6,6 +6,7 @@ use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\StockController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,5 +62,10 @@ Route::get('/admin/liste-produit', [AdminController::class, 'listeProduit'])->na
 Route::get('/admin/modifier-produit/{id}', [AdminController::class, 'modifierProduit'])->name('admin.modifier-produit');
 Route::post('/admin/modifier-produit/{id}', [AdminController::class, 'modifierProduit'])->name('admin.modifier-produit');
 
-Route::get('/admin/stock-produit/{id}', [AdminController::class, 'stockProduit'])->name('admin.stock-produit');
+Route::get('/admin/stock-produit/{produit}', [AdminController::class, 'stockProduit'])->name('admin.stock-produit');
 Route::post('/admin/stock-produit/{id}', [AdminController::class, 'stockProduit'])->name('admin.stock-produit');
+
+// stock
+
+Route::post('/stock', [StockController::class, 'store'])->name('stock.store');
+Route::post('/stock/update', [StockController::class, 'update'])->name('stock.update');
