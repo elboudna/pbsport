@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produit;
+use App\Models\Image;
 
 class ProduitController extends Controller
 {
@@ -11,30 +12,46 @@ class ProduitController extends Controller
 
     public function index()
     {
-        return view('magasin');
+        $produits = Produit::with('images')->get(); // Retrieve products with their associated images
+        return view('magasin', compact('produits'));
     }
+
 
     public function store(Request $request)
     {
         // Validez la demande...
+        $validatedData = $request->validate([
+            'nom' => 'required|string',
+            'description' => 'required|string',
+            'prix' => 'required|numeric',
+            'type_id' => 'required|exists:produit_types,id',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // You can adjust the image validation rules
 
-        $produit = new Produit;
+        ]);
 
-        // nom, description et prix obligatoires, couleur et dimension optionnels
-        $produit->nom = $request->input('nom');
-        $produit->description = $request->input('description');
-        $produit->prix = $request->input('prix');
-        $produit->type_id = $request->input('type_id');
+        $produit = Produit::create([
+            'nom' => $validatedData['nom'],
+            'description' => $validatedData['description'],
+            'prix' => $validatedData['prix'],
+            'type_id' => $validatedData['type_id'],
+        ]);
 
-        $produit->save();
 
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('public/produit_images');
+                $filename = basename($path);
+
+                Image::create([
+                    'imageable_id' => $produit->id,
+                    'imageable_type' => 'App\Models\Produit',
+                    'chemin' => $filename,
+                ]);
+            }
+        }
 
         return redirect()->route('admin.liste-produit');
-
-        // // Récupérez la liste de produits depuis la base de données
-        // $produits = Produit::all();
-
-
-        // return view('admin.liste-produit', compact('produits'));
     }
 }
+
+// suppression d'un produit, supprimer son stock et son image
