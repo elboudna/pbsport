@@ -55,3 +55,4 @@ class ProduitController extends Controller
 }
 
 // suppression d'un produit, supprimer son stock et son image
+// ouvrir un produit et afficher ses infos et les tailles et couleurs disponible selon la table stock

@@ -35,16 +35,17 @@
 
             <div id="produits-magasin">
                 @foreach ($produits as $produit)
-                <div class="produit-magasin">
-                    @if ($produit->images->isNotEmpty())
-                    <img src="{{ asset('storage/produit_images/' . $produit->images->first()->chemin) }}" alt="{{ $produit->nom }}">
-                    @else
-                    <img src="{{ asset('placeholder.jpg') }}" alt="{{ $produit->nom }}">
-                    @endif
-                    <p class="nom-produit-accueil">{{ $produit->nom }}</p>
-                    <p class="prix-produit-accueil vert">{{ $produit->prix }}$</p>
-                    <a class="button-submit" href="">Ajouter au panier</a>
-                </div>
+                <a href="">
+                    <div class="produit-magasin">
+                        @if ($produit->images->isNotEmpty())
+                        <img src="{{ asset('storage/produit_images/' . $produit->images->first()->chemin) }}" alt="{{ $produit->nom }}">
+                        @else
+                        <img src="{{ asset('placeholder.jpg') }}" alt="{{ $produit->nom }}">
+                        @endif
+                        <p class="nom-produit-accueil">{{ $produit->nom }}</p>
+                        <p class="prix-produit-accueil vert">{{ $produit->prix }}$</p>
+                    </div>
+                </a>
                 @endforeach
             </div>
 
