@@ -7,6 +7,7 @@ use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\PanierController;
 
 /*
 |--------------------------------------------------------------------------

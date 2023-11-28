@@ -52,6 +52,14 @@ class ProduitController extends Controller
 
         return redirect()->route('admin.liste-produit');
     }
+
+    public function show($id)
+    {
+        $produit = Produit::with('images')->findOrFail($id);
+        return view('produit', compact('produit'));
+
+        // afficher les couleurs et les tailles disponibles pour ce produit
+    }
 }
 
 // suppression d'un produit, supprimer son stock et son image

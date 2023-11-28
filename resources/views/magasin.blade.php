@@ -35,7 +35,7 @@
 
             <div id="produits-magasin">
                 @foreach ($produits as $produit)
-                <a href="">
+                <a href="{{ route('produit.show', ['id' => $produit->id]) }}">
                     <div class="produit-magasin">
                         @if ($produit->images->isNotEmpty())
                         <img src="{{ asset('storage/produit_images/' . $produit->images->first()->chemin) }}" alt="{{ $produit->nom }}">
