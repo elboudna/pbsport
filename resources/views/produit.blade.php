@@ -39,6 +39,8 @@
                         @endforeach
                     </select>
 
+                    <label for="quantity">Quantité:</label>
+                    <input type="number" name="quantite" id="quantity" min="1" max="1" placeholder="1" disabled>
                     <button type="submit" class="btn-ajouter bgvert">Ajouter</button>
                 </div>
                 <p id="stock-info">Stock: Please select a color and size</p>
@@ -52,74 +54,88 @@
     </form>
 
     <script>
-    // Function to update stock information
-    function updateStockInfo() {
-        var selectedSize = document.getElementById('size').value;
-        var selectedColor = document.getElementById('color').value;
+        // Function to update stock information
+        function updateStockInfo() {
+            var selectedSize = document.getElementById('size').value;
+            var selectedColor = document.getElementById('color').value;
 
-        // Find the selected size option
-        var selectedSizeOption = document.querySelector('#size option[data-color="' + selectedColor + '"][value="' + selectedSize + '"]');
+            // Find the selected size option
+            var selectedSizeOption = document.querySelector('#size option[data-color="' + selectedColor + '"][value="' + selectedSize + '"]');
 
-        // Update the stock information
-        var stockInfo = document.getElementById('stock-info');
-        stockInfo.textContent = 'Stock: ' + selectedColor + ' ' + selectedSize + ' - ' + selectedSizeOption.getAttribute('data-stock') + ' in stock';
-    }
+            // Update the stock information
+            var stockInfo = document.getElementById('stock-info');
+            stockInfo.textContent = 'Stock: ' + selectedColor + ' ' + selectedSize + ' - ' + selectedSizeOption.getAttribute('data-stock') + ' in stock';
 
-    // Listen for changes in the color dropdown
-    document.getElementById('color').addEventListener('change', function () {
-        // Get the selected size
-        var selectedSize = document.getElementById('size').value;
+            // Enable or disable the quantity input based on stock availability
+            var quantityInput = document.getElementById('quantity');
+            var addToCartButton = document.getElementById('add-to-cart');
 
-        // Get the selected color
-        var selectedColor = this.value;
-
-        var defaultOption = document.querySelector('#color option[value=""]');
-        if (defaultOption) {
-            defaultOption.remove();
+            if (parseInt(selectedSizeOption.getAttribute('data-stock')) > 0) {
+                quantityInput.removeAttribute('disabled');
+                quantityInput.setAttribute('max', selectedSizeOption.getAttribute('data-stock'));
+                quantityInput.value = 1; // Set quantity to 1
+                addToCartButton.removeAttribute('disabled');
+            } else {
+                quantityInput.setAttribute('disabled', 'true');
+                addToCartButton.setAttribute('disabled', 'true');
+            }
         }
 
-        // Hide all size options
-        var sizeOptions = document.querySelectorAll('#size option');
-        sizeOptions.forEach(function (option) {
-            option.style.display = 'none';
-        });
+        // Listen for changes in the color dropdown
+        document.getElementById('color').addEventListener('change', function() {
+            // Get the selected size
+            var selectedSize = document.getElementById('size').value;
 
-        // Show size options for the selected color with stock greater than 0
-        var selectedSizeFound = false;
-        var selectedSizeOptions = document.querySelectorAll('#size option[data-color="' + selectedColor + '"]');
-        selectedSizeOptions.forEach(function (option) {
-            // Check if the stock for the size is greater than 0
-            if (parseInt(option.getAttribute('data-stock')) > 0) {
-                option.style.display = 'block';
+            // Get the selected color
+            var selectedColor = this.value;
 
-                // If the selected size is available for the new color, keep it selected
-                if (option.value === selectedSize) {
-                    option.selected = true;
-                    selectedSizeFound = true;
-                }
+            var defaultOption = document.querySelector('#color option[value=""]');
+            if (defaultOption) {
+                defaultOption.remove();
             }
-        });
 
-        // If the selected size is not available, select the first available size
-        if (!selectedSizeFound) {
-            selectedSizeOptions.forEach(function (option) {
+            // Hide all size options
+            var sizeOptions = document.querySelectorAll('#size option');
+            sizeOptions.forEach(function(option) {
+                option.style.display = 'none';
+            });
+
+            // Show size options for the selected color with stock greater than 0
+            var selectedSizeFound = false;
+            var selectedSizeOptions = document.querySelectorAll('#size option[data-color="' + selectedColor + '"]');
+            selectedSizeOptions.forEach(function(option) {
+                // Check if the stock for the size is greater than 0
                 if (parseInt(option.getAttribute('data-stock')) > 0) {
-                    option.selected = true;
-                    return false; // Exit the loop after selecting the first available size
+                    option.style.display = 'block';
+
+                    // If the selected size is available for the new color, keep it selected
+                    if (option.value === selectedSize) {
+                        option.selected = true;
+                        selectedSizeFound = true;
+                    }
                 }
             });
-        }
 
-        // Update the stock information
-        updateStockInfo();
-    });
+            // If the selected size is not available, select the first available size
+            if (!selectedSizeFound) {
+                selectedSizeOptions.forEach(function(option) {
+                    if (parseInt(option.getAttribute('data-stock')) > 0) {
+                        option.selected = true;
+                        return false; // Exit the loop after selecting the first available size
+                    }
+                });
+            }
 
-    // Listen for changes in the size dropdown
-    document.getElementById('size').addEventListener('change', function () {
-        // Update the stock information
-        updateStockInfo();
-    });
-</script>
+            // Update the stock information
+            updateStockInfo();
+        });
+
+        // Listen for changes in the size dropdown
+        document.getElementById('size').addEventListener('change', function() {
+            // Update the stock information
+            updateStockInfo();
+        });
+    </script>
 
 
 
