@@ -52,6 +52,9 @@ Route::get('/magasin', [ProduitController::class, 'index'])->name('magasin');
 
 Route::post('/produit', [ProduitController::class, 'store'])->name('produit.store');
 
+Route::get('/produit/{id}', [ProduitController::class, 'show'])->name('produit.show');
+
+
 
 // admin 
 
@@ -69,3 +72,7 @@ Route::post('/admin/stock-produit/{id}', [AdminController::class, 'stockProduit'
 
 Route::post('/stock', [StockController::class, 'store'])->name('stock.store');
 Route::post('/stock/update', [StockController::class, 'update'])->name('stock.update');
+
+// panier
+Route::get('/panier', [PanierController::class, 'index'])->name('panier');
+Route::post('/panier/ajouter', [PanierController::class, 'ajouter'])->name('panier.ajouter');
