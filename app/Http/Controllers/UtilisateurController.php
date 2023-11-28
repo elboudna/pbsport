@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Utilisateur;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Panier;
 
 class UtilisateurController extends Controller
 {
@@ -77,10 +78,16 @@ class UtilisateurController extends Controller
             // You can set other fields here, e.g., role_id, adresse, sexe, date_de_naissance, niveau
         ]);
 
+        //create a new panier
+        Panier::create([
+            'utilisateur_id' => $utilisateur->id,
+        ]);
+
         // Authenticate the new user
         Auth::login($utilisateur);
 
-        return redirect('/accueil'); // Redirect to the accueil page after registration
+        return redirect('/accueil');
+        // Redirect to the accueil page after registration
     }
 
 
