@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('produit_id');
             $table->integer('quantite');
             $table->string('taille'); // Ajoutez la colonne pour la taille ici
+            $table->string('couleur'); // Ajoutez la colonne pour la couleur ici
 
             $table->timestamps();
 
