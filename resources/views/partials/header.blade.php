@@ -26,7 +26,10 @@
                 <img src="/icone/compte.png" alt="compte">
             </a>
             @endauth
-            <img src="/icone/panier.png" alt="panier">
+            <a href="{{ route('panier') }}">
+                <img src="/icone/panier.png" alt="panier">
+            </a>
+
         </div>
     </div>
 </header>
