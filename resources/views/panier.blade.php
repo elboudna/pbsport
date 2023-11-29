@@ -8,32 +8,34 @@
     <h2>Votre Panier</h2>
 
     @if($panierProduits->isNotEmpty())
-        <table>
-            <thead>
-                <tr>
-                    <th>Produit</th>
-                    <th>Quantité</th>
-                    <th>Prix unitaire</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($panierProduits as $panierProduit)
-                    <tr>
-                        <td>{{ $panierProduit->produit->nom }}</td>
-                        <td>{{ $panierProduit->quantite }}</td>
-                        <td>{{ $panierProduit->produit->prix }}$</td>
-                        <td>{{ $panierProduit->quantite * $panierProduit->produit->prix }}$</td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th>Quantité</th>
+                <th>Prix unitaire</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($panierProduits as $cartProduit)
+            <tr>
+                <td>{{ $cartProduit->nom }}</td>
+                <td>{{ $cartProduit->quantity }}</td>
+                <td>{{ $cartProduit->prix }}$</td>
+                <td>{{ $cartProduit->total }}$</td>
+            </tr>
+            @endforeach
 
-        <p>Total du panier : {{ $totalCartAmount }}$</p>
 
-        <a href="{{ route('checkout') }}" class="btn-commander bgvert">Passer la commande</a>
+        </tbody>
+    </table>
+
+    <p>Total du panier : {{ $totalCartAmount }}$</p>
+
+    <a href="{{}}" class="btn-commander bgvert">Passer la commande</a>
     @else
-        <p>Votre panier est vide.</p>
+    <p>Votre panier est vide.</p>
     @endif
 </section>
 
