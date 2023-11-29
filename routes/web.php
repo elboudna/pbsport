@@ -75,5 +75,6 @@ Route::post('/stock', [StockController::class, 'store'])->name('stock.store');
 Route::post('/stock/update', [StockController::class, 'update'])->name('stock.update');
 
 // panier
+
 Route::get('/panier', [PanierController::class, 'index'])->name('panier');
 Route::post('/panier/ajouter', [PanierController::class, 'ajouter'])->name('panier.ajouter');
