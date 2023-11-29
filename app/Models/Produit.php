@@ -32,4 +32,12 @@ class Produit extends Model
     {
         return $this->hasMany(Stock::class);
     }
+
+    // Produit.php
+    public function paniers()
+    {
+        return $this->belongsToMany(Panier::class, 'panier_produit', 'produit_id', 'panier_id')
+            ->withPivot(['quantite', 'taille', 'couleur'])
+            ->withTimestamps();
+    }
 }
