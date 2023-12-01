@@ -11,16 +11,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ProfilController extends Controller
 {
-    //
-
-    // public function index()
-    // {
-    //     $user = auth()->user();
-    //     $user_img = $user->image->chemin;
-    //     $imageFileName = basename($user_img);
-    //     // dd($user->image->id);
-    //     return view('profil', compact('user', 'imageFileName'));
-    // }
 
     public function index()
     {
@@ -111,5 +101,16 @@ class ProfilController extends Controller
 
         // If no file was uploaded, return with an error message
         return redirect()->back()->with('error', 'No image selected for upload.');
+    }
+
+
+    public function modifierUtilisateur(Request $request, $id)
+    {
+        $user = Utilisateur::find($id);
+        $user->niveau = $request->niveau;
+        $user->role_id = $request->role;
+        $user->save();
+
+        return redirect()->back()->with('success', 'Utilisateur modifié avec succès.');
     }
 }

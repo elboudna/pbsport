@@ -50,12 +50,8 @@ Route::post('/modifierimage', [ProfilController::class, 'modifierimage'])->name(
 
 // produits
 Route::get('/magasin', [ProduitController::class, 'index'])->name('magasin');
-
 Route::post('/produit', [ProduitController::class, 'store'])->name('produit.store');
-
 Route::get('/produit/{id}', [ProduitController::class, 'show'])->name('produit.show');
-
-// modifier produit
 Route::put('/produit/modifier', [ProduitController::class, 'modifier'])->name('produit.modifier');
 
 
@@ -77,6 +73,9 @@ Route::get('/admin/ajouter-tournoi', [AdminController::class, 'ajouterTournoi'])
 Route::get('/admin/liste-tournoi', [AdminController::class, 'listeTournoi'])->name('admin.liste-tournoi');
 
 Route::get('/admin.liste-compte', [AdminController::class, 'listeCompte'])->name('admin.liste-compte');
+Route::put('/modifier-utilisateur/{id}', [ProfilController::class, 'modifierUtilisateur'])->name('modifier-utilisateur');
+
+
 Route::get('/admin.liste-commande', [AdminController::class, 'listeCommande'])->name('admin.liste-commande');
 
 // stock

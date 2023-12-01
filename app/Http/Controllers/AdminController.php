@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Produit;
 use Illuminate\Support\Facades\DB;
+use App\Models\Utilisateur;
+use App\Models\Role;
 
 class AdminController extends Controller
 {
@@ -44,5 +46,13 @@ class AdminController extends Controller
 
 
         return view('admin.modifier-produit', compact('produit', 'produitTypes'));
+    }
+
+    public function listeCompte()
+    {
+        $users = Utilisateur::with('role')->get();
+        $roles = Role::all(); // Assuming you have a Role model
+    
+        return view('admin.liste-compte', compact('users', 'roles'));
     }
 }
