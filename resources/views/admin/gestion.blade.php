@@ -7,7 +7,7 @@
     <a href="{{ route('admin.ajouter-produit') }}">Ajouter Produit</a>
     <a href="{{ route('admin.liste-produit') }}">Accéder à la liste des produits</a>
 
-    <p>vous pouvez gerer les comptes   ici</p>
+    <p>vous pouvez gerer les comptes ici</p>
     <!-- acceder a la liste des comptes -->
     <a href="{{ route('admin.liste-compte') }}">Accéder à la liste des comptes</a>
 
