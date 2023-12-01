@@ -72,13 +72,13 @@
                 <div class="form-gau-dro">
                     <label for="niveau">Niveau</label>
                     <select class="form_select" id="niveau" name="niveau" required>
-                        <option value="débutant" {{ $user->niveau === 'débutant' ? 'selected' : '' }}>2.0</option>
-                        <option value="intermédiaire" {{ $user->niveau === 'intermédiaire' ? 'selected' : '' }}>2.5</option>
-                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>3.0</option>
-                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>3.5</option>
-                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>4.0</option>
-                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>4.5</option>
-                        <option value="avancé" {{ $user->niveau === 'avancé' ? 'selected' : '' }}>5.0</option>
+                        <option value="2.0" {{ $user->niveau === '2.0' ? 'selected' : '' }}>2.0</option>
+                        <option value="2.5" {{ $user->niveau === '2.5' ? 'selected' : '' }}>2.5</option>
+                        <option value="3.0" {{ $user->niveau === '3.0' ? 'selected' : '' }}>3.0</option>
+                        <option value="3.5" {{ $user->niveau === '3.5' ? 'selected' : '' }}>3.5</option>
+                        <option value="4.0" {{ $user->niveau === '4.0' ? 'selected' : '' }}>4.0</option>
+                        <option value="4.5" {{ $user->niveau === '4.5' ? 'selected' : '' }}>4.5</option>
+                        <option value="5.0" {{ $user->niveau === '5.0' ? 'selected' : '' }}>5.0</option>
                     </select><br>
                 </div>
 
