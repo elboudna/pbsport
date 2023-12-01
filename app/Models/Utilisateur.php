@@ -27,4 +27,10 @@ class Utilisateur extends Authenticatable // Update the parent class
     {
         return $this->belongsTo(Image::class, 'image_id');
     }
+
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id'); // Adjust the foreign key column if needed
+    }
 }
