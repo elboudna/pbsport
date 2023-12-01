@@ -36,4 +36,13 @@ class AdminController extends Controller
         // $stocks = $produit->stock;
         return view('admin.stock-produit', compact('produit', 'stocks'));
     }
+
+    public function modifierProduit($id)
+    {
+        $produit = Produit::find($id);
+        $produitTypes = DB::table('produit_types')->get();
+
+
+        return view('admin.modifier-produit', compact('produit', 'produitTypes'));
+    }
 }

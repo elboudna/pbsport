@@ -55,6 +55,8 @@ Route::post('/produit', [ProduitController::class, 'store'])->name('produit.stor
 
 Route::get('/produit/{id}', [ProduitController::class, 'show'])->name('produit.show');
 
+// modifier produit
+Route::put('/produit/modifier', [ProduitController::class, 'modifier'])->name('produit.modifier');
 
 
 // admin 
@@ -64,10 +66,18 @@ Route::get('/admin/ajouter-produit', [AdminController::class, 'ajouterProduit'])
 Route::get('/admin/liste-produit', [AdminController::class, 'listeProduit'])->name('admin.liste-produit');
 
 Route::get('/admin/modifier-produit/{id}', [AdminController::class, 'modifierProduit'])->name('admin.modifier-produit');
-Route::post('/admin/modifier-produit/{id}', [AdminController::class, 'modifierProduit'])->name('admin.modifier-produit');
 
 Route::get('/admin/stock-produit/{produit}', [AdminController::class, 'stockProduit'])->name('admin.stock-produit');
 Route::post('/admin/stock-produit/{id}', [AdminController::class, 'stockProduit'])->name('admin.stock-produit');
+
+Route::get('/admin/ajouter-coach', [AdminController::class, 'ajouterCoach'])->name('admin.ajouter-coach');
+Route::get('/admin/liste-coach', [AdminController::class, 'listeCoach'])->name('admin.liste-coach');
+
+Route::get('/admin/ajouter-tournoi', [AdminController::class, 'ajouterTournoi'])->name('admin.ajouter-tournoi');
+Route::get('/admin/liste-tournoi', [AdminController::class, 'listeTournoi'])->name('admin.liste-tournoi');
+
+Route::get('/admin.liste-compte', [AdminController::class, 'listeCompte'])->name('admin.liste-compte');
+Route::get('/admin.liste-commande', [AdminController::class, 'listeCommande'])->name('admin.liste-commande');
 
 // stock
 
