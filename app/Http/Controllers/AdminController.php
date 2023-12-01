@@ -55,4 +55,21 @@ class AdminController extends Controller
     
         return view('admin.liste-compte', compact('users', 'roles'));
     }
+
+    public function ajouterEvenement()
+    {
+        return view('admin.ajouter-evenement');
+    }
+
+    public function listeEvenement()
+    {
+        $evenements = DB::table('evenements')->get();
+        return view('admin.liste-evenement', compact('evenements'));
+    }
+
+    public function modifierEvenement($id)
+    {
+        $evenement = DB::table('evenements')->where('id', $id)->first();
+        return view('admin.modifier-evenement', compact('evenement'));
+    }
 }
