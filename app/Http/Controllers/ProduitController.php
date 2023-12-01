@@ -53,6 +53,44 @@ class ProduitController extends Controller
         return redirect()->route('admin.liste-produit');
     }
 
+    public function modifier(Request $request)
+    {
+        $produit = Produit::findOrFail($request->id);
+        // Validez la demande...
+        $validatedData = $request->validate([
+            'nom' => 'required|string',
+            'description' => 'required|string',
+            'prix' => 'required|numeric',
+            'type_id' => 'required|exists:produit_types,id',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // You can adjust the image validation rules
+
+        ]);
+
+        $produit->update([
+            'nom' => $validatedData['nom'],
+            'description' => $validatedData['description'],
+            'prix' => $validatedData['prix'],
+            'type_id' => $validatedData['type_id'],
+        ]);
+
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('public/produit_images');
+                $filename = basename($path);
+
+                Image::create([
+                    'imageable_id' => $produit->id,
+                    'imageable_type' => 'App\Models\Produit',
+                    'chemin' => $filename,
+                ]);
+            }
+        }
+        
+
+        return redirect()->route('admin.liste-produit');
+        
+    }
+
     public function show($id)
     {
         $produit = Produit::with('images')->findOrFail($id);
