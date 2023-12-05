@@ -43,7 +43,7 @@
 
     <nav>
         <a href="/">Accueil</a>
-        <a href="#">Evenements</a>
+        <a href="{{ route('evenements') }}">Evenements</a>
         <a href="{{ route('magasin') }}">Produits</a>
         <a href="#">Blog</a>
         <a href="#">Contact</a>
