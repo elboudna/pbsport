@@ -7,6 +7,19 @@ use App\Models\Evenement;
 
 class EvenementController extends Controller
 {
+    public function index()
+    {
+        $evenements = Evenement::all();
+
+        return view('evenements', compact('evenements'));
+    }
+
+    public function show($id)
+    {
+        $evenement = Evenement::findOrFail($id);
+
+        return view('evenement', compact('evenement'));
+    }
 
     public function store(Request $request)
     {
@@ -28,7 +41,7 @@ class EvenementController extends Controller
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $filename = time() . '.' . $extension;
-            $file->move('images/evenements/', $filename);
+            $file->move('storage/evenement_images/', $filename);
             $evenement->image = $filename;
         } else {
             return $request;

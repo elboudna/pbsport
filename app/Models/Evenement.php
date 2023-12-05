@@ -11,9 +11,21 @@ class Evenement extends Model
     use HasFactory;
 
     protected $fillable = [
-        'type', // Add the 'type' attribute to the fillable array
+        'type',
         'nom',
         'description',
-        
+        'date_debut',
+        'heure',
+        'lieu',
+        'adresse',
+        'nbr_joueur',
+        'prix',
+        'classification',
+        'niveau',
+        'image',
+    ];
+
+    protected $casts = [
+        'date_debut' => 'datetime',
     ];
 }
