@@ -1,9 +1,9 @@
 @extends('layouts.app') <!-- Assurez-vous d'étendre la mise en page appropriée -->
 
 @section('content')
-<div class="container">
-    <h2>Liste des Produits</h2>
-    <table class="table">
+<div class="table-admin">
+    <h1>Liste des Produits</h1>
+    <table class="table-element">
         <thead>
             <tr>
                 <th>Nom du Produit</th>

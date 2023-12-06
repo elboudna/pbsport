@@ -1,27 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="table-admin">
 
-    <h2>Liste des événements</h2>
+    <h1>Liste des événements</h1>
 
-    <table class="table">
+    <table class="table-element">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Type</th>
                 <th>Nom</th>
-                <th>Description</th>
                 <th>Date</th>
-                <th>Heure</th>
                 <th>Lieu</th>
-                <th>Adresse</th>
                 <th>Nombre de joueurs</th>
                 <th>Prix</th>
                 <th>Classification</th>
                 <th>Niveau</th>
-                <th>Image</th>
 
-                <!-- Add other columns as needed -->
                 <th>Action</th>
             </tr>
         </thead>
@@ -31,17 +27,12 @@
                 <td>{{ $evenement->id }}</td>
                 <td>{{ $evenement->type }}</td>
                 <td>{{ $evenement->nom }}</td>
-                <td>{{ $evenement->description }}</td>
-                <td>{{ $evenement->date_debut }}</td>
-                <td>{{ $evenement->heure }}</td>
+                <td>{{ \Carbon\Carbon::parse($evenement->date_debut)->isoFormat('D MMMM YYYY', 'Do MMMM YYYY') }}</td>
                 <td>{{ $evenement->lieu }}</td>
-                <td>{{ $evenement->adresse }}</td>
                 <td>{{ $evenement->nbr_joueur }}</td>
-                <td>{{ $evenement->prix }}</td>
+                <td>{{ $evenement->prix }}$</td>
                 <td>{{ $evenement->classification }}</td>
                 <td>{{ $evenement->niveau }}</td>
-                <td>{{ $evenement->image }}</td>
-                <!-- Add other columns as needed -->
                 <td>
                     <a href="{{ route('admin.modifier-evenement', $evenement->id) }}" class="btn btn-primary">Modifier</a>
                 </td>
@@ -49,5 +40,5 @@
             @endforeach
         </tbody>
     </table>
-
+</div>
 @endsection
