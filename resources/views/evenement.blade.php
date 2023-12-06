@@ -2,25 +2,70 @@
 
 @section('content')
 
-<div class="event-banner">
-    <img src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
-</div>
 
-<div class="event-details">
-    <h2>{{ $evenement->nom }}</h2>
-    <p>{{ $evenement->description }}</p>
+<div class="event-div">
+    <h1>{{ $evenement->type }} : {{ $evenement->nom }}</h1>
+    <h3>{{ \Carbon\Carbon::parse($evenement->date_debut)->isoFormat('D MMMM YYYY', 'Do MMMM YYYY') }} à partir de {{ \Carbon\Carbon::parse($evenement->heure)->format('H:i') }}</h3>
 
-    <ul>
-        <li><strong>Type:</strong> {{ $evenement->type }}</li>
-        <li><strong>Date:</strong> {{ $evenement->date_debut->format('Y-m-d') }}</li>
-        <li><strong>Heure:</strong> {{ $evenement->heure }}</li>
-        <li><strong>Lieu:</strong> {{ $evenement->lieu }}</li>
-        <li><strong>Adresse:</strong> {{ $evenement->adresse }}</li>
-        <li><strong>Nombre de joueurs:</strong> {{ $evenement->nbr_joueur }}</li>
-        <li><strong>Prix:</strong> {{ $evenement->prix }}</li>
-        <li><strong>Classification:</strong> {{ $evenement->classification }}</li>
-        <li><strong>Niveau:</strong> {{ $evenement->niveau }}</li>
-    </ul>
+
+    <div id="event-banner">
+        <img src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
+        <p>{{ $evenement->description }}</p>
+    </div>
+
+    <div class="event-details">
+        <h3>Details</h3>
+        <div class="event-details-flex">
+            <div class="event-details-gauche">
+                <p class="detail-titre">Date:</p>
+                <p class="detail-data">{{ \Carbon\Carbon::parse($evenement->date_debut)->isoFormat('D MMMM YYYY', 'Do MMMM YYYY') }}</p>
+                <p class="detail-titre">Heure: </p>
+                <p class="detail-data">{{ \Carbon\Carbon::parse($evenement->heure)->format('H:i') }}</p>
+                <p class="detail-titre">Prix: </p>
+                <p class="detail-data">{{ $evenement->prix }} $</p>
+            </div>
+            <div class="event-details-droite">
+                <p class="detail-titre">Niveau:</p>
+                <p class="detail-data"> {{ $evenement->niveau }}</p>
+                <p class="detail-titre">Catégorie:</p>
+                <p class="detail-data"> {{ $evenement->classification }}</p>
+                <p class="detail-titre">Nombre de joueurs:</p>
+                <p class="detail-data">{{ $evenement->nbr_joueur }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="event-details">
+        <h3>Lieu</h3>
+        <div class="event-details-flex">
+            <div class="event-details-gauche">
+                <p class="detail-titre">Terrain:</p>
+                <p class="detail-data">{{ $evenement->lieu }}</p>
+            </div>
+            <div class="event-details-droite">
+                <p class="detail-titre">Adresse:</p>
+                <p class="detail-data">{{ $evenement->adresse }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="event-details">
+        <h3>Contact</h3>
+        <div class="event-details-flex">
+            <div class="event-details-gauche">
+                <p class="detail-titre">Téléphone:</p>
+                <p class="detail-data">514-499-3254</p>
+            </div>
+            <div class="event-details-droite">
+                <p class="detail-titre">Email:</p>
+                <p class="detail-data"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-center margin-top margin-bottom">
+        <a class="bgvert" href="">S'inscrire sur XXXX</a>
+    </div>
 </div>
 
 @endsection

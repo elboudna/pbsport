@@ -1,0 +1,56 @@
+/* evemenements */
+
+/* evenement */
+.event-div{
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: "Montserrat";
+}
+
+.event-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.event-div a{
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#event-banner{
+    margin-bottom: 50px;
+}
+
+.event-details{
+    border: solid .1px #eee;
+    background-color: #fafafa;
+    padding: 0px 35px;
+    margin-bottom: 50px;
+}
+
+.event-details-flex{
+    display: flex;
+}
+
+.event-details-gauche{
+    width: 50%;
+}
+
+.event-details-droite{
+    width: 50%;
+}
+
+.detail-titre{
+    font-weight: bold;
+    margin: 0;
+}
+
+.detail-data{
+    margin-top: 0;
+}
