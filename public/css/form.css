@@ -72,3 +72,34 @@ input[type="file"] {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
 }
+
+.form-section{
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 100px;
+    font-family: "Montserrat";
+    margin-bottom: 100px;
+    border: solid .1px #eee;
+    border-radius: 5px;
+    background-color: #fafafa;
+    padding: 20px 20px 30px 20px;
+
+}
+
+.form-section h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-section input[type="checkbox"]{
+    width: 20px;
+}
+
+.form-section .checkbox-group{
+    margin-top: 10px;
+    display: flex;
+}
+
+.form-section .checkbox-group label{
+    margin-right: 30px;
+}

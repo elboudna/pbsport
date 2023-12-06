@@ -1,17 +1,19 @@
 @extends('layouts.app') {{-- Assuming you have a layout named 'app' --}}
 
 @section('content')
-<a href="{{ route('admin.liste-produit') }}">Retour à la liste des produits</a>
-<div class="container">
-    <h1>Stock of {{ $produit->nom }}</h1>
+<div class="lien-retour">
+    <a href="{{ route('admin.liste-produit') }}">Retour à la liste des produits</a>
+</div>
+<div class="form-section">
+    <h1>Stock de {{ $produit->nom }}</h1>
 
-    <p>Product Type: {{ $produit->type->type }}</p>
+    <p>Type du produit : {{ $produit->type->type }}</p>
 
     @if ($stocks)
     @if ($stocks->isNotEmpty())
     <form method="post" action="{{ route('stock.update') }}">
         @csrf
-        <table class="table">
+        <table class="table-element margin-bottom">
             <thead>
                 <tr>
                     <th>Couleur</th>
@@ -32,18 +34,20 @@
                 @endforeach
             </tbody>
         </table>
-        <button type="submit" class="btn btn-primary">Update Stock</button>
+        <div class="button-center">
+            <button type="submit" class="btnpbsport btn btn-primary">Mettre à jour</button>
+        </div>
     </form>
 
     @else
-    <p>No stock records found for this product.</p>
+    <p>Pas de stock pour ce produit.</p>
     @endif
     @else
-    <p>No stock records found for this product.</p>
+    <p>Pas de stock pour ce produit.</p>
     @endif
 
     <form id="addstock-form" method="post" action="{{ route('stock.store') }}">
-        <h2>Add New Stock</h2>
+        <h2>Ajouter un nouveau stock</h2>
         @csrf
         <div class="form-group">
             <label for="couleur">Couleur:</label>
@@ -66,7 +70,9 @@
             <input type="hidden" name="produit_id" value="{{ $produit->id }}">
 
         </div>
-        <button type="submit" class="btn btn-primary">Add Stock</button>
+        <div class="button-center">
+            <button type="submit" class="btnpbsport btn btn-primary">Ajouter</button>
+        </div>
     </form>
 </div>
 

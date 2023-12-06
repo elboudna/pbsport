@@ -3,10 +3,11 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="table-admin">
 
 <h1>Liste compte</h1>
 
-<table>
+<table class="table-element">
     <thead>
         <tr>
             <th>ID</th>
@@ -51,7 +52,7 @@
                     </select>
                 </td>
                 <td>
-                    <button type="submit">Update</button>
+                    <button class="bgvert btnpbsport" type="submit">Modifier</button>
                 </td>
                 </form>
         </tr>

@@ -1,6 +1,9 @@
 @extends('layouts.app') <!-- Assurez-vous d'étendre la mise en page appropriée -->
 
 @section('content')
+<div class="lien-retour">
+    <a href="{{ route('admin.gestion') }}">Retour à la page de gestion</a>
+</div>
 <div class="table-admin">
     <h1>Liste des Produits</h1>
     <table class="table-element">

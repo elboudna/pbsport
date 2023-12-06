@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<section id="form-add-produit">
+<div class="lien-retour">
+    <a href="{{ route('admin.gestion') }}">Retour à la page de gestion</a>
+</div>
+<section class="form-section">
 
     <h1>Ajouter un produit</h1>
     <div class="form-pbsport">

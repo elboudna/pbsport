@@ -56,3 +56,32 @@ body{
 .margin-bottom{
     margin-bottom: 80px;
 }
+
+.btnpbsport{
+    background-color: #91cf05; /* Style the first link in each .div-admin */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.lien-retour{
+    margin-left: 300px;
+    margin-top: 20px;
+    margin-right: 300px;
+}
+
+.lien-retour a {
+    background-color: rgb(70,70,70); /* Style the first link in each .div-admin */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    font-family: "Montserrat";
+}
