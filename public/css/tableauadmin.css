@@ -1,0 +1,37 @@
+.table-admin{
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 100px;
+    font-family: "Montserrat";
+    margin-bottom: 100px;
+}
+
+.table-admin h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.table-element {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style the table header */
+.table-element th {
+    background-color: #464646;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style alternating rows for better readability */
+.table-element tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style table cells */
+.table-element td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}

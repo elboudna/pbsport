@@ -1,0 +1,51 @@
+#section-admin{
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: "Montserrat";
+}
+
+#section-admin h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.flex-divs-admin{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div-admin{
+    border: solid .1px #eee;
+    border-radius: 5px;
+    background-color: #fafafa;
+    padding: 0px 20px 30px 20px;
+    margin-right: 20px;
+    width: 45%;
+    margin-bottom: 50px;
+    
+}
+
+.div-admin h3{
+    margin-bottom: 30px;
+}
+
+.div-admin a{
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.div-admin a:nth-of-type(1) {
+    background-color: #79ac03; /* Style the first link in each .div-admin */
+    color: white;
+}
+
+.div-admin a:nth-of-type(2) {
+    background-color: blue; 
+    color: white;
+}
+
+/* Add any additional styling as needed */
