@@ -19,9 +19,10 @@ class CreateEvenementsTable extends Migration
             $table->string('lieu');
             $table->string('adresse');
             $table->decimal('prix', 8, 2);
-            $table->string('classification');
+            $table->enum('categorie', ['Double mixte', 'Double', 'Simple']);
             $table->enum('niveau', ['Débutant', 'Intermediaire', 'Avancé']);
             $table->string('image')->nullable();
+            $table->string('lien')->nullable();
             $table->timestamps();
         });
     }
