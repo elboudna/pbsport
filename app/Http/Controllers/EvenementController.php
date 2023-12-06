@@ -16,6 +16,8 @@ class EvenementController extends Controller
 
     public function show($id)
     {
+        app()->setLocale('fr');
+
         $evenement = Evenement::findOrFail($id);
 
         return view('evenement', compact('evenement'));
