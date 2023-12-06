@@ -14,11 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // run rolestable and typestable seeder
+        $this->call([
+            RolesTableSeeder::class,
+            TypesTableSeeder::class,
+        ]);
     }
 }
