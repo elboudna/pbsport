@@ -11,9 +11,13 @@
         <div>
             <p>
                 @auth
+                <a href="{{ route('profil') }}">
                 {{ Auth::user()->prenom }}
+                </a>
                 @else
-                Bonjour
+                <a href="{{ route('showlogin') }}">
+                Se connecter
+                </a>
                 @endauth
             </p>
 

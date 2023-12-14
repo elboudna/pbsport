@@ -9,6 +9,8 @@ class EvenementController extends Controller
 {
     public function index()
     {
+        app()->setLocale('fr');
+
         $evenements = Evenement::all();
 
         return view('evenements', compact('evenements'));

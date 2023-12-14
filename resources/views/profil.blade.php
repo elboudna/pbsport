@@ -4,7 +4,7 @@
 
 @section('content')
 <section id="profil">
-    <h2>Joueur</h2>
+    <h2>Profil</h2>
     <form id="logout-form" action="{{ route('logout') }}" method="POST">
         @csrf
         <button type="submit">Logout</button>
