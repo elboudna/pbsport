@@ -94,3 +94,4 @@ Route::post('/panier/ajouter', [PanierController::class, 'ajouter'])->name('pani
 Route::get('/evenements', [EvenementController::class, 'index'])->name('evenements');
 Route::get('/evenement/{id}', [EvenementController::class, 'show'])->name('evenement.show');
 Route::post('/evenement', [EvenementController::class, 'store'])->name('evenement.store');
+Route::put('/evenement/modifier', [EvenementController::class, 'modifier'])->name('evenement.modifier');
