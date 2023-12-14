@@ -18,7 +18,7 @@
                 <th>Lieu</th>
                 <th>Nombre de joueurs</th>
                 <th>Prix</th>
-                <th>Classification</th>
+                <th>Categorie</th>
                 <th>Niveau</th>
 
                 <th>Action</th>
@@ -34,7 +34,7 @@
                 <td>{{ $evenement->lieu }}</td>
                 <td>{{ $evenement->nbr_joueur }}</td>
                 <td>{{ $evenement->prix }}$</td>
-                <td>{{ $evenement->classification }}</td>
+                <td>{{ implode(', ', json_decode($evenement->categorie)) }}</td>
                 <td>{{ $evenement->niveau }}</td>
                 <td>
                     <a href="{{ route('admin.modifier-evenement', $evenement->id) }}" class="btn btn-primary">Modifier</a>

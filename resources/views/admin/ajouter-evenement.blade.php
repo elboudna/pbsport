@@ -61,22 +61,39 @@
                 <input type="number" name="prix" id="prix" min="1" class="form-control" required>
             </div>
 
-            <!-- Classification -->
+            <!-- Contact -->
+            <div class="form-group">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" name="telephone" id="telephone" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+
+            <!-- Categorie -->
+            
             <div class="form-group">
                 <label>Catégorie</label>
                 <div class="checkbox-group">
                     <label for="double_mixte">
-                        <input type="checkbox" id="double_mixte" name="classification[]" value="Double mixte"> Double mixte
+                        <input type="checkbox" id="double_mixte" name="categorie[]" value="Double mixte"> Double mixte
                     </label>
                     <label for="double">
-                        <input type="checkbox" id="double" name="classification[]" value="Double"> Double
+                        <input type="checkbox" id="double" name="categorie[]" value="Double"> Double
                     </label>
                     <label for="simple">
-                        <input type="checkbox" id="simple" name="classification[]" value="Simple"> Simple
+                        <input type="checkbox" id="simple" name="categorie[]" value="Simple"> Simple
                     </label>
                 </div>
             </div>
 
+            <!-- lien -->
+            <div class="form-group">
+                <label for="lien">Lien</label>
+                <input type="text" name="lien" id="lien" class="form-control">
+            </div>
 
             <!-- Niveau -->
             <div class="form-group">

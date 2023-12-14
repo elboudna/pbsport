@@ -20,12 +20,17 @@ class Evenement extends Model
         'adresse',
         'nbr_joueur',
         'prix',
-        'classification',
+        'categorie',
         'niveau',
         'image',
+        'lien',
+        'email',
+        'telephone',
     ];
 
     protected $casts = [
         'date_debut' => 'datetime',
+        'categorie' => 'json',
     ];
+
 }

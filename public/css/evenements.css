@@ -1,21 +1,21 @@
 /* evemenements */
 
 /* evenement */
-.event-div{
+.event-div {
     margin-top: 100px;
     margin-left: 300px;
     margin-right: 300px;
     font-family: "Montserrat";
 }
 
-.event-div img{
+.event-div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
 }
 
-.event-div a{
+.event-div a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -23,34 +23,68 @@
     transition: background-color 0.3s;
 }
 
-#event-banner{
+#event-banner {
     margin-bottom: 50px;
 }
 
-.event-details{
+.event-details {
     border: solid .1px #eee;
     background-color: #fafafa;
     padding: 0px 35px;
     margin-bottom: 50px;
 }
 
-.event-details-flex{
+.event-details-flex {
     display: flex;
 }
 
-.event-details-gauche{
+.event-details-gauche {
     width: 50%;
 }
 
-.event-details-droite{
+.event-details label {
+    margin-bottom: 15px;
+}
+
+/* event-details input type text, number, date, time, email */
+.event-details input[type="text"],
+.event-details input[type="number"],
+.event-details input[type="date"],
+.event-details input[type="time"],
+.event-details input[type="email"],
+.event-details textarea,
+.event-details select {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border: solid 1px #eee;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.event-details .checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.event-details .checkbox-group label {
+    margin-right: 70px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.event-details-droite {
     width: 50%;
 }
 
-.detail-titre{
+.detail-titre {
     font-weight: bold;
     margin: 0;
 }
 
-.detail-data{
+.detail-data {
     margin-top: 0;
 }

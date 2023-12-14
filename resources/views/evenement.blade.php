@@ -28,7 +28,8 @@
                 <p class="detail-titre">Niveau:</p>
                 <p class="detail-data"> {{ $evenement->niveau }}</p>
                 <p class="detail-titre">Catégorie:</p>
-                <p class="detail-data"> {{ $evenement->classification }}</p>
+                <p class="detail-data"> {{ implode(', ', $evenement->categorie) }}</p>
+
                 <p class="detail-titre">Nombre de joueurs:</p>
                 <p class="detail-data">{{ $evenement->nbr_joueur }}</p>
             </div>
@@ -54,17 +55,17 @@
         <div class="event-details-flex">
             <div class="event-details-gauche">
                 <p class="detail-titre">Téléphone:</p>
-                <p class="detail-data">514-499-3254</p>
+                <p class="detail-data">{{ $evenement->telephone }}</p>
             </div>
             <div class="event-details-droite">
                 <p class="detail-titre">Email:</p>
-                <p class="detail-data"></p>
+                <p class="detail-data">{{ $evenement->email }}</p>
             </div>
         </div>
     </div>
 
     <div class="button-center margin-top margin-bottom">
-        <a class="bgvert" href="">S'inscrire sur XXXX</a>
+        <a class="bgvert" href="{{ $evenement->lien }}" target="_blank">S'inscrire</a>
     </div>
 </div>
 
