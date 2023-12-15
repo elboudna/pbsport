@@ -9,6 +9,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\PanierController;
 use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\CoachController;
+use App\Http\Controllers\GalerieController;
+use App\Http\Controllers\AbonnementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,7 +65,6 @@ Route::put('/produit/modifier', [ProduitController::class, 'modifier'])->name('p
 
 
 // admin 
-
 Route::middleware(['role:3'])->group(function () {
     Route::get('/admin/gestion', [AdminController::class, 'index'])->name('admin.gestion');
     Route::get('/admin/ajouter-produit', [AdminController::class, 'ajouterProduit'])->name('admin.ajouter-produit');
@@ -70,28 +72,41 @@ Route::middleware(['role:3'])->group(function () {
     Route::get('/admin/modifier-produit/{id}', [AdminController::class, 'modifierProduit'])->name('admin.modifier-produit');
     Route::get('/admin/stock-produit/{produit}', [AdminController::class, 'stockProduit'])->name('admin.stock-produit');
     Route::post('/admin/stock-produit/{id}', [AdminController::class, 'stockProduit'])->name('admin.stock-produit');
-    Route::get('/admin/ajouter-coach', [AdminController::class, 'ajouterCoach'])->name('admin.ajouter-coach');
-    Route::get('/admin/liste-coach', [AdminController::class, 'listeCoach'])->name('admin.liste-coach');
+    Route::get('/admin/ajouter-evenement', [AdminController::class, 'ajouterEvenement'])->name('admin.ajouter-evenement');
     Route::get('/admin/liste-evenement', [AdminController::class, 'listeEvenement'])->name('admin.liste-evenement');
     Route::get('/admin/modifier-evenement/{id}', [AdminController::class, 'modifierEvenement'])->name('admin.modifier-evenement');
-    Route::get('/admin/ajouter-evenement', [AdminController::class, 'ajouterEvenement'])->name('admin.ajouter-evenement');
     Route::get('/admin/liste-compte', [AdminController::class, 'listeCompte'])->name('admin.liste-compte');
     Route::get('/admin/liste-commande', [AdminController::class, 'listeCommande'])->name('admin.liste-commande');
+    Route::get('/admin/ajouter-coach', [AdminController::class, 'ajouterCoach'])->name('admin.ajouter-coach');
+    Route::get('/admin/liste-coach', [AdminController::class, 'listeCoach'])->name('admin.liste-coach');
+    Route::get('/admin/modifier-coach/{id}', [AdminController::class, 'modifierCoach'])->name('admin.modifier-coach');
+    //ajouter coach
 });
 
 // stock
-
 Route::post('/stock', [StockController::class, 'store'])->name('stock.store');
 Route::post('/stock/update', [StockController::class, 'update'])->name('stock.update');
 
 // panier
-
 Route::get('/panier', [PanierController::class, 'index'])->name('panier');
 Route::post('/panier/ajouter', [PanierController::class, 'ajouter'])->name('panier.ajouter');
 
 // evenement
-
 Route::get('/evenements', [EvenementController::class, 'index'])->name('evenements');
 Route::get('/evenement/{id}', [EvenementController::class, 'show'])->name('evenement.show');
 Route::post('/evenement', [EvenementController::class, 'store'])->name('evenement.store');
 Route::put('/evenement/modifier', [EvenementController::class, 'modifier'])->name('evenement.modifier');
+
+
+// coach
+Route::get('/coachs', [CoachController::class, 'index'])->name('coachs');
+Route::post('/coach', [CoachController::class, 'store'])->name('coach.store');
+Route::put('/coach/modifier/{id}', [CoachController::class, 'modifier'])->name('coach.modifier');
+
+
+// galerie
+Route::get('/galeries', [GalerieController::class, 'index'])->name('galeries.index');
+Route::get('/galeries/{id}', [GalerieController::class, 'show'])->name('galeries.show');
+
+// abonnement
+Route::get('/abonnements', [AbonnementController::class, 'index'])->name('abonnements.index');

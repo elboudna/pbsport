@@ -9,12 +9,10 @@
 @import url("form.css");
 @import url("magasin.css");
 @import url("produit.css");
-@import url("panier.css");
 @import url("evenements.css");
 @import url("admin.css");
-@import url("adminproduit.css");
-@import url("adminevenement.css");
 @import url("tableauadmin.css");
+@import url("coachs.css");
 
 body{
     margin: 0;
