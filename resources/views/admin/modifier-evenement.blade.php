@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="lien-retour">
+    <a href="{{ route('admin.gestion') }}">Retour à la page de gestion</a>
+</div>
 <div class="event-div">
     <h1>Modifier Evenement: {{ $evenement->type }} - {{ $evenement->nom }}</h1>
 
