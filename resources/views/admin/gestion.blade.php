@@ -20,6 +20,24 @@
         </div>
 
         <div class="div-admin">
+            <h3>Coach</h3>
+            <a href="{{ route('admin.ajouter-coach') }}">Ajouter un coach</a>
+            <a href="{{ route('admin.liste-coach') }}">Liste des coachs</a>
+        </div>
+
+        <div class="div-admin">
+            <h3>Galerie</h3>
+            <a href="{{ route('admin.liste-commande') }}">Ajouter des images</a>
+            <a href="{{ route('admin.liste-commande') }}">Liste des images</a>
+        </div>
+
+        <div class="div-admin">
+            <h3>Page d'accueil</h3>
+            <a href="{{ route('admin.liste-commande') }}">Gestion des bannières</a>
+            <a href="{{ route('admin.liste-commande') }}">Produits vedettes</a>
+        </div>
+
+        <div class="div-admin">
             <h3>Comptes</h3>
             <a href="{{ route('admin.liste-compte') }}">Liste des comptes</a>
         </div>
@@ -29,6 +47,12 @@
             <h3>Commandes</h3>
             <a href="{{ route('admin.liste-commande') }}">Liste des commandes</a>
         </div>
+
+        <div class="div-admin">
+            <h3>Abonnement</h3>
+            <a href="{{ route('admin.liste-commande') }}">Liste des abonnés</a>
+        </div>
+
 
     </div>
 
