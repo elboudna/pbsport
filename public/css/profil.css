@@ -1,33 +1,51 @@
 #profil{
     height: 600px;
     border: solid #cecece .1px;
-    margin: 30px 200px;
+    border-radius: 10px;
+    margin: 30px 300px;
     padding: 0px 20px;
+    font-family: "Montserrat";
 }
 
 #image-profil{
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #image-profil img{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
-    border-radius: 50%;
-    margin-right: 50px;
+    border-radius: 20%;
 }
 
 #image-profil p{
     text-align: center;
 }
 
+.infoprofil{
+    margin-top: 70px;
+}
+
+.btnprofil{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
 #info-profil{
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+#info-profil label{
+    margin-right: 200px;
 }
 
 #profil h2{
@@ -38,8 +56,6 @@
     padding: 20px;
 }
 
-
-
 .form-gau-dro{
     display: flex;
     margin: 10px;
@@ -49,4 +65,45 @@
     width: 30%;
 }
 
+.button-enregistrer{
+    margin-top: 20px;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    height: 39px;
+    width: 100px;
+    margin-left: 20px;
+    font-family: "Montserrat";
+}
 
+.center-flex{
+    justify-content: center;
+}
+
+.center-flex label{
+    font-size: 14px;
+    font-family: "Montserrat";
+
+}
+
+/* Style the file input to be hidden */
+#file-input {
+    display: none;
+}
+
+/* Style the label to mimic the appearance of a button */
+#file-input + label {
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Hide the default appearance of the file input button */
+#file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    display: none;
+}

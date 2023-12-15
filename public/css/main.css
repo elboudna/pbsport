@@ -41,6 +41,8 @@ body{
     padding: 10px;
     border-radius: 5px;
     border: none;
+    font-family: "Montserrat";
+
 }
 
 .button-submit:hover{
