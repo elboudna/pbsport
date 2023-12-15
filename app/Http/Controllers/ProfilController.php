@@ -33,7 +33,6 @@ class ProfilController extends Controller
             'nom' => 'required|string|max:255',
             'prenom' => 'required|string|max:255',
             'email' => 'required|string|email|max:255',
-            'adresse' => 'string|max:255',
             'date_de_naissance' => 'date',
             'sexe' => 'required|string|max:255',
             'niveau' => 'required|string|max:255',
@@ -50,7 +49,6 @@ class ProfilController extends Controller
         // Update the user's profile
         $user->nom = $credentials['nom'];
         $user->prenom = $credentials['prenom'];
-        $user->adresse = $credentials['adresse'];
         $user->date_de_naissance = $credentials['date_de_naissance'];
         $user->sexe = $credentials['sexe'];
         $user->niveau = $credentials['niveau'];

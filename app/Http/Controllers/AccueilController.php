@@ -8,6 +8,10 @@ class AccueilController extends Controller
 {
     public function index()
     {
-        return view('accueil');
+        // select 4 random produit de la table produit
+        $produits = \App\Models\Produit::inRandomOrder()->take(4)->get();
+
+        return view('accueil', ['produits' => $produits]);
+
     }
 }

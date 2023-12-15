@@ -72,4 +72,15 @@ class AdminController extends Controller
         $evenement = DB::table('evenements')->where('id', $id)->first();
         return view('admin.modifier-evenement', compact('evenement'));
     }
+
+    public function ajouterCoach()
+    {
+        return view('admin.ajouter-coach');
+    }
+
+    public function listeCoach()
+    {
+        $coachs = DB::table('coachs')->get();
+        return view('admin.liste-coach', compact('coachs'));
+    }
 }
