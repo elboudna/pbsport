@@ -50,3 +50,35 @@ nav a{
     color: #464646;
     margin-left: 45px;
 }
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; /* Adjust the background color as needed */
+    border: 1px solid #ccc; /* Adjust the border as needed */
+    padding: 10px;
+    z-index: 1000;
+}
+
+.user-menu:hover .menu-options {
+    display: block;
+}
+
+/* Style links in the menu */
+.menu-options a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #333; /* Adjust the text color as needed */
+}
+
+.menu-options a:hover {
+    background-color: #f0f0f0; /* Adjust the background color on hover as needed */
+}
