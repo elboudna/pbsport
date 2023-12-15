@@ -124,6 +124,22 @@
                 <p class="description-coach-accueil">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt incidunt cum, similique vitae odio velit ea totam.</p>
             </div>
         </div>
+        <div class="coach-accueil">
+            <div class="image-contact-coach-accueil">
+                <div class="image-coach-accueil">
+                    <img src="" alt="">
+                </div>
+                <div class="contact-coach-accueil">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="info-coach-accueil">
+                <p class="nom-coach-accueil">Mehdi</p>
+                <p class="titre-coach-accueil">Coach</p>
+                <p class="description-coach-accueil">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt incidunt cum, similique vitae odio velit ea totam.</p>
+            </div>
+        </div>
 
     </div>
     <div class="button-center margin-top">
