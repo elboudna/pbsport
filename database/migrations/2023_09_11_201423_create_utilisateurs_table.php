@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('adresse')->nullable();
             $table->string('sexe')->nullable();
             $table->date('date_de_naissance')->nullable();
             $table->string('niveau')->nullable();
