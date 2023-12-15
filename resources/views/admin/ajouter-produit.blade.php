@@ -14,10 +14,7 @@
                 <label for="nom">Nom du produit</label>
                 <input type="text" class="form-control" id="nom" name="nom" required>
             </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" name="description" required></textarea>
-            </div>
+            
             <div class="form-group">
                 <label for="prix">Prix</label>
                 <input type="number" step="0.01" class="form-control" id="prix" name="prix" required>
@@ -30,6 +27,12 @@
                     @endforeach
                 </select>
             </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description" required></textarea>
+            </div>
+            
             <div class="form-group">
                 <label for="images">Images</label>
                 <input type="file" class="form-control" id="images" name="images[]" multiple accept="image/*">
