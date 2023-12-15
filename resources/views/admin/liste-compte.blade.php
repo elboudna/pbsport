@@ -3,8 +3,10 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="lien-retour">
+    <a href="{{ route('admin.gestion') }}">Retour à la page de gestion</a>
+</div>
 <div class="table-admin">
-
 <h1>Liste compte</h1>
 
 <table class="table-element">
