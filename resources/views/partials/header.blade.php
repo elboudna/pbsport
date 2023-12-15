@@ -9,32 +9,37 @@
             <p>info@pbsportplus.com</p>
         </div>
         <div>
-            <p>
-                @auth
-                <a href="{{ route('profil') }}">
-                {{ Auth::user()->prenom }}
-                </a>
-                @else
-                <a href="{{ route('showlogin') }}">
-                Se connecter
-                </a>
-                @endauth
-            </p>
 
-            @auth
-            <a href="{{ route('profil') }}">
-                <img src="/icone/compte.png" alt="compte">
-            </a>
-            @else
-            <a href="{{ route('showlogin') }}">
-                <img src="/icone/compte.png" alt="compte">
-            </a>
-            @endauth
+            <div class="user-menu">
+                <p>
+                    @auth
+                    <a href="{{ route('profil') }}">{{ Auth::user()->prenom }}</a>
+                    @else
+                    <a href="{{ route('showlogin') }}">Se connecter</a>
+                    @endauth
+                </p>
+
+                <div class="menu-options">
+                    @auth
+                    @if(auth()->user()->role_id == 3)
+                        <a href="{{ route('admin.gestion') }}">Gestion</a>
+                    @endif <a href="{{ route('profil') }}">Profil</a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    @else
+                    <a href="{{ route('showregister') }}">Nouveau compte</a>
+                    @endauth
+                </div>
+            </div>
+
+
             <a href="{{ route('panier') }}">
                 <img src="/icone/panier.png" alt="panier">
             </a>
-
         </div>
+
     </div>
 </header>
 
