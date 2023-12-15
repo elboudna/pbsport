@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
-use Illuminate\Http\Request;
 use App\Models\Produit;
 use Illuminate\Support\Facades\DB;
 use App\Models\Utilisateur;
@@ -82,5 +80,11 @@ class AdminController extends Controller
     {
         $coachs = DB::table('coachs')->get();
         return view('admin.liste-coach', compact('coachs'));
+    }
+
+    public function modifierCoach($id)
+    {
+        $coach = DB::table('coachs')->where('id', $id)->first();
+        return view('admin.modifier-coach', compact('coach'));
     }
 }

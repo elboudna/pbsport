@@ -16,33 +16,58 @@ class CoachController extends Controller
 
     public function store(Request $request)
     {
-        // Validate the form data
-        $validatedData = $request->validate([
-            'nom' => 'required|string',
-            'prenom' => 'required|string',
-            'facebook' => 'required|string',
-            'email' => 'required|email',
-            'telephone' => 'required|string',
-            'niveau' => 'required|string',
-            'description' => 'required|string',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Adjust the validation rule for images
-        ]);
+        $coach = new Coach();
 
-        // Save Coach data
-        $coach = Coach::create($validatedData);
+        $coach->nom = $request->nom;
+        $coach->prenom = $request->prenom;
+        $coach->facebook = $request->facebook;
+        $coach->email = $request->email;
+        $coach->telephone = $request->telephone;
+        $coach->niveau = $request->niveau;
+        $coach->description = $request->description;
 
-        // Handle image upload if provided
-        if ($request->hasFile('images')) {
-            $images = $request->file('images');
-            foreach ($images as $image) {
-                // Store the image and associate it with the coach
-                $path = $image->store('coach_images', 'public'); // Make sure the 'coach_images' folder exists in your 'public' disk
-                $coach->images()->create(['path' => $path]);
-            }
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = time() . '.' . $extension;
+            $file->move('storage/coach_images/', $filename);
+            $coach->photo = $filename;
+        } else {
+            $coach->photo = ''; // or set it to null or any default value
         }
 
-        // Redirect or respond as needed
-        return redirect()->route('admin.liste-coach')->with('success', 'Coach ajouté avec succès!');
+        $coach->save();
+
+        return redirect()->route('admin.liste-coach');
+
+    }
+
+    public function modifier(Request $request, $id)
+    {
+        $coach = Coach::findOrFail($id);
+
+        $coach->nom = $request->nom;
+        $coach->prenom = $request->prenom;
+        $coach->facebook = $request->facebook;
+        $coach->email = $request->email;
+        $coach->telephone = $request->telephone;
+        $coach->niveau = $request->niveau;
+        $coach->description = $request->description;
+
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = time() . '.' . $extension;
+            $file->move('storage/coach_images/', $filename);
+            $coach->photo = $filename;
+        } else {
+            $coach->photo = ''; // or set it to null or any default value
+        }
+
+        $coach->save();
+
+        return redirect()->route('admin.liste-coach');
+
     }
 
     
