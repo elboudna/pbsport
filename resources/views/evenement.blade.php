@@ -9,7 +9,7 @@
 
 
     <div id="event-banner">
-        <img src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
+        <img class="img-event" src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
         <p>{{ $evenement->description }}</p>
     </div>
 
