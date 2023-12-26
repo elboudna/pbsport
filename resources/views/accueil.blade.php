@@ -27,8 +27,6 @@
     </div>
 </section>
 
-
-
 <section id="section-bienvenue">
     <div id="bienvenue-gauche">
         <img src="" alt="">
@@ -53,7 +51,7 @@
             <p class="nom-produit-accueil">Date</p>
         </div>
     </div>
-    <div class="button-center margin-top">
+    <div class="button-center btn-accueil">
         <a class="bgvert gris" href="#">En savoir plus</a>
     </div>
 </section>
@@ -68,7 +66,7 @@
         <img src="" alt="">
         <img src="" alt="">
     </div>
-    <div class="margin-top button-center">
+    <div class="btn-accueil button-center">
         <a class="bggris vert" href="#">Voir plus</a>
     </div>
 </section>
@@ -98,7 +96,7 @@
             <p class="prix-produit-accueil vert">90$</p>
         </div>
     </div>
-    <div class="button-center margin-top">
+    <div class="button-center btn-accueil">
         <a class="bgvert gris" href="#">Voir plus</a>
     </div>
 </section>
@@ -142,10 +140,10 @@
         </div>
 
     </div>
-    <div class="button-center margin-top">
+    <div class="button-center btn-accueil">
         <a class="bggris vert" href="#">Voir plus</a>
     </div>
-</section>
+</section> 
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
