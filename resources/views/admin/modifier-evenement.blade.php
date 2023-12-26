@@ -14,7 +14,7 @@
         <div id="event-banner">
             <label for="image">Image:</label>
             <input type="file" name="image">
-            <img src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
+            <img class="img-modifier" src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
 
             <label for="description">Description:</label>
             <textarea name="description">{{ $evenement->description }}</textarea>
@@ -25,7 +25,7 @@
             <div class="event-details-flex">
                 <div class="event-details-gauche">
                     <label for="date_debut" class="detail-titre">Date:</label>
-                    <input type="date" name="date_debut" class="detail-data" value="{{ $evenement->date_debut }}">
+                    <input type="date" name="date_debut" class="detail-data" value="{{ \Carbon\Carbon::parse($evenement->date_debut)->format('Y-m-d') }}">
 
                     <label for="heure" class="detail-titre">Heure:</label>
                     <input type="time" name="heure" class="detail-data" value="{{ \Carbon\Carbon::parse($evenement->heure)->format('H:i') }}">
@@ -36,11 +36,12 @@
                 <div class="event-details-droite">
                     <label for="niveau" class="detail-titre">Niveau:</label>
                     <select name="niveau" class="form-control">
-                        <option value="Débutant" @if($evenement->niveau === 'Débutant') selected @endif>Débutant</option>
-                        <option value="Intermédiaire" @if($evenement->niveau === 'Intermédiaire') selected @endif>Intermédiaire</option>
-                        <option value="Avancé" @if($evenement->niveau === 'Avancé') selected @endif>Avancé</option>
+                        <option value="Débutant" @if($evenement->niveau === 'Debutant') selected @endif>Débutant</option>
+                        <option value="Intermédiaire" @if($evenement->niveau === 'Intermediaire') selected @endif>Intermédiaire</option>
+                        <option value="Avancé" @if($evenement->niveau === 'Avance') selected @endif>Avancé</option>
                     </select>
-                    
+
+
                     <label for="nbr_joueur" class="detail-titre">Nombre de joueurs:</label>
                     <input type="number" name="nbr_joueur" class="detail-data" value="{{ $evenement->nbr_joueur }}">
 
@@ -93,7 +94,7 @@
         </div>
 
         <div class="button-center margin-top margin-bottom">
-            <button type="submit" class="btnpbsport">Update Event</button>
+            <button type="submit" class="btnpbsport">Mettre à jour</button>
         </div>
     </form>
 </div>
