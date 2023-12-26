@@ -1,12 +1,17 @@
-#section-banniere-accueil{
+.btn-accueil{
+    margin-top: 80px;
+}
+
+#section-banniere-accueil {
     /* background-color: #cccccc; */
     position: relative;
     width: 100%;
-    height: 600px; /* Set the desired height of your banner */
+    height: 600px;
+    /* Set the desired height of your banner */
     overflow: hidden;
 }
 
-h1{
+h1 {
     margin: 0;
 }
 
@@ -17,7 +22,7 @@ h1{
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .slide img {
@@ -32,26 +37,30 @@ h1{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50%; /* Aligns text vertically center */
+    top: 50%;
+    /* Aligns text vertically center */
     left: 20%;
-    transform: translateY(-50%); /* Centers the text vertically */
-    
+    transform: translateY(-50%);
+    /* Centers the text vertically */
+
 }
 
-.slide .text p{
+.slide .text p {
     color: #fff;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    max-width: 10ch; /* Maximum 10 characters per line */
-    word-wrap: break-word; /* Wrap the text to the next line */
+    max-width: 10ch;
+    /* Maximum 10 characters per line */
+    word-wrap: break-word;
+    /* Wrap the text to the next line */
 }
 
 .slide a {
-    background-color: #91cf05; 
+    background-color: #91cf05;
     color: white;
     border: none;
-    padding: 10px 30px; 
+    padding: 10px 30px;
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -63,7 +72,27 @@ h1{
     opacity: 1;
 }
 
-#section-bienvenue{
+@media (max-width: 425px) {
+    #section-banniere-accueil {
+        height: 200px;
+        /* Adjust the height for smaller screens */
+        margin-top: 20px;
+    }
+
+    .slide .text p {
+        font-size: 14px;
+        /* Further reduce font size for smaller screens if needed */
+        max-width: 90%;
+        /* Adjust maximum width */
+    }
+
+    .slide a {
+        padding: 6px 15px;
+        /* Adjust padding */
+    }
+}
+
+#section-bienvenue {
     margin-top: 100px;
     margin-left: 300px;
     margin-right: 300px;
@@ -72,23 +101,23 @@ h1{
     font-family: "Montserrat";
 }
 
-#bienvenue-gauche{
-    width:60%;
+#bienvenue-gauche {
+    width: 60%;
 }
 
-#bienvenue-gauche img{
+#bienvenue-gauche img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#bienvenue-droite{
+#bienvenue-droite {
     padding: 70px;
-    width:40%;
+    width: 40%;
 }
 
 /* first p of bienvenue-droite */
-#bienvenue-droite p:first-child{
+#bienvenue-droite p:first-child {
     font-size: 60px;
     text-align: center;
     font-weight: bold;
@@ -97,7 +126,7 @@ h1{
 }
 
 /* second p of bienvenue-droite */
-#bienvenue-droite p:nth-child(2){
+#bienvenue-droite p:nth-child(2) {
     font-size: 13px;
     /* distance bettwen letters */
     letter-spacing: 3px;
@@ -107,7 +136,7 @@ h1{
 }
 
 /* third p of bienvenue-droite */
-#bienvenue-droite p:nth-child(3){
+#bienvenue-droite p:nth-child(3) {
     font-size: 14px;
     margin-top: 60px;
     color: white;
@@ -115,7 +144,7 @@ h1{
     line-height: 2;
 }
 
-#bienvenue-droite a{
+#bienvenue-droite a {
     color: white;
     display: inline-block;
     padding: 10px 20px;
@@ -125,66 +154,60 @@ h1{
     transition: background-color 0.3s;
 }
 
+@media (max-width: 425px) {
+    #section-bienvenue {
+        margin: 20px 10px 20px 10px;
+        flex-direction: column-reverse;
+        height: auto;
+    }
 
+    #bienvenue-droite {
+        text-align: center;
+        /* Center text on smaller screens */
+        padding: 0px;
+        /* width: 385px; */
+        width: 100%;
+    }
 
-#section-galerie-accueil{
-    /* margin-top: 100px; */
-    margin-left: 300px;
-    margin-right: 300px;
-    height: 500px;
-    font-family: "Montserrat";
+    #bienvenue-droite * {
+        padding: 10px;
+    }
+
+    #bienvenue-droite p:first-child {
+        font-size: 30px;
+        /* Adjust font size for smaller screens */
+    }
+
+    #bienvenue-droite p:nth-child(2) {
+        font-size: 10px;
+        /* Adjust font size for smaller screens */
+    }
+
+    #bienvenue-droite p:nth-child(3) {
+        font-size: 12px;
+        /* Adjust font size for smaller screens */
+        margin: 0;
+    }
+
+    #bienvenue-droite a {
+        padding: 6px 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    #bienvenue-gauche {
+        width: 100%;
+        /* Adjust width for smaller screens */
+    }
+
+    #bienvenue-gauche img {
+        height: 200px;
+        /* Adjust height for smaller screens */
+    }
+
 }
 
-/* first p of galerie */
-#section-galerie-accueil p:first-child{
-    font-size: 60px;
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* second p of galerie */
-#section-galerie-accueil p:nth-child(2){
-    font-size: 13px;
-    /* distance bettwen letters */
-    letter-spacing: 3px;
-    text-align: center;
-    margin-top: 10px;
-    text-transform: uppercase;
-}
-
-/* third p of galerie */
-#section-galerie-accueil p:nth-child(3){
-    font-size: 14px;
-    margin-top: 30px;
-    line-height: 2;
-    text-align: center;
-}
-
-#galerie-images-accueil{
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-#section-galerie-accueil img{
-    width:250px;
-    height: 250px;
-    border: black solid .1px;
-}
-
-#section-galerie-accueil a{
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-}
-
-#section-evenement-accueil{
+/*  */
+#section-evenement-accueil {
     margin-top: 100px;
     height: 600px;
     display: flex;
@@ -195,7 +218,7 @@ h1{
     padding-bottom: 70px;
 }
 
-#section-evenement-accueil a{
+#section-evenement-accueil a {
     text-decoration: none;
     display: inline-block;
     padding: 10px 20px;
@@ -205,14 +228,14 @@ h1{
     transition: background-color 0.3s;
 }
 
-#section-evenement-accueil > p:first-child{
+#section-evenement-accueil>p:first-child {
     font-size: 60px;
     font-weight: bold;
     color: white;
     margin: 0;
 }
 
-#section-evenement-accueil > p:nth-child(2){
+#section-evenement-accueil>p:nth-child(2) {
     font-size: 13px;
     /* distance bettwen letters */
     letter-spacing: 3px;
@@ -221,7 +244,160 @@ h1{
     margin: 0;
 }
 
-#section-produit-accueil{
+@media (max-width: 425px) {
+    #section-evenement-accueil {
+        margin-top: 10px;
+        /* Adjust margin for smaller screens */
+        margin-bottom: 10px;
+        height: auto;
+        /* Allow height to adjust based on content */
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+        padding-bottom: 30px;
+        /* Adjust bottom padding for smaller screens */
+    }
+
+    #section-evenement-accueil>p:first-child {
+        font-size: 30px;
+        /* Adjust font size for smaller screens */
+    }
+
+    #section-evenement-accueil>p:nth-child(2) {
+        font-size: 10px;
+        /* Adjust font size for smaller screens */
+        letter-spacing: 2px;
+        /* Adjust letter spacing for smaller screens */
+        margin-top: 5px;
+        /* Adjust margin for smaller screens */
+    }
+
+    #section-evenement-accueil a {
+        padding: 8px 15px;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+
+#section-galerie-accueil {
+    /* margin-top: 100px; */
+    margin-left: 300px;
+    margin-right: 300px;
+    height: 500px;
+    font-family: "Montserrat";
+}
+
+/* first p of galerie */
+#section-galerie-accueil p:first-child {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* second p of galerie */
+#section-galerie-accueil p:nth-child(2) {
+    font-size: 13px;
+    /* distance bettwen letters */
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/* third p of galerie */
+#section-galerie-accueil p:nth-child(3) {
+    font-size: 14px;
+    margin-top: 30px;
+    line-height: 2;
+    text-align: center;
+}
+
+#galerie-images-accueil {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-galerie-accueil img {
+    width: 250px;
+    height: 250px;
+    border: black solid .1px;
+}
+
+#section-galerie-accueil a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 425px) {
+    #section-galerie-accueil {
+        margin-left: 10px;
+        /* Adjust margin for smaller screens */
+        margin-right: 10px;
+        /* Adjust margin for smaller screens */
+        height: auto;
+        /* Allow height to adjust based on content */
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    #section-galerie-accueil p:first-child {
+        font-size: 30px;
+        /* Adjust font size for smaller screens */
+    }
+
+    #section-galerie-accueil p:nth-child(2) {
+        font-size: 10px;
+        /* Adjust font size for smaller screens */
+        letter-spacing: 2px;
+        /* Adjust letter spacing for smaller screens */
+        margin-top: 5px;
+        /* Adjust margin for smaller screens */
+    }
+
+    #section-galerie-accueil p:nth-child(3) {
+        font-size: 12px;
+        /* Adjust font size for smaller screens */
+        margin-top: 20px;
+        /* Adjust margin for smaller screens */
+        line-height: 1.5;
+    }
+
+    #galerie-images-accueil {
+        align-items: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .btn-accueil {
+        margin-top: 10px;
+    }
+
+    #section-galerie-accueil img {
+        width: 45%;
+        /* Adjust image width for smaller screens */
+        height: 165px;
+        /* Allow the image to adjust its height based on width */
+        margin-bottom: 20px;
+        /* Adjust margin between images for smaller screens */
+        border: blue solid .1px;
+    }
+
+    #section-galerie-accueil a {
+        padding: 8px 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+}
+
+/*  */
+#section-produit-accueil {
     margin-top: 200px;
     height: 600px;
     display: flex;
@@ -232,7 +408,7 @@ h1{
     padding-bottom: 140px;
 }
 
-#section-produit-accueil a{
+#section-produit-accueil a {
     text-decoration: none;
     display: inline-block;
     padding: 10px 20px;
@@ -242,7 +418,7 @@ h1{
     transition: background-color 0.3s;
 }
 
-#section-produit-accueil > p:first-child{
+#section-produit-accueil>p:first-child {
     font-size: 60px;
     font-weight: bold;
     color: white;
@@ -250,7 +426,7 @@ h1{
 }
 
 /* second p of produit-vedette */
-#section-produit-accueil > p:nth-child(2){
+#section-produit-accueil>p:nth-child(2) {
     font-size: 13px;
     /* distance bettwen letters */
     letter-spacing: 3px;
@@ -259,7 +435,7 @@ h1{
     margin: 0;
 }
 
-#produits-accueil{
+#produits-accueil {
     margin-top: 50px;
     margin-left: 300px;
     margin-right: 300px;
@@ -269,28 +445,74 @@ h1{
     background-color: white;
 }
 
-.produit-accueil{
+.produit-accueil {
     padding: 40px;
     border-left: solid #c0c0c0 .1px;
 }
 
-.produit-accueil img{
+.produit-accueil img {
     width: 250px;
     height: 250px;
     object-fit: cover;
 }
 
-.nom-produit-accueil{
+.nom-produit-accueil {
     font-size: 18px;
     margin-top: 20px;
 }
 
-.prix-produit-accueil{
+.prix-produit-accueil {
     font-size: 18px;
     font-weight: 500;
 }
 
-#section-coach-accueil{
+@media (max-width: 425px) {
+    #section-produit-accueil {
+        margin-top: 10px; /* Adjust margin for smaller screens */
+        margin-bottom: 10px;;
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    #section-produit-accueil > p:first-child {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+    #section-produit-accueil > p:nth-child(2) {
+        font-size: 10px; /* Adjust font size for smaller screens */
+        letter-spacing: 2px; /* Adjust letter spacing for smaller screens */
+        margin-top: 5px; /* Adjust margin for smaller screens */
+    }
+
+    #produits-accueil {
+        margin-left: 10px; /* Adjust margin for smaller screens */
+        margin-right: 10px; /* Adjust margin for smaller screens */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 5px;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .produit-accueil {
+        padding: 20px; /* Adjust padding for smaller screens */
+        border-left: none; /* Remove left border on smaller screens */
+        border-bottom: solid #c0c0c0 .1px; /* Add bottom border for separation */
+    }
+
+    .produit-accueil img {
+        width: 100%; /* Occupy full width on smaller screens */
+        height: auto; /* Allow the image to adjust its height based on width */
+        margin-bottom: 10px; /* Adjust margin between images for smaller screens */
+    }
+
+    .nom-produit-accueil,
+    .prix-produit-accueil {
+        text-align: center; /* Center text on smaller screens */
+    }
+}
+
+
+#section-coach-accueil {
     /* margin-top: 100px; */
     margin-left: 300px;
     margin-right: 300px;
@@ -300,7 +522,7 @@ h1{
 }
 
 /* first p of coach */
-#section-coach-accueil > p:first-child{
+#section-coach-accueil>p:first-child {
     font-size: 60px;
     text-align: center;
     font-weight: bold;
@@ -308,7 +530,7 @@ h1{
 }
 
 /* second p of coach */
-#section-coach-accueil > p:nth-child(2){
+#section-coach-accueil>p:nth-child(2) {
     font-size: 13px;
     /* distance bettwen letters */
     letter-spacing: 3px;
@@ -318,7 +540,7 @@ h1{
 }
 
 /* third p of coach */
-#section-coach-accueil > p:nth-child(3){
+#section-coach-accueil>p:nth-child(3) {
     font-size: 14px;
     margin-top: 30px;
     line-height: 2;
@@ -326,7 +548,7 @@ h1{
 }
 
 
-#section-coach-accueil a{
+#section-coach-accueil a {
     text-decoration: none;
     display: inline-block;
     padding: 10px 20px;
@@ -337,13 +559,13 @@ h1{
 }
 
 
-#coachs-accueil{
+#coachs-accueil {
     display: flex;
     gap: 5%;
     flex-wrap: wrap;
 }
 
-.coach-accueil{
+.coach-accueil {
     display: flex;
     width: 47%;
     margin-bottom: 30px;
@@ -351,42 +573,42 @@ h1{
     justify-content: space-between;
 }
 
-.image-contact-coach-accueil{
+.image-contact-coach-accueil {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     width: 35%;
     border: black solid .1px;
 }
 
-.info-coach-accueil{
+.info-coach-accueil {
     display: flex;
     flex-direction: column;
     width: 65%;
     justify-content: center;
 }
 
-.image-coach-accueil{
+.image-coach-accueil {
     width: 200px;
     height: 200px;
     object-fit: cover;
 }
 
-.contact-coach-accueil{
+.contact-coach-accueil {
     display: flex;
     height: 50px;
 }
 
-.contact-coach-accueil img:first-of-type{
+.contact-coach-accueil img:first-of-type {
     background-color: rgb(184, 0, 0);
     width: 50%;
 }
 
-.contact-coach-accueil img:last-of-type{
+.contact-coach-accueil img:last-of-type {
     background-color: rgb(0, 0, 196);
     width: 50%;
 }
 
-.nom-coach-accueil{
+.nom-coach-accueil {
     font-size: 18px;
     margin-top: 20px;
     text-align: center;
@@ -395,7 +617,7 @@ h1{
 }
 
 
-.titre-coach-accueil{ 
+.titre-coach-accueil {
     font-size: 13px;
     /* distance bettwen letters */
     letter-spacing: 3px;
@@ -403,8 +625,69 @@ h1{
     text-transform: uppercase;
 }
 
-.description-coach-accueil{
+.description-coach-accueil {
     font-size: 14px;
     line-height: 2;
     text-align: center;
+}
+
+@media (max-width: 425px) {
+    #section-coach-accueil {
+        margin-left: 10px;
+        margin-right: 10px;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    #section-coach-accueil > p:first-child {
+        font-size: 30px;
+    }
+
+    #section-coach-accueil > p:nth-child(2) {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-top: 5px;
+    }
+
+    #section-coach-accueil > p:nth-child(3) {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    #coachs-accueil {
+        gap: 10px;
+    }
+
+    .coach-accueil {
+        width: 100%;
+    }
+
+    .image-contact-coach-accueil {
+        width: 100%;
+    }
+
+    .info-coach-accueil {
+        width: 100%;
+    }
+
+    .image-coach-accueil {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-coach-accueil {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .contact-coach-accueil img {
+        width: 100%;
+    }
+
+    .nom-coach-accueil,
+    .titre-coach-accueil,
+    .description-coach-accueil {
+        text-align: center;
+    }
 }
