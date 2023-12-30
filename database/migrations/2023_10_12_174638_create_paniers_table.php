@@ -17,11 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('utilisateur_id')->nullable(); // Si le panier est associé à un utilisateur
             $table->timestamps();
-
-            // Ajoutez d'autres colonnes au besoin, par exemple, pour stocker le total du panier.
-
             $table->foreign('utilisateur_id')->references('id')->on('utilisateur');
-
         });
     }
 
