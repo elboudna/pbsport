@@ -72,8 +72,8 @@
 </section>
 
 <section id="section-produit-accueil" class="bggris margin-bottom">
-    <p>Produit vedette</p>
-    <p class="vert">Nouvel arrivage</p>
+    <p>Produits vedette</p>
+    <p class="vert">Nouvel arrivage/Meilleur vente</p>
     <div id="produits-accueil">
         <div class="produit-accueil">
             <img src="" alt="">
