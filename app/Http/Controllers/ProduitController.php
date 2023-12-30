@@ -44,7 +44,7 @@ class ProduitController extends Controller
 
                 Image::create([
                     'imageable_id' => $produit->id,
-                    'imageable_type' => 'App\Models\Produit',
+                    'imageable_type' => 'Produit',
                     'chemin' => $filename,
                 ]);
             }
@@ -80,7 +80,7 @@ class ProduitController extends Controller
 
                 Image::create([
                     'imageable_id' => $produit->id,
-                    'imageable_type' => 'App\Models\Produit',
+                    'imageable_type' => 'Produit',
                     'chemin' => $filename,
                 ]);
             }
