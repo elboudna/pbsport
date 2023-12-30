@@ -20,6 +20,7 @@ return new class extends Migration
             $table->decimal('prix', 10, 2);
             // vedette : 1 si le produit est en vedette, 0 sinon
             $table->boolean('vedette')->default(0);
+            $table->integer('nombre_vente')->default(0);
             $table->unsignedBigInteger('type_id'); // Add the 'type_id' column to the 'produits' table
             $table->foreign('type_id')->references('id')->on('produit_types')->default(1); // Define the foreign key relationship
 
