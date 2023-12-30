@@ -10,7 +10,7 @@ class CreateEvenementsTable extends Migration
     {
         Schema::create('evenements', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['Tournoi', 'Bootcamp', 'Formation']);
+            $table->enum('type', ['Tournoi', 'Bootcamp', 'Formation', 'Autre']);
             $table->string('nom');
             $table->text('description');
             $table->integer('nbr_joueur');
@@ -25,6 +25,9 @@ class CreateEvenementsTable extends Migration
             $table->string('lien')->nullable();
             $table->string('email')->nullable();
             $table->string('telephone')->nullable();
+            $table->integer('place_restante');
+            $table->dateTime('date_limite_inscription')->nullable();
+
             $table->timestamps();
         });
     }
