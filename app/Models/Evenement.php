@@ -22,10 +22,10 @@ class Evenement extends Model
         'prix',
         'categorie',
         'niveau',
-        'image',
         'lien',
         'email',
         'telephone',
+        'image',
     ];
 
     protected $casts = [
