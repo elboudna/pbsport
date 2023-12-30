@@ -11,6 +11,15 @@
     overflow: hidden;
 }
 
+/* 
+    Baniere taille
+    height : 600 px
+    width : 1900 px
+
+    Produit et coach 
+    Height = width ( carré )
+*/
+
 h1 {
     margin: 0;
 }
