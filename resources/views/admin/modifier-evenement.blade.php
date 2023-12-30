@@ -6,7 +6,7 @@
 </div>
 <div class="event-div">
     <h1>Modifier Evenement: {{ $evenement->type }} - {{ $evenement->nom }}</h1>
-
+    
     <form method="POST" action="{{ route('evenement.modifier', ['id' => $evenement->id]) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
