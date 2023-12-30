@@ -5,35 +5,47 @@
 @section('content')
 
 <section class="margin-bottom margin-top" id="panier">
-    <h2>Votre Panier</h2>
+    <h2>Panier</h2>
 
-    @if($panierProduits->isNotEmpty())
-    <table>
-        <thead>
-            <tr>
-                <th>Produit</th>
-                <th>Quantité</th>
-                <th>Prix unitaire</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($panierProduits as $cartProduit)
-            <tr>
-                <td>{{ $cartProduit->nom }}</td>
-                <td>{{ $cartProduit->quantity }}</td>
-                <td>{{ $cartProduit->prix }}$</td>
-                <td>{{ $cartProduit->total }}$</td>
-            </tr>
-            @endforeach
+    <section>
+        @if($panierProduits)
+        @foreach($panierProduits as $cartProduit)
+        <div class="product-item">
+            <div class="product-image">
+                <img src="{{ asset('storage/produit_images/' . $cartProduit['image']) }}" alt="{{ $cartProduit['nom'] }}">
+            </div>
+            <div class="product-details">
+                <p>Nom: {{ $cartProduit['nom'] }}</p>
+                <p>Couleur: {{ $cartProduit['couleur'] }}</p>
+                <p>Taille: {{ $cartProduit['taille'] }}</p>
+                <p>Quantité: {{ $cartProduit['quantity'] }}</p>
+            </div>
+            <div class="product-price">
+                <p>{{ $cartProduit['prix'] }}$</p>
+            </div>
+        </div>
+        @endforeach
 
+    </section>
 
-        </tbody>
-    </table>
+    <section>
+        <p>Récapitulatif</p>
+        <div>
+            <p>Sous-total </p>
+            <p>{{ $totalCartAmount }}$</p>
+        </div>
+        <div>
+            <p>Taxes</p>
+            <p>{{ $totalCartAmount * 0.15 }}$</p>
+        </div>
 
-    <p>Total du panier : {{ $totalCartAmount }}$</p>
+        <div>
+            <p>Total</p>
+            <p>{{ $totalCartAmount * 1.15 }}$</p>
+        </div>
 
-    <a href="{{}}" class="btn-commander bgvert">Passer la commande</a>
+        <a href="{{-- Add your checkout route here --}}" class="btn-commander bgvert">Passer la commande</a>
+    </section>
     @else
     <p>Votre panier est vide.</p>
     @endif
