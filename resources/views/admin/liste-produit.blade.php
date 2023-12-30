@@ -12,7 +12,8 @@
                 <th>Nom du Produit</th>
                 <th>Prix</th>
                 <th>Type</th>
-                <th>Actions</th>
+                <th>Modifier</th>
+                <th>Stock</th>
             </tr>
         </thead>
         <tbody>
@@ -29,6 +30,8 @@
                 </td>
                 <td>
                     <a href="{{ route('admin.modifier-produit', $produit->id) }}" class="btn btn-primary">Modifier</a>
+                </td>
+                <td>
                     <a href="{{ route('admin.stock-produit', $produit->id) }}" class="btn btn-success">Stock</a>
                 </td>
             </tr>
