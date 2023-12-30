@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Produit;
 use App\Models\User;
 use App\Models\Panier;
+use App\Models\Image;
 
 
 class PanierController extends Controller
@@ -20,28 +21,45 @@ class PanierController extends Controller
             // get the user id
             $userId = auth()->user()->id;
 
-            // get the cart for the user
-            $cart = Panier::with('produits')->where('utilisateur_id', $userId)->first();
+            // get the cart for the user with products and their sizes/colors
+            $cart = Panier::with(['produits', 'produits.type'])->where('utilisateur_id', $userId)->first();
 
             // calculate the total amount of the cart
             $totalCartAmount = 0;
+
+            // prepare an array to store products with additional information
+            $panierProduits = [];
 
             // using the produit_id in the pivot table, get the product name
             foreach ($cart->produits as $cartProduit) {
                 // Access the pivot data directly
                 $quantite = $cartProduit->pivot->quantite;
+                $taille = $cartProduit->pivot->taille;
+                $couleur = $cartProduit->pivot->couleur;
 
-                // Add quantity and total to the product object
-                $cartProduit->quantity = $quantite;
-                $cartProduit->total = $quantite * $cartProduit->prix;
+                // get the image for the product
+                $image = Image::where('imageable_id', $cartProduit->id)->first();
 
+                // Add product details to the array
+                $panierProduits[] = [
+                    'nom' => $cartProduit->nom,
+                    'quantity' => $quantite,
+                    'taille' => $taille,
+                    'couleur' => $couleur,
+                    'prix' => $cartProduit->prix * $quantite,
+                    'total' => $quantite * $cartProduit->prix,
+                    'image' => $image->chemin,
+                ];
+
+                
                 // Calculate the total cart amount
-                $totalCartAmount += $cartProduit->total;
-            }
-
-            // return the view with the cart products and the total amount
+                $totalCartAmount += $quantite * $cartProduit->prix;
+            }           
+            
+            // dd($panierProduits[1]['image']);
+            // return the view with the cart data
             return view('panier', [
-                'panierProduits' => $cart->produits,
+                'panierProduits' => $panierProduits,
                 'totalCartAmount' => $totalCartAmount,
             ]);
         }
