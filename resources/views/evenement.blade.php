@@ -23,6 +23,8 @@
                 <p class="detail-data">{{ \Carbon\Carbon::parse($evenement->heure)->format('H:i') }}</p>
                 <p class="detail-titre">Prix: </p>
                 <p class="detail-data">{{ $evenement->prix }} $</p>
+                <p class="detail-titre">Date limite d'inscription: </p>
+                <p class="detail-data">{{ $evenement->date_limite_inscription }}</p>
             </div>
             <div class="event-details-droite">
                 <p class="detail-titre">Niveau:</p>
@@ -32,6 +34,10 @@
 
                 <p class="detail-titre">Nombre de joueurs:</p>
                 <p class="detail-data">{{ $evenement->nbr_joueur }}</p>
+
+                <p class="detail-titre">Places restantes:</p>
+                <p class="detail-data">{{ $evenement->place_restante }}</p>
+
             </div>
         </div>
     </div>
