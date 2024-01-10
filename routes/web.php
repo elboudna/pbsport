@@ -12,6 +12,7 @@ use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\CoachController;
 use App\Http\Controllers\GalerieController;
 use App\Http\Controllers\AbonnementController;
+use App\Http\Controllers\BanniereController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ Route::middleware(['role:3'])->group(function () {
     Route::get('/admin/ajouter-coach', [AdminController::class, 'ajouterCoach'])->name('admin.ajouter-coach');
     Route::get('/admin/liste-coach', [AdminController::class, 'listeCoach'])->name('admin.liste-coach');
     Route::get('/admin/modifier-coach/{id}', [AdminController::class, 'modifierCoach'])->name('admin.modifier-coach');
-    //ajouter coach
+    Route::get('/admin/bannieres', [AdminController::class, 'bannieres'])->name('admin.bannieres');
 });
 
 // stock
@@ -110,3 +111,7 @@ Route::get('/galeries/{id}', [GalerieController::class, 'show'])->name('galeries
 
 // abonnement
 Route::get('/abonnements', [AbonnementController::class, 'index'])->name('abonnements.index');
+
+//banniere
+Route::post('/banniere', [BanniereController::class, 'store'])->name('banniere.store');
+Route::delete('/banniere/supprimer/{id}', [BanniereController::class, 'supprimer'])->name('banniere.supprimer');
