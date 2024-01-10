@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('prenom');
             $table->string('email');
             $table->string('telephone');
-            $table->string('niveau');
+            $table->string('niv_pro');
             $table->string('description', 1000);
             $table->string('facebook');
             $table->string('photo');
