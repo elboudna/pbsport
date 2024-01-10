@@ -4,28 +4,17 @@
 
 @section('content')
 <section id="section-banniere-accueil">
-    <div class="slide">
-        <img src="{{ asset('image/ban1.jpg') }}" alt="Image 1">
-        <div class="text">
-            <p>Text for Image 1</p>
-            <a href="">En savoir plus!</a>
+    @foreach($bannieres as $banniere)
+        <div class="slide">
+            <img src="{{ asset('storage/bannieres/' . $banniere->image) }}" alt="{{ $banniere->titre }}">
+            <div class="text">
+                <p>{{ $banniere->titre }}</p>
+                <a href="{{ $banniere->url }}">En savoir plus!</a>
+            </div>
         </div>
-    </div>
-    <div class="slide">
-        <img src="{{ asset('image/ban2.jpg') }}" alt="Image 2">
-        <div class="text">
-            <p>Text for Image 2</p>
-            <a href="">En savoir plus!</a>
-        </div>
-    </div>
-    <div class="slide">
-        <img src="{{ asset('image/ban3.jpg') }}" alt="Image 3">
-        <div class="text">
-            <p>Text for Image 3</p>
-            <a href="">En savoir plus!</a>
-        </div>
-    </div>
+    @endforeach
 </section>
+
 
 <section id="section-bienvenue">
     <div id="bienvenue-gauche">
