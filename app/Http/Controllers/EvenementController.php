@@ -43,6 +43,8 @@ class EvenementController extends Controller
         $evenement->telephone = $request->telephone;
         $evenement->email = $request->email;
         $evenement->lien = $request->lien;
+        $evenement->place_restante = $request->nombre_joueurs;
+        $evenement->date_limite_inscription = $request->date_limite_inscription;
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -77,6 +79,8 @@ class EvenementController extends Controller
         $evenement->telephone = $request->telephone;
         $evenement->email = $request->email;
         $evenement->lien = $request->lien;
+        $evenement->place_restante = $request->place_restante;
+        $evenement->date_limite_inscription = $request->date_limite_inscription;
 
         // validate the image and size and format
         $request->validate([
