@@ -87,4 +87,10 @@ class AdminController extends Controller
         $coach = DB::table('coachs')->where('id', $id)->first();
         return view('admin.modifier-coach', compact('coach'));
     }
+
+    public function bannieres()
+    {
+        $bannieres = DB::table('bannieres')->get();
+        return view('admin.bannieres', compact('bannieres'));
+    }
 }
