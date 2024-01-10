@@ -27,8 +27,7 @@
 
         <div class="div-admin">
             <h3>Galerie</h3>
-            <a href="{{ route('admin.liste-commande') }}">Ajouter des images</a>
-            <a href="{{ route('admin.liste-commande') }}">Liste des images</a>
+            <a href="{{ route('admin.galerie') }}">Gestion de la galerie</a>
         </div>
 
         <div class="div-admin">
