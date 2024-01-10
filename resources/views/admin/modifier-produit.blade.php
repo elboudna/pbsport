@@ -6,7 +6,7 @@
     <h1>Modifier le produit</h1>
 
     <div class="form-pbsport">
-        <form action="{{  route('produit.modifier') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('produit.modifier') }}" method="POST" enctype="multipart/form-data">
             @method('PUT')
             @csrf
             <div class="form-group">
