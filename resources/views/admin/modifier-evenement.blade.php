@@ -32,6 +32,9 @@
 
                     <label for="prix" class="detail-titre">Prix:</label>
                     <input type="number" name="prix" class="detail-data" value="{{ $evenement->prix }}">
+
+                    <label for="date_limite_inscription" class="detail-titre">Date limite d'inscription:</label>
+                    <input type="date" name="date_limite_inscription" class="detail-data" value="{{ \Carbon\Carbon::parse($evenement->date_limite_inscription)->format('Y-m-d') }}">
                 </div>
                 <div class="event-details-droite">
                     <label for="niveau" class="detail-titre">Niveau:</label>
@@ -44,7 +47,10 @@
 
                     <label for="nbr_joueur" class="detail-titre">Nombre de joueurs:</label>
                     <input type="number" name="nbr_joueur" class="detail-data" value="{{ $evenement->nbr_joueur }}">
-
+                    
+                    <label for="place_restante" class="detail-titre">Places restantes:</label>
+                    <input type="number" name="place_restante" class="detail-data" value="{{ $evenement->place_restante }}">
+                    
                     <label for="categorie" class="detail-titre">Catégorie:</label>
                     <div class="checkbox-group">
                         <label>
