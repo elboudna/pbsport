@@ -33,7 +33,7 @@
 
         <div class="div-admin">
             <h3>Page d'accueil</h3>
-            <a href="{{ route('admin.liste-commande') }}">Gestion des bannières</a>
+            <a href="{{ route('admin.bannieres') }}">Gestion des bannières</a>
             <a href="{{ route('admin.liste-commande') }}">Produits vedettes</a>
         </div>
 
