@@ -9,15 +9,34 @@ class GalerieController extends Controller
 {
     public function index()
     {
-        $galeries = Galerie::all();
-        return view('gallery.index', compact('galeries'));
     }
 
-    public function show($id)
+    public function store()
     {
-        $galerie = Galerie::findOrFail($id);
-        return view('gallery.show', compact('galerie'));
+        $galerie = new Galerie();
+
+        $galerie->nom = request('nom');
+
+        if (request()->hasFile('image')) {
+            $file = request()->file('image');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = time() . '.' . $extension;
+            $file->move('storage/galerie/', $filename);
+            $galerie->image = $filename;
+        } else {
+            $galerie->image = ''; // or set it to null or any default value
+        }
+
+        $galerie->save();
+
+        return redirect()->route('admin.galerie');
     }
 
-    // Add other methods as needed (create, store, edit, update, destroy)
+    public function supprimer($id)
+    {
+        $galerie = Galerie::find($id);
+        $galerie->delete();
+
+        return redirect()->route('admin.galerie');
+    }
 }
