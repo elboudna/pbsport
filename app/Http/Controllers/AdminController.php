@@ -93,4 +93,10 @@ class AdminController extends Controller
         $bannieres = DB::table('bannieres')->get();
         return view('admin.bannieres', compact('bannieres'));
     }
+
+    public function galerie()
+    {
+        $images = DB::table('galeries')->get();
+        return view('admin.galerie', compact('images'));
+    }
 }
