@@ -34,15 +34,10 @@
             </div>
 
             <div class="form-groupe">
-                <label for="niveau">Niveau</label>
+                <label for="niveau">Pro</label>
                 <select class="form_select" id="niveau" name="niveau" required>
-                    <option value="2.0">2.0</option>
-                    <option value="2.5">2.5</option>
-                    <option value="3.0">3.0</option>
-                    <option value="3.5">3.5</option>
-                    <option value="4.0">4.0</option>
-                    <option value="4.5">4.5</option>
-                    <option value="5.0">5.0</option>
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
                 </select><br><br>
             </div>
 
