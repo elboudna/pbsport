@@ -14,7 +14,7 @@ class CreateEvenementsTable extends Migration
             $table->string('nom');
             $table->text('description');
             $table->integer('nbr_joueur');
-            $table->dateTime('date_debut');
+            $table->date('date_debut');
             $table->time('heure');
             $table->string('lieu');
             $table->string('adresse');
@@ -26,7 +26,7 @@ class CreateEvenementsTable extends Migration
             $table->string('email')->nullable();
             $table->string('telephone')->nullable();
             $table->integer('place_restante');
-            $table->dateTime('date_limite_inscription')->nullable();
+            $table->date('date_limite_inscription')->nullable();
 
             $table->timestamps();
         });
