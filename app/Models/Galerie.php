@@ -9,6 +9,6 @@ class Galerie extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nom', 'description', 'image_path'];
+    protected $fillable = ['nom', 'image'];
 
 }
