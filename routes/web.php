@@ -82,6 +82,7 @@ Route::middleware(['role:3'])->group(function () {
     Route::get('/admin/liste-coach', [AdminController::class, 'listeCoach'])->name('admin.liste-coach');
     Route::get('/admin/modifier-coach/{id}', [AdminController::class, 'modifierCoach'])->name('admin.modifier-coach');
     Route::get('/admin/bannieres', [AdminController::class, 'bannieres'])->name('admin.bannieres');
+    Route::get('/admin/galerie', [AdminController::class, 'galerie'])->name('admin.galerie');
 });
 
 // stock
@@ -108,6 +109,8 @@ Route::put('/coach/modifier/{id}', [CoachController::class, 'modifier'])->name('
 // galerie
 Route::get('/galeries', [GalerieController::class, 'index'])->name('galeries.index');
 Route::get('/galeries/{id}', [GalerieController::class, 'show'])->name('galeries.show');
+Route::post('/galerie', [GalerieController::class, 'store'])->name('galerie.store');
+Route::delete('/galerie/supprimer/{id}', [GalerieController::class, 'supprimer'])->name('galerie.supprimer');
 
 // abonnement
 Route::get('/abonnements', [AbonnementController::class, 'index'])->name('abonnements.index');
