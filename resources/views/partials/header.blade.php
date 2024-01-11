@@ -68,6 +68,10 @@
                             <a href="/">Accueil</a>
                             <a href="{{ route('evenements') }}">Evenements</a>
                             <a href="{{ route('magasin') }}">Produits</a>
+                            <a href="{{ route('coachs') }}">Coach</a>
+                            <a href="#">Académie</a>
+                            <a href="{{ route('galerie') }}">Galerie</a>
+                            <a href="#">Partenaire</a>
                             <a href="#">Blog</a>
                             <a href="#">Contact</a>
                         </nav>
@@ -101,7 +105,15 @@
         <a href="/">Accueil</a>
         <a href="{{ route('evenements') }}">Evenements</a>
         <a href="{{ route('magasin') }}">Produits</a>
-        <a href="#">Blog</a>
+        <div class="dropdown">
+            <a href="#">Académie</a>
+            <div class="dropdown-content">
+                <a href="{{ route('coachs') }}">Coach</a>
+                <a href="{{ route('galerie') }}">Galerie</a>
+                <a href="#">Partenaire</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
         <a href="#">Contact</a>
     </nav>
 </section>
