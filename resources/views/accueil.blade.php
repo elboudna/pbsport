@@ -5,13 +5,13 @@
 @section('content')
 <section id="section-banniere-accueil">
     @foreach($bannieres as $banniere)
-        <div class="slide">
-            <img src="{{ asset('storage/bannieres/' . $banniere->image) }}" alt="{{ $banniere->titre }}">
-            <div class="text">
-                <p>{{ $banniere->titre }}</p>
-                <a href="{{ $banniere->url }}">En savoir plus!</a>
-            </div>
+    <div class="slide">
+        <img src="{{ asset('storage/bannieres/' . $banniere->image) }}" alt="{{ $banniere->titre }}">
+        <div class="text">
+            <p>{{ $banniere->titre }}</p>
+            <a href="{{ $banniere->url }}">En savoir plus!</a>
         </div>
+    </div>
     @endforeach
 </section>
 
@@ -31,17 +31,27 @@
     </div>
 </section>
 
-<section id="section-evenement-accueil" class="bggris margin-bottom">
-    <p>Prochain évènement</p>
-    <p class="vert">evenement nom</p>
-    <div id="produits-accueil">
-        <div class="produit-accueil">
-            <img src="" alt="IMAGE">
-            <p class="nom-produit-accueil">Date</p>
+<section id="section-evenement-accueil" class="bggris">
+    <p>Prochains évènements</p>
+    <p class="vert">Venez participer!</p>
+    <div class="event">
+    @foreach($evenements as $evenement)
+        <div class="evenement-div-accueil">
+            <div class="evenement-img">
+                <img src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
+            </div>
+            <div class="evenement-flex">
+                <h3>{{ $evenement->nom }}</h3>
+                <p>Date de début : {{ \Carbon\Carbon::parse($evenement->date_debut)->isoFormat('D MMMM YYYY', 'Do MMMM YYYY') }}</p>
+                <div class="btn-ensavoirplus-event">
+                    <a href="{{ route('evenement.show', $evenement->id) }}">En savoir en plus</a>
+                </div>
+            </div>
         </div>
+        @endforeach
     </div>
     <div class="button-center btn-accueil">
-        <a class="bgvert gris" href="#">En savoir plus</a>
+        <a class="bgvert blanc" href="{{ route('evenements') }}">Nos évènements</a>
     </div>
 </section>
 
@@ -56,11 +66,11 @@
         <img src="" alt="">
     </div>
     <div class="btn-accueil button-center">
-        <a class="bggris vert" href="#">Voir plus</a>
+        <a class="bggris vert" href="{{ route('galerie') }}">Notre galerie</a>
     </div>
 </section>
 
-<section id="section-produit-accueil" class="bggris margin-bottom">
+<section id="section-produit-accueil" class="bggris">
     <p>Produits vedette</p>
     <p class="vert">Nouvel arrivage/Meilleur vente</p>
     <div id="produits-accueil">
@@ -86,7 +96,7 @@
         </div>
     </div>
     <div class="button-center btn-accueil">
-        <a class="bgvert gris" href="#">Voir plus</a>
+        <a class="bgvert blanc" href="{{ route('magasin') }} ">Nos produits</a>
     </div>
 </section>
 
@@ -130,9 +140,9 @@
 
     </div>
     <div class="button-center btn-accueil">
-        <a class="bggris vert" href="#">Voir plus</a>
+        <a class="bggris vert" href="{{ route('coachs') }}">Nos coachs</a>
     </div>
-</section> 
+</section>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
