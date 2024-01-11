@@ -31,11 +31,16 @@
                 <label for="date">Date</label>
                 <input type="date" name="date_debut" id="date_debut" class="form-control" required>
             </div>
-
+            
             <!-- Heure -->
             <div class="form-group">
                 <label for="heure">Heure</label>
                 <input type="time" name="heure" id="heure" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Date limite d'inscription</label>
+                <input type="date" name="date_limite_inscription" id="date_limite_inscription" class="form-control" required>
             </div>
 
             <!-- Adresse -->
