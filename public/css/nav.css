@@ -36,6 +36,8 @@ header>div div {
     justify-content: space-between;
 }
 
+
+
 #logo-nav img {
     width: 180px;
 }
@@ -49,6 +51,46 @@ nav a {
     text-decoration: none;
     color: #464646;
     margin-left: 45px;
+}
+
+nav a:hover {
+    color: #79ac03;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: 40px;
+}
+
+.dropdown-content a {
+    display: flex;
+    padding: 15px 8px 15px 8px;
+    font-size: 15px;
+    width: 110px;
+    text-decoration: none;
+    color: #333;
+    margin-left: 0;
+    /* Adjust the text color as needed */
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+    color: #fff;
+    /* Adjust the background color on hover as needed */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .user-menu {
