@@ -25,16 +25,10 @@ use App\Http\Controllers\BanniereController;
 |
 */
 
-Route::get('/', function () {
-    return view('accueil');
-});
 
-Route::get('/accueil', function () {
-    return view('accueil');
-});
 
+Route::get('/accueil', [AccueilController::class, 'index'])->name('accueil');
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
-
 
 
 // Authentication Routes
@@ -107,8 +101,8 @@ Route::put('/coach/modifier/{id}', [CoachController::class, 'modifier'])->name('
 
 
 // galerie
-Route::get('/galeries', [GalerieController::class, 'index'])->name('galeries.index');
-Route::get('/galeries/{id}', [GalerieController::class, 'show'])->name('galeries.show');
+Route::get('/galerie', [GalerieController::class, 'index'])->name('galerie');
+Route::get('/galerie/{id}', [GalerieController::class, 'show'])->name('galerie.show');
 Route::post('/galerie', [GalerieController::class, 'store'])->name('galerie.store');
 Route::delete('/galerie/supprimer/{id}', [GalerieController::class, 'supprimer'])->name('galerie.supprimer');
 
