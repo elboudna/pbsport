@@ -105,7 +105,6 @@ h1 {
     margin-top: 100px;
     margin-left: 300px;
     margin-right: 300px;
-    height: 500px;
     display: flex;
     font-family: "Montserrat";
 }
@@ -218,13 +217,11 @@ h1 {
 /*  */
 #section-evenement-accueil {
     margin-top: 100px;
-    height: 600px;
     display: flex;
     font-family: "Montserrat";
     flex-direction: column;
     align-items: center;
-    padding: 50px;
-    padding-bottom: 70px;
+    padding: 50px 50px 70px 50px;
 }
 
 #section-evenement-accueil a {
@@ -232,6 +229,7 @@ h1 {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
+    color: white;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
@@ -249,8 +247,18 @@ h1 {
     /* distance bettwen letters */
     letter-spacing: 3px;
     margin-top: 10px;
+    margin-bottom: 30px;
     text-transform: uppercase;
-    margin: 0;
+}
+
+.evenement-div-accueil{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 2% 0px 2%;
+    border-radius: 20px;
+    width: 45%;
+    height: 300px;
+    color: white;
 }
 
 @media (max-width: 425px) {
@@ -288,11 +296,11 @@ h1 {
 
 
 #section-galerie-accueil {
-    /* margin-top: 100px; */
     margin-left: 300px;
     margin-right: 300px;
-    height: 500px;
     font-family: "Montserrat";
+    padding: 50px 50px 70px 50px;
+
 }
 
 /* first p of galerie */
@@ -310,19 +318,19 @@ h1 {
     letter-spacing: 3px;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 10px;    
     text-transform: uppercase;
 }
 
 /* third p of galerie */
 #section-galerie-accueil p:nth-child(3) {
     font-size: 14px;
-    margin-top: 30px;
     line-height: 2;
     text-align: center;
 }
 
 #galerie-images-accueil {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -407,14 +415,11 @@ h1 {
 
 /*  */
 #section-produit-accueil {
-    margin-top: 200px;
-    height: 600px;
     display: flex;
     font-family: "Montserrat";
     flex-direction: column;
     align-items: center;
-    padding: 50px;
-    padding-bottom: 140px;
+    padding: 50px 50px 70px 50px;
 }
 
 #section-produit-accueil a {
@@ -440,6 +445,7 @@ h1 {
     /* distance bettwen letters */
     letter-spacing: 3px;
     margin-top: 10px;
+    margin-bottom: 30px;
     text-transform: uppercase;
     margin: 0;
 }
@@ -522,12 +528,10 @@ h1 {
 
 
 #section-coach-accueil {
-    /* margin-top: 100px; */
     margin-left: 300px;
     margin-right: 300px;
-    height: 500px;
     font-family: "Montserrat";
-    margin-bottom: 200px;
+    padding: 50px 50px 70px 50px;
 }
 
 /* first p of coach */
@@ -545,14 +549,15 @@ h1 {
     letter-spacing: 3px;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 /* third p of coach */
 #section-coach-accueil>p:nth-child(3) {
     font-size: 14px;
-    margin-top: 30px;
     line-height: 2;
+    margin-bottom: 30px;
     text-align: center;
 }
 
