@@ -71,3 +71,11 @@
 #galerie-admin .image-info img {
     width: 200px;
 }
+
+#btn-sup-ban {
+    text-align: center;
+}
+
+#btn-msg{
+    font-size: 14px;
+}
