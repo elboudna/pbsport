@@ -26,14 +26,6 @@
     width: 100%;
 }
 
-.event{
-    margin-bottom: 20px;
-}
-
-.event a{
-    text-decoration: none;
-    color: #000;
-}
 
 .btn-ensavoirplus{
     display: flex;
