@@ -9,6 +9,11 @@ class GalerieController extends Controller
 {
     public function index()
     {
+        $images = Galerie::all();
+
+        return view('galerie', [
+            'images' => $images
+        ]);
     }
 
     public function store()
