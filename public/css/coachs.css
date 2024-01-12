@@ -6,47 +6,35 @@
     font-family: "Montserrat";
 }
 
-.coach-div{
+#coachs-flex{
     display: flex;
-    border: #f5f5f7 .1px solid;
-    padding: 20px 20px 20px 50px;
-    gap: 20px;
-    border-radius: 50px;
-}
-
-.coach-img{
-    width: 30%;
-    height: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.coach-img img{
+    flex-wrap: wrap;
     width: 100%;
 }
 
-
-.btn-ensavoirplus{
+.coach {
     display: flex;
-    justify-content: flex-end;
-    padding-right: 10px;
+    width: 50%;
+    height: 0;
+    padding-bottom: 25%;   
 }
 
-.btn-ensavoirplus a{
-    background-color: #91cf05; /* Style the first link in each .div-admin */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
+.coach div{
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
+    border: rgb(0, 255, 136) solid .1px;
+    margin: 0;
 }
 
-.coach-flex{
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    width: 70%;
+.coach div:first-child {
+    background-color: grey;
 }
+
+.coach:nth-child(4n+3),
+.coach:nth-child(4n+4) {
+    flex-direction: row-reverse;
+}
+
+
+
