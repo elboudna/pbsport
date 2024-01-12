@@ -32,10 +32,10 @@
 </section>
 
 <section id="section-evenement-accueil" class="bggris">
-    <p>Prochains évènements</p>
+    <p id="titre-event-accueil-resp">Prochain évènement</p>
     <p class="vert">Venez participer!</p>
     <div class="event">
-    @foreach($evenements as $evenement)
+        @foreach($evenements as $evenement)
         <div class="evenement-div-accueil">
             <div class="evenement-img">
                 <img src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
@@ -59,11 +59,11 @@
     <p>Dernières photos</p>
     <p class="vert">Notre belle galerie de photos</p>
     <p>Notre Academie est fier de la réussite de ses membres et veut partager leurs meilleurs moments</p>
-    <div id="galerie-images-accueil">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+    <div id="galerie-images-accueil" class="image-slider">
+        <img src="" alt="Hello">
+        <img src="" alt="You">
+        <img src="" alt="World">
+        <img src="" alt="!">
     </div>
     <div class="btn-accueil button-center">
         <a class="bggris vert" href="{{ route('galerie') }}">Notre galerie</a>
@@ -82,17 +82,17 @@
         <div class="produit-accueil">
             <img src="" alt="">
             <p class="nom-produit-accueil">Nom produit</p>
-            <p class="prix-produit-accueil vert">90$</p>
+            <p class="prix-produit-accueil vert">100$</p>
         </div>
         <div class="produit-accueil">
             <img src="" alt="">
             <p class="nom-produit-accueil">Nom produit</p>
-            <p class="prix-produit-accueil vert">90$</p>
+            <p class="prix-produit-accueil vert">200$</p>
         </div>
         <div class="produit-accueil">
             <img src="" alt="">
             <p class="nom-produit-accueil">Nom produit</p>
-            <p class="prix-produit-accueil vert">90$</p>
+            <p class="prix-produit-accueil vert">30$</p>
         </div>
     </div>
     <div class="button-center btn-accueil">
@@ -165,6 +165,54 @@
             showSlide(currentSlide);
             setInterval(nextSlide, 4000);
         }, 0); // Adjust the delay as needed
+
+
+        function initializeSlider(slides, containerId) {
+            const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+            if (screenWidth <= 425) {
+                let currentSlide = 0;
+                const dotsContainer = document.createElement('div');
+                dotsContainer.classList.add('slider-dots');
+                document.getElementById(containerId).insertAdjacentElement('afterend', dotsContainer);
+
+                // Create dots based on the number of slides
+                slides.forEach((slide, index) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('slider-dot');
+                    dot.addEventListener('click', () => showSlide(index));
+                    dotsContainer.appendChild(dot);
+                });
+
+                // Show the initial dot as active
+                dotsContainer.children[currentSlide].classList.add('active');
+
+                function showSlide(index) {
+                    slides.forEach((slide) => (slide.style.display = 'none'));
+                    dotsContainer.children[currentSlide].classList.remove('active');
+
+                    currentSlide = index;
+
+                    slides[currentSlide].style.display = 'block';
+                    dotsContainer.children[currentSlide].classList.add('active');
+                }
+
+                // Auto-advance slides every 3 seconds
+                setInterval(() => {
+                    const nextSlide = (currentSlide + 1) % slides.length;
+                    showSlide(nextSlide);
+                }, 3000);
+            }
+        }
+
+        // Usage
+        const galerieSlides = document.querySelectorAll('.image-slider img');
+        initializeSlider(galerieSlides, 'galerie-images-accueil');
+
+        const produitSlides = document.querySelectorAll('.produit-accueil');
+        initializeSlider(produitSlides, 'produits-accueil');
+
+
     });
 </script>
 @endsection
