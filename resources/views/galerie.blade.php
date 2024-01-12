@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section id="section-coachs">
+<section id="section-galerie">
 
     <h2>Notre galerie</h2>
     
