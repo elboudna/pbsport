@@ -5,10 +5,73 @@
 <section id="section-coachs">
 
     <h2>Nos Coachs</h2>
-    
-    <div class="coach">
-              
+
+    <div id="coachs-flex">
+        <div class="coach">
+            <div>
+                <img src="img/coach1.jpg" alt="coach1">
+            </div>
+            <div>
+                <h3>Coach 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </div>
+        <div class="coach">
+            <div>
+                <img src="img/coach1.jpg" alt="coach1">
+            </div>
+            <div>
+                <h3>Coach 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </div>
+        <div class="coach">
+            <div>
+                <img src="img/coach1.jpg" alt="coach1">
+            </div>
+            <div>
+                <h3>Coach 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </div>
+        <div class="coach">
+            <div>
+                <img src="img/coach1.jpg" alt="coach1">
+            </div>
+            <div>
+                <h3>Coach 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </div>
+        <div class="coach">
+            <div>
+                <img src="img/coach1.jpg" alt="coach1">
+            </div>
+            <div>
+                <h3>Coach 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </div>
+        <div class="coach">
+            <div>
+                <img src="img/coach1.jpg" alt="coach1">
+            </div>
+            <div>
+                <h3>Coach 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </div>
+        <div class="coach">
+            <div>
+                <img src="img/coach1.jpg" alt="coach1">
+            </div>
+            <div>
+                <h3>Coach 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </div>
     </div>
-    
+
+
 </section>
 @endsection
