@@ -1,4 +1,4 @@
-.btn-accueil{
+.btn-accueil {
     margin-top: 80px;
 }
 
@@ -57,9 +57,10 @@ h1 {
 .slide .text p {
     color: #fff;
     text-align: center;
+    text-shadow: 3px 3px 5px black;
     font-size: 24px;
     font-weight: bold;
-    max-width: 10ch;
+    max-width: 50ch;
     /* Maximum 10 characters per line */
     word-wrap: break-word;
     /* Wrap the text to the next line */
@@ -88,15 +89,25 @@ h1 {
         margin-top: 20px;
     }
 
+    .slide .text {
+        width: 40%;
+        /* top: 50%; */
+        /* Aligns text vertically center */
+        left: 10%;
+        /* transform: translateY(-50%); */
+    }
+
     .slide .text p {
-        font-size: 14px;
+        font-size: 12px;
+        /* text shadow so it can be visible on light pictures */
         /* Further reduce font size for smaller screens if needed */
         max-width: 90%;
         /* Adjust maximum width */
     }
 
     .slide a {
-        padding: 6px 15px;
+        font-size: 12px;
+        padding: 5px 10px;
         /* Adjust padding */
     }
 }
@@ -183,11 +194,15 @@ h1 {
 
     #bienvenue-droite p:first-child {
         font-size: 30px;
+        padding-bottom: 0;
         /* Adjust font size for smaller screens */
     }
 
     #bienvenue-droite p:nth-child(2) {
         font-size: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
         /* Adjust font size for smaller screens */
     }
 
@@ -195,6 +210,12 @@ h1 {
         font-size: 12px;
         /* Adjust font size for smaller screens */
         margin: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    #bienvenue-droite .button-center {
+        margin: 5px 0 10px 0;
     }
 
     #bienvenue-droite a {
@@ -224,7 +245,7 @@ h1 {
     padding: 50px 50px 70px 50px;
 }
 
-#section-evenement-accueil a {
+#section-evenement-accueil .btn-accueil a {
     text-decoration: none;
     display: inline-block;
     padding: 10px 20px;
@@ -251,7 +272,7 @@ h1 {
     text-transform: uppercase;
 }
 
-.evenement-div-accueil{
+.evenement-div-accueil {
     display: flex;
     flex-direction: column;
     padding: 20px 2% 0px 2%;
@@ -261,39 +282,65 @@ h1 {
     color: white;
 }
 
+.btn-ensavoirplus-event {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-ensavoirplus-event a {
+    background-color: #91cf05;
+    /* Style the first link in each .div-admin */
+    /*  important color:white */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
 @media (max-width: 425px) {
+
     #section-evenement-accueil {
         margin-top: 10px;
-        /* Adjust margin for smaller screens */
         margin-bottom: 10px;
         height: auto;
-        /* Allow height to adjust based on content */
         padding: 20px;
-        /* Adjust padding for smaller screens */
         padding-bottom: 30px;
-        /* Adjust bottom padding for smaller screens */
     }
 
     #section-evenement-accueil>p:first-child {
         font-size: 30px;
-        /* Adjust font size for smaller screens */
     }
 
     #section-evenement-accueil>p:nth-child(2) {
         font-size: 10px;
-        /* Adjust font size for smaller screens */
         letter-spacing: 2px;
-        /* Adjust letter spacing for smaller screens */
         margin-top: 5px;
-        /* Adjust margin for smaller screens */
     }
 
-    #section-evenement-accueil a {
-        padding: 8px 15px;
-        /* Adjust padding for smaller screens */
+    .evenement-div-accueil {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .btn-ensavoirplus-event {
+        margin-top: 10px;
+        justify-content: flex-start;
+    }
+
+    .btn-ensavoirplus-event a {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .evenement-div-accueil:nth-of-type(2) {
+        display: none;
     }
 }
-
 
 #section-galerie-accueil {
     margin-left: 300px;
@@ -318,7 +365,7 @@ h1 {
     letter-spacing: 3px;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
@@ -380,7 +427,7 @@ h1 {
     #section-galerie-accueil p:nth-child(3) {
         font-size: 12px;
         /* Adjust font size for smaller screens */
-        margin-top: 20px;
+        margin-top: 10px;
         /* Adjust margin for smaller screens */
         line-height: 1.5;
     }
@@ -388,8 +435,8 @@ h1 {
     #galerie-images-accueil {
         align-items: center;
         margin-top: 30px;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        /* flex-wrap: wrap;*/
+        justify-content: center;
     }
 
     .btn-accueil {
@@ -409,6 +456,39 @@ h1 {
     #section-galerie-accueil a {
         padding: 8px 15px;
         /* Adjust padding for smaller screens */
+    }
+
+    .image-slider {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-slider img {
+        width: 100%;
+        display: none;
+    }
+
+    .image-slider img:first-child {
+        display: block;
+    }
+
+    .slider-dots {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .slider-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .slider-dot.active {
+        background-color: #333;
     }
 
 }
@@ -483,46 +563,77 @@ h1 {
 
 @media (max-width: 425px) {
     #section-produit-accueil {
-        margin-top: 10px; /* Adjust margin for smaller screens */
-        margin-bottom: 10px;;
-        height: auto; /* Allow height to adjust based on content */
-        padding: 20px; /* Adjust padding for smaller screens */
+        margin-top: 10px;
+        /* Adjust margin for smaller screens */
+        margin-bottom: 10px;
+        ;
+        height: auto;
+        /* Allow height to adjust based on content */
+        padding: 20px;
+        /* Adjust padding for smaller screens */
     }
 
-    #section-produit-accueil > p:first-child {
-        font-size: 30px; /* Adjust font size for smaller screens */
+    #section-produit-accueil>p:first-child {
+        font-size: 30px;
+        /* Adjust font size for smaller screens */
     }
 
-    #section-produit-accueil > p:nth-child(2) {
-        font-size: 10px; /* Adjust font size for smaller screens */
-        letter-spacing: 2px; /* Adjust letter spacing for smaller screens */
-        margin-top: 5px; /* Adjust margin for smaller screens */
+    #section-produit-accueil>p:nth-child(2) {
+        font-size: 10px;
+        /* Adjust font size for smaller screens */
+        letter-spacing: 2px;
+        /* Adjust letter spacing for smaller screens */
+        margin-top: 5px;
+        /* Adjust margin for smaller screens */
     }
 
     #produits-accueil {
-        margin-left: 10px; /* Adjust margin for smaller screens */
-        margin-right: 10px; /* Adjust margin for smaller screens */
+        margin-left: 10px;
+        /* Adjust margin for smaller screens */
+        margin-right: 10px;
+        /* Adjust margin for smaller screens */
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
+        flex-direction: column;
         gap: 5px;
-        height: auto; /* Allow height to adjust based on content */
+        height: auto;
+        /* Allow height to adjust based on content */
+        margin-top: 30px;
+        margin-bottom: 20px;
+
     }
 
     .produit-accueil {
-        padding: 20px; /* Adjust padding for smaller screens */
-        border-left: none; /* Remove left border on smaller screens */
-        border-bottom: solid #c0c0c0 .1px; /* Add bottom border for separation */
+        display: none;
+    }
+
+    .produit-accueil:first-child {
+        display: block;
+    }
+
+
+    .produit-accueil {
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+        border-left: none;
+        /* Remove left border on smaller screens */
+        border-bottom: solid #c0c0c0 .1px;
+        /* Add bottom border for separation */
     }
 
     .produit-accueil img {
-        width: 100%; /* Occupy full width on smaller screens */
-        height: auto; /* Allow the image to adjust its height based on width */
-        margin-bottom: 10px; /* Adjust margin between images for smaller screens */
+        width: 100%;
+        /* Occupy full width on smaller screens */
+        height: auto;
+        /* Allow the image to adjust its height based on width */
+        margin-bottom: 10px;
+        /* Adjust margin between images for smaller screens */
     }
 
     .nom-produit-accueil,
     .prix-produit-accueil {
-        text-align: center; /* Center text on smaller screens */
+        text-align: center;
+        /* Center text on smaller screens */
     }
 }
 
@@ -654,19 +765,19 @@ h1 {
         margin-bottom: 20px;
     }
 
-    #section-coach-accueil > p:first-child {
+    #section-coach-accueil>p:first-child {
         font-size: 30px;
     }
 
-    #section-coach-accueil > p:nth-child(2) {
-        font-size: 12px;
+    #section-coach-accueil>p:nth-child(2) {
+        font-size: 10px;
         letter-spacing: 2px;
         margin-top: 5px;
     }
 
-    #section-coach-accueil > p:nth-child(3) {
-        font-size: 14px;
-        margin-top: 20px;
+    #section-coach-accueil>p:nth-child(3) {
+        font-size: 12px;
+        margin-top: 10px;
     }
 
     #coachs-accueil {
@@ -703,5 +814,9 @@ h1 {
     .titre-coach-accueil,
     .description-coach-accueil {
         text-align: center;
+    }
+
+    .coach-accueil:nth-of-type(2) {
+        display: none;
     }
 }
