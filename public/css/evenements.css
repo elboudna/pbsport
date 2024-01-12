@@ -136,22 +136,6 @@
     text-decoration: none;
 }
 
-.btn-ensavoirplus-event{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.btn-ensavoirplus-event a{
-    background-color: #91cf05; /* Style the first link in each .div-admin */
-    /*  important color:white */
-    color: white; 
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-}
 
 .evenement-flex{
     
