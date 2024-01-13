@@ -152,13 +152,33 @@ nav a:hover {
         margin-right: 70px;
     }
 
+    .dropdown-content a {
+        padding-left: 5px;
+        padding-right: 0;
+        /* width: auto; */
+    }
 
 }
 
 /* 940px */
 
 @media (max-width: 940px) {
-    #navigation a {
+    
+    .dropdown-content {
+        margin-left: 15px;
+    }
+    
+    .dropdown-content a {
+        padding-left: 5px;
+        padding-right: 0;
+        width: auto;
+    }
+    
+    #navigation nav > a {
+        margin-left: 20px;
+    }
+
+    nav a {
         margin-left: 20px;
     }
 }
