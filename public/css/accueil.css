@@ -173,6 +173,13 @@ h1 {
     transition: background-color 0.3s;
 }
 
+@media (max-width: 1440px) {
+    #section-bienvenue {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
 @media (max-width: 480px) {
     #section-bienvenue {
         margin: 20px 10px 20px 10px;
@@ -396,6 +403,13 @@ h1 {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
+}
+
+@media (max-width: 1440px) {
+    #section-galerie-accueil {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -754,6 +768,14 @@ h1 {
     font-size: 14px;
     line-height: 2;
     text-align: center;
+}
+
+/* 1440px */
+@media (max-width: 1440px) {
+    #section-coach-accueil {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 }
 
 @media (max-width: 480px) {
