@@ -36,12 +36,9 @@ header>div div {
     justify-content: space-between;
 }
 
-
-
 #logo-nav img {
     width: 180px;
 }
-
 
 nav {
     font-family: "Montserrat";
@@ -149,9 +146,20 @@ nav a:hover {
         margin-right: 0;
     }
 
-    #navigation {
-        margin-left: 0;
-        margin-right: 0;
+    #navigation,
+    #desktop-nav {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+
+}
+
+/* 940px */
+
+@media (max-width: 940px) {
+    #navigation a {
+        margin-left: 20px;
     }
 }
 
@@ -166,16 +174,22 @@ nav a:hover {
         margin-right: 0;
     }
 
-    #navigation {
-        margin-left: 0;
-        margin-right: 0;
+    #navigation,
+    #desktop-nav {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #navigation a {
+        font-size: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    #navigation{
+    #navigation {
         display: none;
     }
+
     #desktop-nav {
         display: none;
     }
@@ -227,17 +241,17 @@ nav a:hover {
         /* margin-right: 500px; */
     }
 
-    .user-menu a{
+    .user-menu a {
         color: #ccc;
         text-decoration: none;
     }
 
-    .user-menu div{
+    .user-menu div {
         display: flex;
         flex-direction: column;
     }
 
-    #nav-mobile{
+    #nav-mobile {
         margin-top: 30px;
         padding-top: 20px;
         border-top: #ccc solid 1px;
@@ -248,23 +262,24 @@ nav a:hover {
         margin-left: 0;
     }
 
-    #nav-mobile nav{
+    #nav-mobile nav {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    #nav-mobile a{
+    #nav-mobile a {
         color: #ccc;
     }
 
-    .compte-mobile-head{
+    .compte-mobile-head {
         font-size: 20px;
         color: White;
         /* bold */
         font-weight: 700;
         margin-bottom: 20px;
     }
+
     #logo-nav-mobile {
         display: flex;
         justify-content: center;
