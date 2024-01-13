@@ -82,7 +82,7 @@ h1 {
     opacity: 1;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     #section-banniere-accueil {
         height: 200px;
         /* Adjust the height for smaller screens */
@@ -173,7 +173,7 @@ h1 {
     transition: background-color 0.3s;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     #section-bienvenue {
         margin: 20px 10px 20px 10px;
         flex-direction: column-reverse;
@@ -300,7 +300,7 @@ h1 {
     transition: background-color 0.3s;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
 
     #section-evenement-accueil {
         margin-top: 10px;
@@ -398,7 +398,7 @@ h1 {
     transition: background-color 0.3s;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     #section-galerie-accueil {
         margin-left: 10px;
         /* Adjust margin for smaller screens */
@@ -561,7 +561,7 @@ h1 {
     font-weight: 500;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     #section-produit-accueil {
         margin-top: 10px;
         /* Adjust margin for smaller screens */
@@ -756,7 +756,7 @@ h1 {
     text-align: center;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     #section-coach-accueil {
         margin-left: 10px;
         margin-right: 10px;

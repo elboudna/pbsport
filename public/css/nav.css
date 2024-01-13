@@ -172,7 +172,7 @@ nav a:hover {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     #navigation{
         display: none;
     }
