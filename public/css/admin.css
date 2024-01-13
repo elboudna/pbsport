@@ -49,6 +49,105 @@
     color: white;
 }
 
+/* 1024px */
+
+@media (max-width: 1024px) {
+    #section-admin {
+        margin-left: 5px; /* Further reduce the left margin for smaller screens */
+        margin-right: 5px; /* Further reduce the right margin for smaller screens */
+        margin-top: 50px;
+    }
+
+    .flex-divs-admin{
+        justify-content: center;
+    }
+
+    .div-admin {
+        padding: 0px 5px 15px 5px; /* Adjust padding for smaller screens */
+        width: 45%;
+        
+    }
+
+    .div-admin h3 {
+        margin-bottom: 20px; /* Further reduce the margin for smaller screens */
+        text-align: center;
+    }
+
+    .div-admin a {
+        padding: 8px 14px;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+        margin: 0px 0px 10px 10px;
+    }
+}
+
+/* 768px */
+
+@media (max-width: 768px) {
+    #section-admin {
+        margin-left: 5px; /* Further reduce the left margin for smaller screens */
+        margin-right: 5px; /* Further reduce the right margin for smaller screens */        
+    }
+
+    .flex-divs-admin{
+        justify-content: center;
+    }
+
+    .div-admin {
+        padding: 0px 5px 15px 5px; /* Adjust padding for smaller screens */
+        margin-right: 0; /* Remove right margin for smaller screens */
+        width: 80%;
+    }
+
+    .div-admin h3 {
+        margin-bottom: 20px; /* Further reduce the margin for smaller screens */
+        text-align: center;
+    }
+
+    .div-admin a {
+        padding: 10px 16px;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+    }
+}
+
+/* 480px */
+
+@media (max-width: 480px) {
+    #section-admin {
+        margin-left: 5px; /* Further reduce the left margin for smaller screens */
+        margin-right: 5px; /* Further reduce the right margin for smaller screens */
+    }
+
+    .div-admin {
+        padding: 0px 5px 15px 5px; /* Adjust padding for smaller screens */
+        margin-right: 0; /* Remove right margin for smaller screens */
+        width: 100%;
+    }
+
+    .div-admin h3 {
+        margin-bottom: 20px; /* Further reduce the margin for smaller screens */
+        text-align: center;
+    }
+
+    .div-admin a {
+        padding: 8px 14px;
+        font-size: 12px;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+        /* margin: 0px 0px 10px 10px; */
+
+    }
+}
+
 /* Add any additional styling as needed */
 
 .image-ban img {
@@ -79,3 +178,4 @@
 #btn-msg{
     font-size: 14px;
 }
+
