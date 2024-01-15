@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="bande">
+    <h2>Page d'administration</h2>
+</div>
+
 <div id="section-admin">
-    <h1>Page d'administration</h1>
 
     <div class="flex-divs-admin">
 
