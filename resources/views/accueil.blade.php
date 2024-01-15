@@ -37,7 +37,7 @@
     <div class="event">
         @foreach($evenements as $evenement)
         <div class="evenement-div-accueil">
-            <div class="evenement-img">
+            <div class="evenement-img-accueil">
                 <img src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
             </div>
             <div class="evenement-flex">
@@ -105,38 +105,29 @@
     <p class="vert">Notre équipe</p>
     <p>Notre académie est honoré de travailler avec les meilleurs joueurs de pickelball de la région du grand Montréal, qui peuvent maintenant devenir votre coach personnel et vous aider à progresser</p>
     <div id="coachs-accueil">
+        @foreach($coachs as $coach)
         <div class="coach-accueil">
             <div class="image-contact-coach-accueil">
                 <div class="image-coach-accueil">
-                    <img src="" alt="">
+                    <img src="{{ asset('storage/coach_images/' . $coach->photo) }}" alt="{{ $coach->nom }}">
                 </div>
                 <div class="contact-coach-accueil">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <a href="mailto:{{ $coach->email }}">
+                        <img src="{{ asset('icone/mail.png') }}" alt="">
+                    </a>
+                    
+                    <a target="_blank" href="{{ $coach->facebook }}">
+                        <img src="{{ asset('icone/fb.png') }}" alt="">
+                    </a>
                 </div>
             </div>
             <div class="info-coach-accueil">
-                <p class="nom-coach-accueil">Auristella</p>
+                <p class="nom-coach-accueil">{{ $coach->prenom }}</p>
                 <p class="titre-coach-accueil">Coach</p>
-                <p class="description-coach-accueil">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt incidunt cum, similique vitae odio velit ea totam.</p>
+                <p class="description-coach-accueil">{{ $coach->description }}</p>
             </div>
         </div>
-        <div class="coach-accueil">
-            <div class="image-contact-coach-accueil">
-                <div class="image-coach-accueil">
-                    <img src="" alt="">
-                </div>
-                <div class="contact-coach-accueil">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="info-coach-accueil">
-                <p class="nom-coach-accueil">Mehdi</p>
-                <p class="titre-coach-accueil">Coach</p>
-                <p class="description-coach-accueil">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt incidunt cum, similique vitae odio velit ea totam.</p>
-            </div>
-        </div>
+        @endforeach
 
     </div>
     <div class="button-center btn-accueil">
@@ -170,7 +161,7 @@
         function initializeSlider(slides, containerId) {
             const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-            if (screenWidth <= 425) {
+            if (screenWidth <= 480) {
                 let currentSlide = 0;
                 const dotsContainer = document.createElement('div');
                 dotsContainer.classList.add('slider-dots');
