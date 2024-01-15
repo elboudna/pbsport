@@ -67,7 +67,7 @@ h1 {
 }
 
 .slide a {
-    background-color: #91cf05;
+    background-color: #10a87d;
     color: white;
     border: none;
     padding: 10px 30px;
@@ -295,7 +295,7 @@ h1 {
 }
 
 .btn-ensavoirplus-event a {
-    background-color: #91cf05;
+    background-color: #10a87d;
     /* Style the first link in each .div-admin */
     /*  important color:white */
     color: white;
@@ -409,6 +409,14 @@ h1 {
     #section-galerie-accueil {
         margin-left: 100px;
         margin-right: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #section-galerie-accueil {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 50px 0px;
     }
 }
 
@@ -775,6 +783,15 @@ h1 {
     #section-coach-accueil {
         margin-left: 100px;
         margin-right: 100px;
+    }
+}
+
+/* 1024 */
+@media (max-width: 1024px) {
+    #section-coach-accueil {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 50px 0px;
     }
 }
 
