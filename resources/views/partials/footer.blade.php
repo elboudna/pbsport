@@ -1,7 +1,7 @@
 <footer class="bggris">
     <section id="footer">
         <div id="logo-footer">
-            <img src="/image/pbs.jpg" alt="logo">
+            <img src="/image/pbsportlogoNoir.png" alt="logo">
             <div id="RS-footer">
                 <img src="" alt="">
                 <img src="" alt="">
