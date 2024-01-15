@@ -11,7 +11,8 @@ class CoachController extends Controller
     // Méthode qui renvoie la vue de la page des coachs
     public function index()
     {
-        return view('coachs');
+        $coachs = Coach::all();
+        return view('coachs', compact('coachs'));
     }
 
     public function store(Request $request)
