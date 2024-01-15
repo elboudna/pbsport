@@ -35,7 +35,7 @@
 
 
             <a href="{{ route('panier') }}">
-                <img src="/icone/panier.png" alt="panier">
+                <img src="/icone/panierblanc.png" alt="panier">
             </a>
         </div>
     </div>
@@ -68,10 +68,11 @@
                             <a href="/">Accueil</a>
                             <a href="{{ route('evenements') }}">Evenements</a>
                             <a href="{{ route('magasin') }}">Produits</a>
-                            <a href="{{ route('coachs') }}">Coachs</a>
                             <a href="#">Académie</a>
+                            <a href="{{ route('coachs') }}">Coachs</a>
+                            <a href="">Equipe</a>
+                            <a href="{{ route('partenaires') }}">Partenaires</a>
                             <a href="{{ route('galerie') }}">Galerie</a>
-                            <a href="#">Partenaires</a>
                             <a href="#">Blog</a>
                             <a href="#">Contact</a>
                         </nav>
@@ -97,7 +98,7 @@
 <section id="navigation">
     <div id="logo-nav">
         <a href="/">
-            <img src="/image/pbs.jpg" alt="logo">
+            <img src="/image/pbsportlogo.png" alt="logo">
         </a>
     </div>
 
@@ -109,8 +110,9 @@
             <a href="#">Académie</a>
             <div class="dropdown-content">
                 <a href="{{ route('coachs') }}">Coachs</a>
+                <a href="">Equipe</a>
+                <a href="{{ route('partenaires') }}">Partenaires</a>
                 <a href="{{ route('galerie') }}">Galerie</a>
-                <a href="#">Partenaires</a>
                 <a href="#">Blog</a>
             </div>
         </div>
