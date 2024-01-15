@@ -4,8 +4,11 @@
 
 @section('content')
 
-<section class="margin-bottom margin-top" id="panier">
+<div class="bande">
     <h2>Panier</h2>
+</div>
+
+<section class="margin-bottom margin-top" id="panier">
 
     <section>
         @if($panierProduits)
