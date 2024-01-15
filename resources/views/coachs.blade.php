@@ -26,6 +26,7 @@
                         <h3>{{ $coach->prenom }}</h3>
                     </div>
                     @endif
+                    <div class="nom-cache">{{ $coach->nom}}</div>
                     <div class="description-coach">
                         <p>{{ $coach->description }}</p>
                     </div>
@@ -43,14 +44,22 @@
 
     <div class="modal-container" id="myModal">
         <span class="close-btn">&times;</span>
-        <div class="modal-img">
-            <img src="" alt="">
+        <div class="modal-top">
+            <div class="modal-nom">
+                <h2></h2>
+            </div>
+            <div class="modal-img">
+                <img src="" alt="">
+            </div>
         </div>
-        <h2></h2>
-        <p></p>
-        <div class="contact-coach">
-            <a href=""><img src="{{ asset('icone/mail.png') }}" alt="mail"></a>
-            <a href=""><img src="{{ asset('icone/fb.png') }}" alt="fb"></a>
+        <div class="modal-bottom">
+            <div class="modal-description">
+                <p></p>
+            </div>
+            <div class="contact-coach">
+                <a href=""><img src="{{ asset('icone/mail.png') }}" alt="mail"></a>
+                <a href=""><img src="{{ asset('icone/fb.png') }}" alt="fb"></a>
+            </div>
         </div>
     </div>
 
@@ -80,6 +89,7 @@
         let fbCoach = document.querySelectorAll('.fbCoach');
         let imgCoach = document.querySelectorAll('.photo-coach img');
         let nomCoach = document.querySelectorAll('.info-coach h3');
+        let nomCacheCoach = document.querySelectorAll('.nom-cache');
         
         // Get the modal container
         let fleche = document.querySelectorAll('.fleche-coach');
@@ -108,18 +118,24 @@
 
         for (let i = 0; i < fleche.length; i++) {
             fleche[i].addEventListener('click', function() {
-                modal.style.display = 'block';
+                modal.style.display = 'flex';
+
+                //disallow scrolling
+                document.body.style.overflow = 'hidden';
+
                 modalDescription.textContent = fullDescriptions[i];
                 mailCoachModal.href = 'mailto:' + mailCoach[i].href;
                 fbCoachModal.href = fbCoach[i].href;
                 imgModal.src = imgCoach[i].src;
                 imgModal.alt = imgCoach[i].alt;
-                nomCoachModal.textContent = nomCoach[i].textContent;
+                nomCoachModal.textContent = nomCoach[i].textContent + ' ' + nomCacheCoach[i].textContent;
             });
         }
 
         close.addEventListener('click', function() {
             modal.style.display = 'none';
+            //allow scrolling
+            document.body.style.overflow = 'auto';
         });
 
         let coachElements = document.querySelectorAll('.coach:nth-child(4n+2) .fleche-coach img, .coach:nth-child(4n+3) .fleche-coach img');
