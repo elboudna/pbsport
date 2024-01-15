@@ -1,12 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="bande">
+    <h2>Erreur 404!</h2>
+</div>
 <section>
 
-    <h1>404 Not Found</h1>
-    <p>Sorry, the page you are looking for could not be found.</p>
-    <!-- Add any additional content or styling as needed -->
+    <p>La page que vous cherchez n'existe pas.</p>
+    <!-- retour à la page d'accueil -->
+    <a href="{{ route('accueil') }}">Retour à la page d'accueil</a>
+
 </section>
 
 
