@@ -1,0 +1,24 @@
+#section-partenaires {
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: "Montserrat";
+}
+
+#section-partenaires > div {
+    margin-bottom: 100px;
+}
+
+#partenaire-majeur {
+    text-align: center;
+}
+
+#partenaire-majeur h2{ 
+    font-size: 40px;
+    font-weight: bolder;
+    /* text-transform: uppercase; */
+}
+
+#partenaires {
+    text-align: center;
+}
