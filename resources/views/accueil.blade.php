@@ -18,7 +18,7 @@
 
 <section id="section-bienvenue">
     <div id="bienvenue-gauche">
-        <img src="" alt="">
+        <img src="{{ asset('image/accueil.png') }}" alt="Bienvenue">
     </div>
     <div id="bienvenue-droite" class="bggris">
         <p>Bienvenue</p>
