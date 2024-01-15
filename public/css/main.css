@@ -41,7 +41,7 @@ body{
 
 .button-submit{
     margin-top: 20px;
-    background-color: #91cf05;
+    background-color: #10a87d;
     color: #fff;
     cursor: pointer;
     padding: 10px;
@@ -52,7 +52,7 @@ body{
 }
 
 .button-submit:hover{
-    background-color: #7ab304;
+    background-color: #10a87d;
 }
 
 .margin-top{
@@ -64,7 +64,7 @@ body{
 }
 
 .btnpbsport{
-    background-color: #91cf05; /* Style the first link in each .div-admin */
+    background-color: #10a87d; /* Style the first link in each .div-admin */
     color: white;
     border: none;
     padding: 10px 20px;
