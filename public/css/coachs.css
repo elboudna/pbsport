@@ -115,7 +115,6 @@
     justify-content: center;
     padding: 0px 12px;
     font-size: 14px;
-    /* text-align: justify; */
 }
 
 .fleche-coach {
@@ -175,10 +174,6 @@
     }
 }
 
-/* background-color: #464646;
-background-color: #10a87d; */
-
-
 
 .modal-container {
     display: none;
@@ -187,7 +182,6 @@ background-color: #10a87d; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background-color: #464646e3; */
     padding: 20px;
     border-radius: 10px;
     color: #fff;
@@ -201,7 +195,7 @@ background-color: #10a87d; */
     width: 35%;
     display: flex;
     justify-content: center;
-    background-color: #eeeeee;
+    background-color: #464646;
     position: relative;
     left: 20%;
     top: 30%;
@@ -239,18 +233,20 @@ background-color: #10a87d; */
 .modal-top {
     padding-left: 420px;
     padding-right: 420px;
-    background-color: #464646;
+    background-color: #10a87d;
     height: 35%;
     color: white;
     display: flex;
+    border-bottom: #464646 1px solid;
 }
 
 .modal-bottom {
+    border-top: #464646 1px solid;
     padding-left: 420px;
     padding-right: 420px;
-    background-color: #eeeeee;
     height: 65%;
-    color: #464646;
+    background-color: #464646;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
