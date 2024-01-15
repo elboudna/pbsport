@@ -84,7 +84,7 @@
         <div id="burger-icon">&#9776;</div>
         <div id="logo-nav-mobile">
             <a href="/">
-                <img src="/image/pbs.jpg" alt="logo">
+                <img src="/image/pbsportlogoVert.png" alt="logo">
             </a>
         </div>
         <div class="panier-icone">
