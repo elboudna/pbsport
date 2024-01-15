@@ -746,12 +746,12 @@ h1 {
 }
 
 .contact-coach-accueil img:first-of-type {
-    background-color: rgb(184, 0, 0);
+    background-color: #0f9b73;
     width: 50%;
 }
 
 .contact-coach-accueil img:last-of-type {
-    background-color: rgb(0, 0, 196);
+    background-color: #1a76d2;
     width: 50%;
 }
 
