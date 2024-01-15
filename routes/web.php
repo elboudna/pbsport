@@ -112,3 +112,8 @@ Route::get('/abonnements', [AbonnementController::class, 'index'])->name('abonne
 //banniere
 Route::post('/banniere', [BanniereController::class, 'store'])->name('banniere.store');
 Route::delete('/banniere/supprimer/{id}', [BanniereController::class, 'supprimer'])->name('banniere.supprimer');
+
+//partenaires without controller
+Route::get('/partenaires', function () {
+    return view('partenaires');
+})->name('partenaires');
