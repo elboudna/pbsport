@@ -86,7 +86,7 @@ h1 {
     #section-banniere-accueil {
         height: 200px;
         /* Adjust the height for smaller screens */
-        margin-top: 20px;
+        /* margin-top: 20px; */
     }
 
     .slide .text {
@@ -182,7 +182,8 @@ h1 {
 
 @media (max-width: 480px) {
     #section-bienvenue {
-        margin: 20px 10px 20px 10px;
+        /* margin: 20px 10px 20px 10px; */
+        margin: 0px;
         flex-direction: column-reverse;
         height: auto;
     }
@@ -232,6 +233,7 @@ h1 {
 
     #bienvenue-gauche {
         width: 100%;
+        margin-bottom: -5px;
         /* Adjust width for smaller screens */
     }
 
@@ -296,8 +298,6 @@ h1 {
 
 .btn-ensavoirplus-event a {
     background-color: #10a87d;
-    /* Style the first link in each .div-admin */
-    /*  important color:white */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -307,14 +307,30 @@ h1 {
     transition: background-color 0.3s;
 }
 
+.evenement-img-accueil img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
 @media (max-width: 480px) {
 
+
+    .evenement-img-accueil img{
+        width: 100%;
+        height: 115px;
+    }
+
     #section-evenement-accueil {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
         height: auto;
         padding: 20px;
         padding-bottom: 30px;
+    }
+
+    #section-evenement-accueil .btn-accueil a {
+        padding: 8px 15px;
     }
 
     #section-evenement-accueil>p:first-child {
@@ -348,6 +364,57 @@ h1 {
         display: none;
     }
 }
+
+@media (max-width: 325px) {
+    #section-evenement-accueil {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        height: auto;
+        padding: 20px;
+        /* padding-bottom: 20px; */
+
+    }
+
+    #section-evenement-accueil .btn-accueil a {
+        padding: 8px 15px;
+    }
+
+    #section-evenement-accueil>p:first-child {
+        font-size: 24px;
+    }
+
+    #section-evenement-accueil>p:nth-child(2) {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-top: 5px;
+    }
+
+    .evenement-img-accueil img{
+        width: 100%;
+    }
+
+    .evenement-div-accueil {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .btn-ensavoirplus-event {
+        margin-top: 10px;
+        justify-content: flex-start;
+    }
+
+    .btn-ensavoirplus-event a {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .evenement-div-accueil:nth-of-type(2) {
+        display: none;
+    }
+}
+
 
 #section-galerie-accueil {
     margin-left: 300px;
@@ -515,6 +582,85 @@ h1 {
 
 }
 
+/* 325px */
+@media (max-width: 325px) {
+    #section-galerie-accueil {
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    #section-galerie-accueil p:first-child {
+        font-size: 24px;
+    }
+
+    #section-galerie-accueil p:nth-child(3) {
+        padding: 0 10px;
+        text-align: justify;
+    }
+
+    #galerie-images-accueil {
+        align-items: center;
+        margin-top: 30px;
+        /* flex-wrap: wrap;*/
+        justify-content: center;
+    }
+
+    .btn-accueil {
+        margin-top: 10px;
+    }
+
+    #section-galerie-accueil img {
+        width: 55%;
+        /* Adjust image width for smaller screens */
+        height: 165px;
+        /* Allow the image to adjust its height based on width */
+        margin-bottom: 20px;
+        /* Adjust margin between images for smaller screens */
+        border: blue solid .1px;
+    }
+
+    #section-galerie-accueil a {
+        padding: 8px 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .image-slider {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-slider img {
+        width: 100%;
+        display: none;
+    }
+
+    .image-slider img:first-child {
+        display: block;
+    }
+
+    .slider-dots {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .slider-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .slider-dot.active {
+        background-color: #333;
+    }
+}
+
 /*  */
 #section-produit-accueil {
     display: flex;
@@ -585,10 +731,7 @@ h1 {
 
 @media (max-width: 480px) {
     #section-produit-accueil {
-        margin-top: 10px;
-        /* Adjust margin for smaller screens */
-        margin-bottom: 10px;
-        ;
+        margin-top: 10px;        
         height: auto;
         /* Allow height to adjust based on content */
         padding: 20px;
@@ -659,6 +802,57 @@ h1 {
     }
 }
 
+@media (max-width: 325px) {
+    #section-produit-accueil {
+        margin-top: 10px;
+        /* Adjust margin for smaller screens */
+        margin-bottom: 10px;
+        ;
+        height: auto;
+        /* Allow height to adjust based on content */
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    #section-produit-accueil>p:first-child {
+        font-size: 24px;
+        /* Adjust font size for smaller screens */
+    }
+
+    #section-produit-accueil>p:nth-child(2) {
+        font-size: 10px;
+        /* Adjust font size for smaller screens */
+        letter-spacing: 2px;
+        /* Adjust letter spacing for smaller screens */
+        margin-top: 5px;
+        /* Adjust margin for smaller screens */
+    }
+
+    #produits-accueil {
+        margin-left: 10px;
+        /* Adjust margin for smaller screens */
+        margin-right: 10px;
+        /* Adjust margin for smaller screens */
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+        height: auto;
+        /* Allow height to adjust based on content */
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+    }
+
+    .produit-accueil {
+        display: none;
+    }
+
+    .produit-accueil:first-child {
+        display: block;
+    }
+
+}
 
 #section-coach-accueil {
     margin-left: 300px;
@@ -694,17 +888,13 @@ h1 {
     text-align: center;
 }
 
-
 #section-coach-accueil a {
     text-decoration: none;
-    display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
 }
-
 
 #coachs-accueil {
     display: flex;
@@ -724,7 +914,8 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 35%;
-    border: black solid .1px;
+    border: #e9e9e9 solid .1px;
+    height: 285px;
 }
 
 .info-coach-accueil {
@@ -735,29 +926,47 @@ h1 {
 }
 
 .image-coach-accueil {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+}
+
+.image-coach-accueil img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
 .contact-coach-accueil {
     display: flex;
     height: 50px;
+    justify-content: center;
 }
 
-.contact-coach-accueil img:first-of-type {
+.contact-coach-accueil a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-coach-accueil a:first-child {
     background-color: #0f9b73;
     width: 50%;
+    height: 20px;
 }
 
-.contact-coach-accueil img:last-of-type {
+.contact-coach-accueil a:last-child {
     background-color: #1a76d2;
     width: 50%;
+    height: 20px;
+}
+
+.contact-coach-accueil img {
+    width: 20px;
 }
 
 .nom-coach-accueil {
+    height: 10%;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 0px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 0;
@@ -765,6 +974,7 @@ h1 {
 
 
 .titre-coach-accueil {
+    height: 10%;
     font-size: 13px;
     /* distance bettwen letters */
     letter-spacing: 3px;
@@ -773,9 +983,11 @@ h1 {
 }
 
 .description-coach-accueil {
+    height: 80%;
     font-size: 14px;
     line-height: 2;
     text-align: center;
+    margin-top: 0;
 }
 
 /* 1440px */
@@ -797,8 +1009,8 @@ h1 {
 
 @media (max-width: 480px) {
     #section-coach-accueil {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
         height: auto;
         padding: 20px;
         margin-bottom: 20px;
@@ -842,11 +1054,14 @@ h1 {
 
     .contact-coach-accueil {
         height: auto;
-        flex-direction: column;
     }
 
     .contact-coach-accueil img {
-        width: 100%;
+        width: 20px;
+    }
+
+    .image-contact-coach-accueil {
+        height: 262px;
     }
 
     .nom-coach-accueil,
@@ -855,7 +1070,110 @@ h1 {
         text-align: center;
     }
 
+    .nom-coach-accueil {
+        font-size: 16px;
+        margin: 0;
+        height: 5%;
+    }
+
+    .titre-coach-accueil {
+        font-size: 13px;
+        height: 5%;
+        margin-bottom: 0px;
+    }
+
+    .description-coach-accueil {
+        height: 80%;
+        font-size: 12px;
+        line-height: 1.3;
+        text-align: center;
+        margin-top: 12px;
+        text-align: justify;
+    }
     .coach-accueil:nth-of-type(2) {
         display: none;
     }
+
+    /* media 325 */
+    /* Styles for screens with a maximum width of 325px */
+    @media (max-width: 325px) {
+        #section-coach-accueil {
+            margin-left: 0;
+            margin-right: 0;
+            height: auto;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    
+        #section-coach-accueil > p:first-child {
+            font-size: 24px;
+        }
+
+        #section-coach-accueil>p:nth-child(3) {
+            padding: 0 10px;
+            text-align: justify;
+        }
+    
+        .coach-accueil {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+    
+        .image-contact-coach-accueil {
+            width: 60%;
+            height: auto; 
+        }
+    
+        .info-coach-accueil {
+            width: 100%;
+        }
+    
+        .image-coach-accueil {
+            width: 100%;
+            height: 200px;
+        }
+    
+        .contact-coach-accueil {
+            height: auto;
+        }
+    
+        .contact-coach-accueil img {
+            width: 20px;
+        }
+    
+        .nom-coach-accueil,
+        .titre-coach-accueil,
+        .description-coach-accueil {
+            text-align: center;
+        }
+    
+        .nom-coach-accueil {
+            font-size: 16px;
+            margin-bottom: 5px ;
+            height: 5%;
+        }
+    
+        .titre-coach-accueil {
+            font-size: 13px;
+            height: 5%;
+            margin-bottom: 10px;
+        }
+    
+        .description-coach-accueil {
+            height: 80%;
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: center;
+            margin-top: 12px;
+            text-align: justify;
+            padding: 0 10px;
+        }
+    
+        .coach-accueil:nth-of-type(2) {
+            display: none;
+        }
+    }
+
 }
