@@ -4,9 +4,12 @@
 
 @section('content')
 
+<div class="bande">
+    <h2>Evénements</h2>
+</div>
+
 <section id="section-evenements">
 
-    <h2>Liste des événements</h2>
 
     <div class="event">
     @foreach($evenements as $evenement)
