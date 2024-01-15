@@ -18,13 +18,17 @@ class AccueilController extends Controller
         //select 4 random image from the table galerie
         $galeries = \App\Models\Galerie::inRandomOrder()->take(4)->get();
 
+        // select 2 random coach from the table coach
+        $coachs = \App\Models\Coach::inRandomOrder()->take(2)->get();
+
         // select all event order by date_debut from the table evenement, and show the first
         $evenements = \App\Models\Evenement::orderBy('date_debut', 'asc')->take(2)->get();
         return view('accueil', [
             'produits' => $produits,
             'bannieres' => $bannieres,
             'galeries' => $galeries,
-            'evenements' => $evenements
+            'evenements' => $evenements,
+            'coachs' => $coachs
         ]);
     }
 }
