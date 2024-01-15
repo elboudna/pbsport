@@ -1,4 +1,4 @@
-#section-coachs{
+#section-coachs {
     margin-top: 100px;
     margin-bottom: 100px;
     margin-left: 300px;
@@ -6,7 +6,7 @@
     font-family: "Montserrat";
 }
 
-#coachs-flex{
+#coachs-flex {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -15,20 +15,29 @@
 .coach {
     display: flex;
     width: 50%;
-    height: 0;
-    padding-bottom: 25%;   
 }
 
-.coach div{
+.photo-coach{
     width: 50%;
-    height: 0;
-    padding-bottom: 50%;
-    border: rgb(0, 255, 136) solid .1px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-coach img {
+    width: 80%;
+    object-fit: cover; /* or use 'contain' if you want the whole image to be visible */
+    display: block;
+}
+
+.info-coach{
+    width: 50%;
     margin: 0;
 }
 
-.coach div:first-child {
-    background-color: grey;
+.coach p {
+    margin-top: 0;
 }
 
 .coach:nth-child(4n+3),
@@ -36,5 +45,291 @@
     flex-direction: row-reverse;
 }
 
+.nom-coach-pro {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding-left: 35%;
+    padding-right: 25%;
+}
+
+.nom-coach {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.nom-coach-pro h3, .nom-coach h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nom-coach-pro span {
+    font-size: 18px;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(45deg, #ffe656, #ffba24, #ffe656, #ffba24, #ffe656, #ffba24);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    animation: gradientAnimation 10s infinite linear;
+}
+
+.description-coach {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    padding: 0px 25px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.contact-coach {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin: 0 25px;
+    height: 40px;
+}
+
+.contact-coach a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-coach img {
+    width: 30px;
+}
+
+.contact-coach a:first-child {
+    background-color: #464646;
+    width: 50%;
+}
+
+.contact-coach a:last-child {
+    background-color: #1a76d2;
+    width: 50%;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
 
 
+
+/* TEST */
+
+.flip-box {
+    font-family: 'Inter', sans-serif;
+    perspective: 1000px;
+    border-radius: 20px;
+}
+
+.flexMembreEquipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-family: 'Replica Pro New';
+}
+
+.flexMembreEquipe>div {
+    width: 23%;
+    background-color: white;
+    margin: 1%;
+}
+
+
+.membreEquipePhoto img {
+    border-radius: 5%;
+    /* border: 1px solid #67d1d4; */
+    height: 260px;
+    
+    margin-top: 30px;
+}
+
+.flip-box-inner {
+    perspective: 1000px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px -7px #003f7e59, 0px 9px 10px 5px rgba(0, 0, 0, 0.001);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    background-color: #f1f1f1;
+}
+
+.membreEquipeNom {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #464646;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+.membreEquipeDescription {
+    font-size: 1em;
+    /* font-weight: 100; */
+    text-align: center;
+    padding: 15px;
+    line-height: 1.1em;
+    overflow: auto;
+}
+
+.membreEquipeDescription::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.membreEquipeDescription p {
+    margin: 15px;
+    text-align: justify;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    font-weight: 700;
+    /* color: #464646; */
+    color: #fff;
+
+}
+
+.membreEquipeRS {
+    height: 50px;
+    width: 90%;
+    margin: 0 5% 20px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.membreEquipeRS a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.membreEquipeRS img {
+    width: 30px;
+}
+
+.membreEquipeRS a:first-child {
+    background-color: #464646;
+    width: 50%;
+}
+
+.membreEquipeRS a:last-child {
+    background-color: #1a76d2;
+    width: 50%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: linear-gradient(to right, #818181,#d1d1d1);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    color: black;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    font-weight: 900;
+}
+
+.flip-box .flip-box-inner {
+    transition: transform 1.5s ease;
+    transition-delay: 0.2s;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+    transition-delay: 0s;
+}
+
+@media only screen and (max-width: 1024px) {
+    .flexMembreEquipe>div {
+        width: 31%;
+        margin: 1%;
+    }
+
+    .membreEquipePhoto img {
+        height: 220px;
+        margin-top: 20px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .flexMembreEquipe>div {
+        width: 46%;
+        margin: 2%;
+    }
+
+    .membreEquipePhoto img {
+        height: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .flexMembreEquipe {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .membreEquipeNom {
+        font-size: 1.3em;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .membreEquipeDescription {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+
+    .flexMembreEquipe>div {
+        width: 90%;
+        margin: 2% 0;
+    }
+
+    .membreEquipePhoto img {
+        height: 160px;
+        margin-top: 10px;
+    }
+}
