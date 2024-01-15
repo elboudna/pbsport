@@ -46,7 +46,7 @@
 }
 
 .submitbtn input{
-    background-color: #91cf05;
+    background-color: #10a87d;
     color: #fff;
     cursor: pointer;
     width: 210px;
@@ -60,7 +60,7 @@
 }
 
 .lien-compte{
-    color: #91cf05;
+    color: #10a87d;
     text-decoration: none;
     display: flex;
     justify-content: center;
