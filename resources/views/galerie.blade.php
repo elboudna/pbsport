@@ -2,9 +2,12 @@
 
 @section('content')
 
+<div class="bande">
+    <h2>Galerie</h2>
+</div>
+
 <section id="section-galerie">
 
-    <h2>Notre galerie</h2>
     
     <div class="coach">
               
