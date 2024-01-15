@@ -3,8 +3,12 @@
 @section('title', 'Home')
 
 @section('content')
+
+<div class="bande">
+    <h2>Produits</h2>
+</div>
+
 <section class="margin-bottom margin-top" id="magasin">
-    <h2>Nos produits</h2>
     <div class="flex-row">
         <div id="magasin-gauche">
             <div>
