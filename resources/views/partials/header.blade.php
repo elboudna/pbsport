@@ -33,10 +33,11 @@
                 </div>
             </div>
 
-
-            <a href="{{ route('panier') }}">
-                <img src="/icone/panierblanc.png" alt="panier">
-            </a>
+            <div id="panier-desktop">
+                <a href="{{ route('panier') }}">
+                    <img src="/icone/panierblanc.png" alt="panier">
+                </a>
+            </div>
         </div>
     </div>
 
