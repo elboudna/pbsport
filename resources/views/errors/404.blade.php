@@ -2,13 +2,15 @@
 
 @section('content')
 <div class="bande">
-    <h2>Erreur 404!</h2>
+    <h2>Page introuvable</h2>
 </div>
-<section>
-
+<section class="section-error">
+    <span> <p>404!</p> </span>
     <p>La page que vous cherchez n'existe pas.</p>
     <!-- retour à la page d'accueil -->
-    <a href="{{ route('accueil') }}">Retour à la page d'accueil</a>
+    <div class="lien-retour">
+        <a href="{{ route('accueil') }}">Retour à la page d'accueil</a>
+    </div>
 
 </section>
 
