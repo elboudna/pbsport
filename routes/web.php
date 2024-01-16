@@ -117,3 +117,8 @@ Route::delete('/banniere/supprimer/{id}', [BanniereController::class, 'supprimer
 Route::get('/partenaires', function () {
     return view('partenaires');
 })->name('partenaires');
+
+//contact without controller
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
