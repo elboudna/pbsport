@@ -2,6 +2,9 @@
 
 @section('content')
 
+<div class="bande">
+    <h2>Evénement</h2>
+</div>
 
 <div class="event-div">
     <h1>{{ $evenement->type }} : {{ $evenement->nom }}</h1>
