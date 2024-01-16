@@ -75,7 +75,7 @@
                             <a href="{{ route('partenaires') }}">Partenaires</a>
                             <a href="{{ route('galerie') }}">Galerie</a>
                             <a href="#">Blog</a>
-                            <a href="#">Contact</a>
+                            <a href="{{ route('contact') }}">Contact</a>
                         </nav>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                 <a href="#">Blog</a>
             </div>
         </div>
-        <a href="#">Contact</a>
+        <a href="{{ route('contact') }}">Contact</a>
     </nav>
 </section>
 
