@@ -19,7 +19,7 @@
     margin-bottom: 50px;
 }
 
-.photo-coach{
+.photo-coach {
     width: 50%;
     margin: 0;
     display: flex;
@@ -29,17 +29,19 @@
 
 .photo-coach img {
     width: 100%;
-    object-fit: cover; /* or use 'contain' if you want the whole image to be visible */
+    object-fit: cover;
+    /* or use 'contain' if you want the whole image to be visible */
     display: block;
     /* black and white */
     filter: grayscale(100%);
 }
 
-.coach:nth-child(4n+3) .info-coach, .coach:nth-child(4n+4) .info-coach {
+.coach:nth-child(4n+3) .info-coach,
+.coach:nth-child(4n+4) .info-coach {
     justify-content: flex-end;
 }
 
-.info-coach{
+.info-coach {
     width: 50%;
     margin: 0;
     display: flex;
@@ -48,13 +50,13 @@
 }
 
 
-.info-coach>div{
+.info-coach>div {
     background-color: #10a87d;
     /* background-color: #10a87d; */
-    padding: 10px 10px ;
+    padding: 10px 10px;
     width: 70%;
     height: 60%;
-    
+
 }
 
 .coach p {
@@ -66,12 +68,14 @@
     flex-direction: row-reverse;
 }
 
-.coach:nth-child(4n+2) .info-coach>div, .coach:nth-child(4n+3) .info-coach>div {
+.coach:nth-child(4n+2) .info-coach>div,
+.coach:nth-child(4n+3) .info-coach>div {
     background-color: #464646;
     color: white;
 }
 
-.coach:nth-child(4n+2) h3, .coach:nth-child(4n+3) h3{
+.coach:nth-child(4n+2) h3,
+.coach:nth-child(4n+3) h3 {
     color: white;
 }
 
@@ -89,7 +93,8 @@
     margin-top: 5px;
 }
 
-.nom-coach-pro h3, .nom-coach h3 {
+.nom-coach-pro h3,
+.nom-coach h3 {
     font-size: 22px;
     color: #17191c;
     font-weight: bold;
@@ -160,7 +165,7 @@
     width: 50%;
 }
 
-.nom-cache{
+.nom-cache {
     display: none;
 }
 
@@ -191,7 +196,7 @@
     height: 100vh;
 }
 
-.modal-img{
+.modal-img {
     width: 35%;
     display: flex;
     justify-content: center;
@@ -201,7 +206,7 @@
     top: 30%;
 }
 
-.modal-img img{
+.modal-img img {
     padding: 50px 0px;
     width: 60%;
     height: 100%;
@@ -210,15 +215,17 @@
 
 }
 
-.modal-nom{
+.modal-nom {
     display: flex;
     align-items: flex-end;
 }
 
-.modal-nom h2{
+.modal-nom h2 {
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
+    z-index: 2; /* Ensure the text is above the overlay */
+
 }
 
 /* Styling for the close button */
@@ -228,34 +235,71 @@
     right: 40px;
     cursor: pointer;
     font-size: 50px;
+    z-index: 2; /* Ensure the text is above the overlay */
 }
 
 .modal-top {
     padding-left: 420px;
     padding-right: 420px;
-    background-color: #10a87d;
+    /* background: linear-gradient(-45deg, #14C996ff, #11AF83ff, #0C7B5Cff, #074735ff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite; */
+    background-color: #0f9b73;
+    /* test debut */
+    background-image: url('/image/bannn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 35%;
+    /* test mid */
     color: white;
     display: flex;
     border-bottom: #464646 1px solid;
 }
+
+/* add a layer of black on the background image */
+.modal-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 35.6%;
+}
+
+/* test fin */
 
 .modal-bottom {
     border-top: #464646 1px solid;
     padding-left: 420px;
     padding-right: 420px;
     height: 65%;
-    background-color: #464646;
+    background: #464646;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.modal-description{
+.modal-description {
     display: flex;
     /* justify-content: center; */
     align-items: flex-start;
     width: 55%;
     margin-top: 30px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
