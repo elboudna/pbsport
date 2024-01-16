@@ -14,6 +14,12 @@ header>div {
     justify-content: space-between;
 }
 
+#desktop-nav{
+    display: flex;
+    align-items: center;
+
+}
+
 header p {
     margin: 0;
 }
@@ -147,6 +153,11 @@ nav a:hover {
 
 #mobile-nav {
     display: none;
+}
+
+#panier-desktop {
+    display: flex;
+    align-items: center;
 }
 
 
