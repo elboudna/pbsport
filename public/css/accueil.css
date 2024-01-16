@@ -85,8 +85,7 @@ h1 {
 @media (max-width: 480px) {
     #section-banniere-accueil {
         height: 200px;
-        /* Adjust the height for smaller screens */
-        /* margin-top: 20px; */
+        border-bottom: #464646 solid 1px;
     }
 
     .slide .text {
@@ -182,7 +181,6 @@ h1 {
 
 @media (max-width: 480px) {
     #section-bienvenue {
-        /* margin: 20px 10px 20px 10px; */
         margin: 0px;
         flex-direction: column-reverse;
         height: auto;
