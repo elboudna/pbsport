@@ -1,0 +1,23 @@
+.section-error{
+    margin: 100px 300px;
+}
+
+.section-error p{
+    font-size: 50px;
+    font-family: "Montserrat";
+    text-align: center;
+    margin: 30px;
+}
+
+.section-error span p{
+    font-size: 100px;
+    font-family: "Montserrat";
+    text-align: center;
+    margin: 0;
+}
+
+.section-error div{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
