@@ -53,6 +53,9 @@
             </div>
         </div>
         <div class="modal-bottom">
+            <!-- <div>
+                Coach
+            </div> -->
             <div class="modal-description">
                 <p></p>
             </div>
