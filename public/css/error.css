@@ -9,8 +9,19 @@
     margin: 30px;
 }
 
+.section-error span{
+    display: flex;
+    justify-content: center;
+
+}
+
+.section-error img{
+    width: 80px;
+    object-fit:fill;
+}
+
 .section-error span p{
-    font-size: 100px;
+    font-size: 80px;
     font-family: "Montserrat";
     text-align: center;
     margin: 0;
