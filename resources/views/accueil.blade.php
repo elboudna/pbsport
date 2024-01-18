@@ -22,7 +22,7 @@
     </div>
     <div id="bienvenue-droite" class="bggris">
         <p>Bienvenue</p>
-        <p class="vert">à notre academie de pickelball</p>
+        <p class="vert">dans notre academie de pickelball</p>
         <p>Founded in 1964 by a team of professional tennis players our club is based in one of the most picturesque
             areas of the country and is ideal for family membership.</p>
         <div class="button-center">
