@@ -3,9 +3,15 @@
         <div id="logo-footer">
             <img src="/image/pbsportlogoNoir.png" alt="logo">
             <div id="RS-footer">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=61555624168061">
+                    <img src="{{ asset('icone/fbg.png') }}" alt="">
+                </a>
+                <a href="">
+                    <img src="{{ asset('icone/ttkg.png') }}" alt="">
+                </a>
+                <a href="">
+                    <img src="{{ asset('icone/insg_.png') }}" alt="">
+                </a>
             </div>
         </div>
         <div id="contact-footer">
