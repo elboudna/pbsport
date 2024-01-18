@@ -7,7 +7,7 @@
 <section class="section-error">
     <span> 
         <img src="{{ asset('icone/raquetteG.png') }}" alt="">
-        <p>404!</p> 
+        <p>404</p> 
         <img src="{{ asset('icone/raquetteD.png') }}" alt="">
     </span>
     <p>La page que vous cherchez n'existe pas.</p>
