@@ -150,7 +150,7 @@ h1 {
         border-bottom: #464646 solid 1px;
     }
 
-    .slide .text{
+    .slide .text {
         width: 70%;
         left: -5%;
     }
@@ -416,15 +416,14 @@ h1 {
     transition: background-color 0.3s;
 }
 
-.evenement-img-accueil img{
+.evenement-img-accueil img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-@media (max-width: 768px)
-{
-    #section-evenement-accueil{
+@media (max-width: 768px) {
+    #section-evenement-accueil {
         margin-top: 0px;
     }
 
@@ -439,7 +438,7 @@ h1 {
         padding: 0;
     }
 
-    #section-evenement-accueil .btn-accueil{
+    #section-evenement-accueil .btn-accueil {
         margin-top: 0px;
     }
 
@@ -448,7 +447,7 @@ h1 {
 @media (max-width: 480px) {
 
 
-    .evenement-img-accueil img{
+    .evenement-img-accueil img {
         width: 100%;
         height: 115px;
     }
@@ -510,7 +509,7 @@ h1 {
         margin-top: 5px;
     }
 
-    .evenement-img-accueil img{
+    .evenement-img-accueil img {
         width: 100%;
     }
 
@@ -605,6 +604,12 @@ h1 {
         margin-left: 50px;
         margin-right: 50px;
         padding: 50px 0px;
+        margin-bottom: 20px;
+    }
+
+    #section-galerie-accueil img {
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -616,12 +621,12 @@ h1 {
     }
 
     #section-galerie-accueil {
-        padding-bottom: 70px;
+        padding-bottom: 50px;
     }
 
-    #section-galerie-accueil .btn-accueil{
+    #section-galerie-accueil .btn-accueil {
         margin-top: 40px;
-    
+
     }
 }
 
@@ -825,7 +830,6 @@ h1 {
 /* second p of produit-vedette */
 #section-produit-accueil>p:nth-child(2) {
     font-size: 13px;
-    /* distance bettwen letters */
     letter-spacing: 3px;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -840,7 +844,7 @@ h1 {
     display: flex;
     flex-direction: row;
     height: 400px;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .produit-accueil {
@@ -857,6 +861,7 @@ h1 {
 .nom-produit-accueil {
     font-size: 18px;
     margin-top: 20px;
+    color: white;
 }
 
 .prix-produit-accueil {
@@ -864,12 +869,65 @@ h1 {
     font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+    #produits-accueil {
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 300px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .produit-accueil {
+        border-left: none;
+        width: 25%;
+        height: 260px;
+        padding: 0px;
+    }
+
+    .produit-accueil img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    #section-produit-accueil .btn-accueil {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    #produits-accueil {
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 250px;
+    }
+
+    .produit-accueil {
+        border-left: none;
+        width: 25%;
+        padding: 0px;
+    }
+
+    .produit-accueil img {
+        width: 145px;
+        height: 145px;
+        object-fit: cover;
+    }
+
+    #section-produit-accueil .btn-accueil {
+        margin-top: 40px;
+
+    }
+}
+
 @media (max-width: 480px) {
     #section-produit-accueil {
-        margin-top: 10px;        
+        margin-top: 10px;
         height: auto;
         /* Allow height to adjust based on content */
         padding: 20px;
+        padding-bottom: 40px;
         /* Adjust padding for smaller screens */
     }
 
@@ -1025,10 +1083,13 @@ h1 {
 #section-coach-accueil a {
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 5px;
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
+}
+
+#section-coach-accueil .btn-accueil a {
+    border-radius: 5px;
 }
 
 #coachs-accueil {
@@ -1076,7 +1137,7 @@ h1 {
     justify-content: center;
 }
 
-.contact-coach-accueil a{
+.contact-coach-accueil a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1107,11 +1168,9 @@ h1 {
     margin-bottom: 0;
 }
 
-
 .titre-coach-accueil {
     height: 10%;
     font-size: 13px;
-    /* distance bettwen letters */
     letter-spacing: 3px;
     text-align: center;
     text-transform: uppercase;
@@ -1131,6 +1190,10 @@ h1 {
         margin-left: 100px;
         margin-right: 100px;
     }
+
+    .image-contact-coach-accueil {
+        height: 260px;
+    }
 }
 
 /* 1024 */
@@ -1139,7 +1202,40 @@ h1 {
         margin-left: 50px;
         margin-right: 50px;
         padding: 50px 0px;
+        margin-bottom: 20px;
     }
+
+    .image-contact-coach-accueil {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-contact-coach-accueil {
+        height: 270px;
+        width: 60%;
+    }
+
+    .coach-accueil {
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        justify-content: unset;
+        margin-bottom: 0;
+    }
+
+    .nom-coach-accueil {
+        height: 30px;
+    }
+
+    .titre-coach-accueil {
+        height: 30px;
+    }
+
+    #section-coach-accueil {
+        margin-bottom: 20px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1172,6 +1268,7 @@ h1 {
 
     .coach-accueil {
         width: 100%;
+        flex-direction: row;
     }
 
     .image-contact-coach-accueil {
@@ -1225,148 +1322,154 @@ h1 {
         margin-top: 12px;
         text-align: justify;
     }
+
     .coach-accueil:nth-of-type(2) {
         display: none;
     }
 
-    @media (max-width: 375px) {
-        .description-coach-accueil{
-            display: none;
-        }
-
-        #section-coach-accueil>p:nth-child(3) {
-            padding: 0 10px;
-            text-align: justify;
-        }
-    
-        .coach-accueil {
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 0px;
-        }
-    
-        .image-contact-coach-accueil {
-            width: 60%;
-            height: auto; 
-        }
-    
-        .info-coach-accueil {
-            width: 100%;
-        }
-    
-        .image-coach-accueil {
-            width: 100%;
-            height: 270px;
-        }
-    
-        .contact-coach-accueil {
-            height: auto;
-        }
-    
-        .contact-coach-accueil img {
-            width: 20px;
-        }
-    
-        .nom-coach-accueil,
-        .titre-coach-accueil {
-            text-align: center;
-        }
-    
-        .nom-coach-accueil {
-            font-size: 16px;
-            margin-bottom: 5px ;
-            height: 5%;
-        }
-    
-        .titre-coach-accueil {
-            font-size: 13px;
-            height: 5%;
-            margin-bottom: 10px;
-        }
-    
-    }
-
-    /* media 325 */
-    /* Styles for screens with a maximum width of 325px */
-    @media (max-width: 325px) {
-        #section-coach-accueil {
-            margin-left: 0;
-            margin-right: 0;
-            height: auto;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    
-        #section-coach-accueil > p:first-child {
-            font-size: 24px;
-        }
-
-        #section-coach-accueil>p:nth-child(3) {
-            padding: 0 10px;
-            text-align: justify;
-        }
-    
-        .coach-accueil {
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 0px;
-        }
-    
-        .image-contact-coach-accueil {
-            width: 60%;
-            height: auto; 
-        }
-    
-        .info-coach-accueil {
-            width: 100%;
-        }
-    
-        .image-coach-accueil {
-            width: 100%;
-            height: 200px;
-        }
-    
-        .contact-coach-accueil {
-            height: auto;
-        }
-    
-        .contact-coach-accueil img {
-            width: 20px;
-        }
-    
-        .nom-coach-accueil,
-        .titre-coach-accueil,
-        .description-coach-accueil {
-            text-align: center;
-        }
-    
-        .nom-coach-accueil {
-            font-size: 16px;
-            margin-bottom: 5px ;
-            height: 5%;
-        }
-    
-        .titre-coach-accueil {
-            font-size: 13px;
-            height: 5%;
-            margin-bottom: 10px;
-        }
-    
-        .description-coach-accueil {
-            height: 80%;
-            font-size: 12px;
-            line-height: 1.5;
-            text-align: center;
-            margin-top: 12px;
-            text-align: justify;
-            padding: 0 10px;
-        }
-    
-        .coach-accueil:nth-of-type(2) {
-            display: none;
-        }
+    #section-coach-accueil .btn-accueil {
+        margin-top: 40px;
     }
 
 }
+
+@media (max-width: 375px) {
+    .description-coach-accueil {
+        display: none;
+    }
+
+    #section-coach-accueil>p:nth-child(3) {
+        padding: 0 10px;
+        text-align: justify;
+    }
+
+    .coach-accueil {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+    .image-contact-coach-accueil {
+        width: 60%;
+        height: auto;
+    }
+
+    .info-coach-accueil {
+        width: 100%;
+    }
+
+    .image-coach-accueil {
+        width: 100%;
+        height: 270px;
+    }
+
+    .contact-coach-accueil {
+        height: auto;
+    }
+
+    .contact-coach-accueil img {
+        width: 20px;
+    }
+
+    .nom-coach-accueil,
+    .titre-coach-accueil {
+        text-align: center;
+    }
+
+    .nom-coach-accueil {
+        font-size: 16px;
+        margin-bottom: 5px;
+        height: 5%;
+    }
+
+    .titre-coach-accueil {
+        font-size: 13px;
+        height: 5%;
+        margin-bottom: 10px;
+    }
+
+}
+
+/* media 325 */
+/* Styles for screens with a maximum width of 325px */
+@media (max-width: 325px) {
+    #section-coach-accueil {
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    #section-coach-accueil>p:first-child {
+        font-size: 24px;
+    }
+
+    #section-coach-accueil>p:nth-child(3) {
+        padding: 0 10px;
+        text-align: justify;
+    }
+
+    .coach-accueil {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+    .image-contact-coach-accueil {
+        width: 60%;
+        height: auto;
+    }
+
+    .info-coach-accueil {
+        width: 100%;
+    }
+
+    .image-coach-accueil {
+        width: 100%;
+        height: 200px;
+    }
+
+    .contact-coach-accueil {
+        height: auto;
+    }
+
+    .contact-coach-accueil img {
+        width: 20px;
+    }
+
+    .nom-coach-accueil,
+    .titre-coach-accueil,
+    .description-coach-accueil {
+        text-align: center;
+    }
+
+    .nom-coach-accueil {
+        font-size: 16px;
+        margin-bottom: 5px;
+        height: 5%;
+    }
+
+    .titre-coach-accueil {
+        font-size: 13px;
+        height: 5%;
+        margin-bottom: 10px;
+    }
+
+    .description-coach-accueil {
+        height: 80%;
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: center;
+        margin-top: 12px;
+        text-align: justify;
+        padding: 0 10px;
+    }
+
+    .coach-accueil:nth-of-type(2) {
+        display: none;
+    }
+}
+
