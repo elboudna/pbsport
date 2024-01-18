@@ -12,6 +12,7 @@
 .section-error span{
     display: flex;
     justify-content: center;
+    gap: 7px;
 
 }
 
