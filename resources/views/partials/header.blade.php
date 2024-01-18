@@ -67,7 +67,7 @@
                     <div id="nav-mobile">
                         <nav>
                             <a href="/">Accueil</a>
-                            <a href="{{ route('evenements') }}">Événements</a>
+                            <a href="{{ route('evenements') }}">Évènements</a>
                             <a href="{{ route('magasin') }}">Produits</a>
                             <a href="#">Académie</a>
                             <a href="{{ route('coachs') }}">Coachs</a>
@@ -105,7 +105,7 @@
 
     <nav>
         <a href="/">Accueil</a>
-        <a href="{{ route('evenements') }}">Événements</a>
+        <a href="{{ route('evenements') }}">Évènements</a>
         <a href="{{ route('magasin') }}">Produits</a>
         <div class="dropdown">
             <a href="#">Académie</a>
