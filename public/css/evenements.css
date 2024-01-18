@@ -150,3 +150,71 @@
         height: 180px;
     }
 }
+
+@media (max-width: 1024px) {
+    #section-evenements{
+        margin: 50px 70px;
+    }
+
+    .evenement-img img {
+        height: 150px;
+    }
+
+    .evenement-div{
+        height: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    #section-evenements{
+        margin: 50px 20px;
+    }
+
+    .evenement-img img {
+        height: 120px;
+    }
+
+    .evenement-div{
+        height: 220px;
+    }
+
+    .event-nom{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .evenement-div{
+        width: 90%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .evenement-img{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        /* border: blue solid; */
+    }
+
+    .evenement-img img {
+        height: 150px;
+        width: 100%;
+    }
+
+    .event-nom{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 375px) {
+    .evenement-img img {
+        height: 120px;
+    }
+}
