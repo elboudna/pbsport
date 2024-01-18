@@ -161,7 +161,48 @@ nav a:hover {
 }
 
 
+.bande{
+    background-image: url('/image/bannn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    padding-left: 300px; /* Add padding to the left for the text */
+    box-sizing: border-box; /* Ensure padding is included in the total width */
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.bande::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
+    /* z-index: ; Ensure the overlay is above the background image */
+}
+
+.bande h2 {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+    margin: 0;
+    line-height: 300px;
+    color: #fff; /* Set text color to white or any other color that contrasts well with the overlay */
+}
+
+
 /* responsive */
+
+@media (max-width: 1440px){
+    .bande{
+        padding-left: 200px; /* Add padding to the left for the text */
+    }
+
+}
 
 @media (max-width: 1024px) {
     header {
@@ -188,7 +229,6 @@ nav a:hover {
 
 }
 
-/* 940px */
 
 @media (max-width: 940px) {
     
@@ -339,37 +379,4 @@ nav a:hover {
         height: 35px;
     }
 
-}
-
-.bande{
-    background-image: url('/image/bannn.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 300px;
-    padding-left: 300px; /* Add padding to the left for the text */
-    box-sizing: border-box; /* Ensure padding is included in the total width */
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    color: #fff;
-}
-
-.bande::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
-    /* z-index: ; Ensure the overlay is above the background image */
-}
-
-.bande h2 {
-    position: relative;
-    z-index: 2; /* Ensure the text is above the overlay */
-    margin: 0;
-    line-height: 300px;
-    color: #fff; /* Set text color to white or any other color that contrasts well with the overlay */
 }
