@@ -18,7 +18,7 @@
                 <img src="{{ asset('storage/evenement_images/' . $evenement->image) }}" alt="{{ $evenement->nom }}">
             </div>
             <div class="evenement-flex">
-                <h3>{{ $evenement->nom }}</h3>
+                <h3 class="event-nom">{{ $evenement->nom }}</h3>
                 <p>Date de début : {{ \Carbon\Carbon::parse($evenement->date_debut)->isoFormat('D MMMM YYYY', 'Do MMMM YYYY') }}</p>
                 <div class="btn-ensavoirplus-event">
                     <a href="{{ route('evenement.show', $evenement->id) }}">En savoir en plus</a>
