@@ -202,9 +202,32 @@ nav a:hover {
         padding-left: 200px; /* Add padding to the left for the text */
     }
 
+    #navigation{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    header>div {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
 }
 
 @media (max-width: 1024px) {
+    .bande{
+        padding-left: 70px;
+        height: 200px;
+    }
+
+    .bande::before {
+        height: 200px;
+    }
+
+    .bande h2{
+        line-height: 200px;
+    }
+
     header {
         margin-left: 0;
         margin-right: 0;
@@ -252,6 +275,20 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+
+    .bande{
+        padding-left: 40px;
+        height: 180px;
+    }
+
+    .bande::before {
+        height: 180px;
+    }
+
+    .bande h2{
+        line-height: 180px;
+    }
+
     header {
         margin-left: 0;
         margin-right: 0;
@@ -274,6 +311,21 @@ nav a:hover {
 }
 
 @media (max-width: 480px) {
+
+    .bande{
+        padding-left: 20px;
+        height: 150px;
+    }
+
+    .bande::before {
+        height: 150px;
+    }
+
+    .bande h2{
+        line-height: 150px;
+        font-size: 35px;
+    }
+
     #navigation {
         display: none;
     }
@@ -379,4 +431,10 @@ nav a:hover {
         height: 35px;
     }
 
+}
+
+@media (max-width : 375px){
+    .bande h2{
+        font-size: 28px;
+    }
 }
