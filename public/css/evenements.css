@@ -136,12 +136,17 @@
     text-decoration: none;
 }
 
-
-.evenement-flex{
-    
-}
-
 .img-modifier{
     margin-top: 20px;
     width: 300px;
+}
+
+@media (max-width: 1440px) {
+    #section-evenements{
+        margin: 50px 200px;
+    }
+
+    .evenement-img img {
+        height: 180px;
+    }
 }
