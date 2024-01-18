@@ -13,6 +13,7 @@ use App\Http\Controllers\CoachController;
 use App\Http\Controllers\GalerieController;
 use App\Http\Controllers\AbonnementController;
 use App\Http\Controllers\BanniereController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -118,7 +119,6 @@ Route::get('/partenaires', function () {
     return view('partenaires');
 })->name('partenaires');
 
-//contact without controller
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+//contact 
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'sendEmail'])->name('contact.send');
