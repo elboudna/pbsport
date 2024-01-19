@@ -121,6 +121,17 @@
     </nav>
 </section>
 
+<div class="divBande">
+    <div id="bande1" class="bandeDef">
+        <p>Dernière nouveauté.</p>
+        <p><a href="">En savoir plus</a></p>
+    </div>
+    <div id="bande2" class="bandeDef" style="display: none;">
+        <p>Decouvrez notre selection de produits</p>
+        <p><a href="">Cliquez ici</a></p>
+    </div>
+</div>
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var burgerIcon = document.getElementById("burger-icon");
@@ -137,5 +148,33 @@
                 burgerIcon.style.zIndex = "1000";
             }
         });
+
+
+        let bande1 = document.querySelector('#bande1');
+        let bande2 = document.querySelector('#bande2');
+        bande1.style.display = 'inline';
+        setInterval(function() {
+            if (bande1.style.display == 'inline') {
+                setTimeout(function() {
+                    bande2.style.animation = 'entrer 2s normal forwards ease-in-out';
+                    bande1.style.animation = 'sortir 2s normal forwards ease-in-out';
+                }, 5000)
+                setTimeout(function() {
+                    bande2.style.display = 'inline';
+                    bande1.style.display = 'none';
+                }, 6000)
+            } else {
+                setTimeout(function() {
+                    bande1.style.animation = 'entrer 2s normal forwards ease-in-out';
+                    bande2.style.animation = 'sortir 2s normal forwards ease-in-out';
+                }, 5000)
+                setTimeout(function() {
+                    bande1.style.display = 'inline';
+                    bande2.style.display = 'none';
+                }, 6000)
+            }
+        }, 0)
+
     });
+
 </script>
