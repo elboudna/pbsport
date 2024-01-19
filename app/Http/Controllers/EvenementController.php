@@ -11,8 +11,8 @@ class EvenementController extends Controller
     {
         app()->setLocale('fr');
 
-        $evenements = Evenement::all();
-
+        // show only events that it date is not passed
+        $evenements = Evenement::where('date_debut', '>=', date('Y-m-d'))->orderBy('date_debut', 'asc')->get();
         return view('evenements', compact('evenements'));
     }
 
@@ -96,9 +96,6 @@ class EvenementController extends Controller
     
             // Set the image attribute on the model
             $evenement->image = $filename;
-        }
-        else {
-            $evenement->image = ''; // or set it to null or any default value
         }
 
         $evenement->save();
