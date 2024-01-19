@@ -16,19 +16,37 @@ class ContactController extends Controller
 
     public function sendEmail(Request $request)
     {
+        // Validate the input data (you can customize the validation rules)
+        $request->validate([
+            'nom' => 'required|string',
+            'prenom' => 'required|string',
+            'email' => 'required|email',
+            'telephone' => 'required|string',
+            'message' => 'required|string',
+        ]);
+
+        // Data to be passed to the email view
         $data = [
-            'name' => $request->input('name'),
+            'nom' => $request->input('nom'),
+            'prenom' => $request->input('prenom'),
             'email' => $request->input('email'),
+            'telephone' => $request->input('telephone'),
             'message' => $request->input('message'),
         ];
 
-        Mail::to('recipient@example.com')->send(new ContactFormMail($data));
+        // Send email using the 'mail' blade template (you can customize the template)
+        Mail::send('contact', $data, function ($message) use ($data) {
+            $message->to('medi.mtfi@gmail.com') // Set the recipient email address
+                ->subject('New Contact Form Submission'); // Set the email subject
+        });
 
-        // Optionally, you can check for successful email sending and provide feedback
-        if (count(Mail::failures()) > 0) {
-            return redirect('/contact')->with('error', 'Failed to send email.');
+        // Optionally, you can check if the email was sent successfully
+        if (Mail::failures()) {
+            return response()->json(['message' => 'Failed to send email'], 500);
+            return redirect()->route('accueil');
         }
 
-        return redirect('/contact')->with('success', 'Email sent successfully!');
+        // Return a success response
+        return response()->json(['message' => 'Email successfully sent!'], 200);
     }
 }
