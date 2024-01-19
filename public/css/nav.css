@@ -14,7 +14,7 @@ header>div {
     justify-content: space-between;
 }
 
-#desktop-nav{
+#desktop-nav {
     display: flex;
     align-items: center;
 
@@ -66,7 +66,7 @@ nav a:hover {
     display: inline-block;
 }
 
-.dropdown > a{
+.dropdown>a {
     padding: 10px 0;
     margin-bottom: 10px;
 }
@@ -108,16 +108,16 @@ nav a:hover {
     display: inline-block;
 }
 
-.user-menu p{
+.user-menu p {
     color: white;
     padding: 15px 0;
 }
 
-.user-menu a:hover{
+.user-menu a:hover {
     color: #464646;
 }
 
-.user-menu a{
+.user-menu a {
     text-decoration: none;
     color: white;
 }
@@ -161,15 +161,17 @@ nav a:hover {
 }
 
 
-.bande{
+.bande {
     background-image: url('/image/bannn.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: 300px;
-    padding-left: 300px; /* Add padding to the left for the text */
-    box-sizing: border-box; /* Ensure padding is included in the total width */
+    padding-left: 300px;
+    /* Add padding to the left for the text */
+    box-sizing: border-box;
+    /* Ensure padding is included in the total width */
     display: flex;
     align-items: center;
     font-size: 30px;
@@ -182,27 +184,31 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 300px;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the alpha value for transparency */
     /* z-index: ; Ensure the overlay is above the background image */
 }
 
 .bande h2 {
     position: relative;
-    z-index: 2; /* Ensure the text is above the overlay */
+    z-index: 2;
+    /* Ensure the text is above the overlay */
     margin: 0;
     line-height: 300px;
-    color: #fff; /* Set text color to white or any other color that contrasts well with the overlay */
+    color: #fff;
+    /* Set text color to white or any other color that contrasts well with the overlay */
 }
 
 
 /* responsive */
 
-@media (max-width: 1440px){
-    .bande{
-        padding-left: 200px; /* Add padding to the left for the text */
+@media (max-width: 1440px) {
+    .bande {
+        padding-left: 200px;
+        /* Add padding to the left for the text */
     }
 
-    #navigation{
+    #navigation {
         margin-left: 200px;
         margin-right: 200px;
     }
@@ -215,7 +221,7 @@ nav a:hover {
 }
 
 @media (max-width: 1024px) {
-    .bande{
+    .bande {
         padding-left: 70px;
         height: 200px;
     }
@@ -224,7 +230,7 @@ nav a:hover {
         height: 200px;
     }
 
-    .bande h2{
+    .bande h2 {
         line-height: 200px;
     }
 
@@ -254,18 +260,18 @@ nav a:hover {
 
 
 @media (max-width: 940px) {
-    
+
     .dropdown-content {
         margin-left: 15px;
     }
-    
+
     .dropdown-content a {
         padding-left: 5px;
         padding-right: 0;
         width: auto;
     }
-    
-    #navigation nav > a {
+
+    #navigation nav>a {
         margin-left: 20px;
     }
 
@@ -276,7 +282,7 @@ nav a:hover {
 
 @media (max-width: 768px) {
 
-    .bande{
+    .bande {
         padding-left: 40px;
         height: 180px;
     }
@@ -285,7 +291,7 @@ nav a:hover {
         height: 180px;
     }
 
-    .bande h2{
+    .bande h2 {
         line-height: 180px;
     }
 
@@ -312,7 +318,7 @@ nav a:hover {
 
 @media (max-width: 480px) {
 
-    .bande{
+    .bande {
         padding-left: 20px;
         height: 150px;
     }
@@ -321,7 +327,7 @@ nav a:hover {
         height: 150px;
     }
 
-    .bande h2{
+    .bande h2 {
         line-height: 150px;
         font-size: 35px;
     }
@@ -433,8 +439,67 @@ nav a:hover {
 
 }
 
-@media (max-width : 375px){
-    .bande h2{
+@media (max-width : 375px) {
+    .bande h2 {
         font-size: 28px;
+    }
+}
+
+
+/*----------------------BANDE DEFILANTE-----------------------*/
+
+.divBande {
+    display: flex;
+    background-color: #10a87d;
+    height: 60px;
+    width: 100%;
+    font-family: "Montserrat";
+}
+
+.divBande a{
+    text-decoration: underline;
+
+    color: #464646;
+}
+
+.bandeDef {
+    flex: 1;
+    width: 100%;
+    background-color: #10a87d;
+    color: white;
+    padding: .5em;
+}
+
+.bandeDef p {
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    font-style: normal;
+    line-height: 20px;
+}
+
+.bandeDef p a {
+    font-size: 12px;
+    text-align: center;
+    font-style: normal;
+}
+
+@keyframes sortir {
+    from {
+        margin-right: 0vw;
+    }
+
+    to {
+        margin-right: -120vw;
+    }
+}
+
+@keyframes entrer {
+    from {
+        margin-left: -115vw;
+    }
+
+    to {
+        margin-left: 0vw;
     }
 }
