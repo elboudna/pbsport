@@ -23,7 +23,9 @@
     font-family: 'Montserrat', sans-serif;
 }  
 
+
 body{
+    overflow-x: hidden;
     margin: 0;
 }
 
