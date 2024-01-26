@@ -409,6 +409,12 @@ h1 {
     text-transform: uppercase;
 }
 
+.event-accueil{
+    display: flex;
+    width: 70%;
+    gap: 5%;
+}
+
 .evenement-div-accueil {
     display: flex;
     flex-direction: column;
@@ -417,6 +423,7 @@ h1 {
     width: 45%;
     height: 300px;
     color: white;
+    margin-bottom: 35px;
 }
 
 .btn-ensavoirplus-event {
@@ -441,7 +448,17 @@ h1 {
     object-fit: cover;
 }
 
+@media (max-width: 1440px) {
+    .event-accueil{
+        width: 90%;
+    }   
+}
+
 @media (max-width:1024px){
+    .event-accueil{
+        width: 100%;
+    }   
+
     .evenement-img-accueil img{
         height: 160px;
     }
@@ -468,6 +485,10 @@ h1 {
         margin-top: 0px;
     }
 
+    .event-accueil{
+        width: 90%;
+    }   
+
     .evenement-div-accueil:nth-of-type(2) {
         display: none;
     }
@@ -484,7 +505,7 @@ h1 {
     }
 
     #section-evenement-accueil .btn-accueil {
-        margin-top: 0px;
+        margin-top: 20px;
     }
 
 }
