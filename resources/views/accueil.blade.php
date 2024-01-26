@@ -34,7 +34,7 @@
 <section id="section-evenement-accueil" class="bggris">
     <p id="titre-event-accueil-resp">Prochain évènement</p>
     <p class="vert">Venez participer!</p>
-    <div class="event">
+    <div class="event-accueil">
         @foreach($evenements as $evenement)
         <div class="evenement-div-accueil">
             <div class="evenement-img-accueil">
