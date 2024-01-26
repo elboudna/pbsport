@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+//import Evenement model
+use App\Models\Evenement;
 
 
 class AccueilController extends Controller
@@ -23,6 +25,8 @@ class AccueilController extends Controller
 
         // select all event order by date_debut from the table evenement, and show the first
         $evenements = \App\Models\Evenement::orderBy('date_debut', 'asc')->take(2)->get();
+        // $evenements = Evenement::where('date_debut', '>=', date('Y-m-d'))->orderBy('date_debut', 'asc')->take(2)->get();
+
         return view('accueil', [
             'produits' => $produits,
             'bannieres' => $bannieres,
