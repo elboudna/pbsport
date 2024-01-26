@@ -458,14 +458,12 @@ nav a:hover {
 
 .divBande a{
     text-decoration: underline;
-
     color: #464646;
 }
 
 .bandeDef {
     flex: 1;
     width: 100%;
-    background-color: #10a87d;
     color: white;
     padding: .5em;
 }
@@ -490,7 +488,7 @@ nav a:hover {
     }
 
     to {
-        margin-right: -120vw;
+        margin-right: -200vw;
     }
 }
 
@@ -501,5 +499,47 @@ nav a:hover {
 
     to {
         margin-left: 0vw;
+    }
+}
+
+/*  */
+
+@media screen and (max-width: 1024px) {
+    /* Adjust keyframes for 1024px and below */
+    @keyframes sortir {
+        to {
+            margin-right: -250vw; /* Adjust the value accordingly */
+        }
+    }
+
+    @keyframes entrer {
+        from {
+            margin-left: -130vw; 
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    /* Adjust keyframes for 480px and below */
+    @keyframes sortir {
+        to {
+            margin-right: -270vw; 
+        }
+    }
+
+    @keyframes entrer {
+        from {
+            margin-left: -180vw; 
+        }
+    }
+
+    .divBande{
+        background-color: #464646;
+    }
+
+    .divBande a{
+        color: #10a87d;
     }
 }
