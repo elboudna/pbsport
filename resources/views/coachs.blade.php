@@ -71,19 +71,6 @@
 
 <script>
     window.onload = function() {
-        // let flex_coach_width = document.querySelector('.photo-coach').offsetWidth;
-        // let height = flex_coach_width;
-
-        // let coachInfo = document.querySelectorAll('.info-coach');
-        // let coachPhoto = document.querySelectorAll('.photo-coach');
-
-        // coachInfo.forEach(element => {
-        //     element.style.height = height + 'px';
-        // });
-
-        // coachPhoto.forEach(element => {
-        //     element.style.height = height + 'px';
-        // });
 
         let description = document.querySelectorAll('.description-coach p');
         let descriptionCourte = document.querySelectorAll('.description-coach p');
@@ -119,6 +106,21 @@
             descriptionCourte[i].textContent = descriptionTextJoin + '...';
         }
 
+        // for screen between 1024px and 900px show only 10 words
+        if (window.matchMedia("(max-width: 1024px)").matches) {
+            for (let i = 0; i < description.length; i++) {
+                fullDescriptions.push(description[i].textContent);
+
+                // Trim and split to show only the first 10 words
+                let descriptionText = description[i].textContent;
+                let descriptionTextTrim = descriptionText.trim();
+                let descriptionTextSplit = descriptionTextTrim.split(' ');
+                let descriptionTextSlice = descriptionTextSplit.slice(0, 10);
+                let descriptionTextJoin = descriptionTextSlice.join(' ');
+                descriptionCourte[i].textContent = descriptionTextJoin + '...';
+            }
+        }
+
         for (let i = 0; i < fleche.length; i++) {
             fleche[i].addEventListener('click', function() {
                 modal.style.display = 'flex';
@@ -137,7 +139,6 @@
 
         close.addEventListener('click', function() {
             modal.style.display = 'none';
-            //allow scrolling
             document.body.style.overflow = 'auto';
         });
 
@@ -146,5 +147,22 @@
         coachElements.forEach(function (img) {
             img.src = "{{ asset('icone/arrow-white.png') }}";
         });
+
+        // for screen 768px and less, even coachs img are white arrow 
+
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            let coachElementsEven = document.querySelectorAll('.coach:nth-child(even) .fleche-coach img');
+            let coachElementsOdd = document.querySelectorAll('.coach:nth-child(odd) .fleche-coach img');
+
+            coachElementsEven.forEach(function (img) {
+                img.src = "{{ asset('icone/arrow-white.png') }}";
+            });
+
+            coachElementsOdd.forEach(function (img) {
+                img.src = "{{ asset('icone/arrow.png') }}";
+            });
+
+        }
+
     }
 </script>
