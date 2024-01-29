@@ -5,10 +5,6 @@
     font-family: "Montserrat";
 }
 
-#section-partenaires > div {
-    margin-bottom: 100px;
-}
-
 #partenaire-majeur {
     text-align: center;
 }
@@ -21,6 +17,11 @@
 
 #partenaire-majeur img {
     width: 300px;
+    margin: 15px 0px 40px 0px;
+}
+
+#partenaires{
+    margin-bottom: 100px;
 }
 
 #partenaires h2{
