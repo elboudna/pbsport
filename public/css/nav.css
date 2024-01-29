@@ -543,3 +543,14 @@ nav a:hover {
         color: #10a87d;
     }
 }
+
+/* media sortir entrer max width 375px */
+
+@media screen and (max-width: 375px) {
+    @keyframes sortir {
+        to {
+            margin-right: -300vw; 
+        }
+    }
+
+}
