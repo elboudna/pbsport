@@ -19,6 +19,22 @@
     /* text-transform: uppercase; */
 }
 
-#partenaires {
+#partenaire-majeur img {
+    width: 300px;
+}
+
+#partenaires h2{
     text-align: center;
+    margin-bottom: 50px;
+}
+
+#partenaires div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#partenaires img {
+    width: 150px;
 }
