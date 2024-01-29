@@ -23,7 +23,7 @@
                     @if(auth()->user()->role_id == 3)
                     <a href="{{ route('admin.gestion') }}">Gestion</a>
                     @endif <a href="{{ route('profil') }}">Profil</a>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
@@ -60,7 +60,7 @@
                         <a href="{{ route('admin.gestion') }}">Gestion</a>
                         @endif
                         <a href="{{ route('profil') }}">Profil</a>
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se deconnecter</a>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a>
                     </div>
                     @endauth
 
