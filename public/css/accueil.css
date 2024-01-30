@@ -114,6 +114,18 @@ h1 {
     }
 }
 
+@media (max-width: 768px) {
+    #section-banniere-accueil {
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    #section-banniere-accueil {
+        height: 230px;
+    }
+}
+
 @media (max-width: 480px) {
     #section-banniere-accueil {
         height: 200px;
@@ -233,7 +245,26 @@ h1 {
         margin-left: 100px;
         margin-right: 100px;
     }
+
+    #bienvenue-droite {
+        padding: 40px;
+    }
+
+    #bienvenue-droite p:nth-child(3) {
+        margin-top: 30px;
+    }
+
+    #bienvenue-droite p:nth-child(2) {
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+
+    #bienvenue-droite .button-center {
+        margin: 5px 0 10px 0;
+    }
 }
+
+
 
 @media (max-width: 1024px){
     #section-bienvenue {
@@ -254,7 +285,11 @@ h1 {
     }
 }
 
-@media (max-width: 768px) {
+
+
+
+@media (max-width: 940px) {
+
     #section-bienvenue {
         margin: 0px;
         flex-direction: column-reverse;
@@ -480,7 +515,18 @@ h1 {
     }
 }
 
+@media (max-width: 940px) {
+#section-evenement-accueil {
+    margin-top: 0px;
+}
+}
+
 @media (max-width: 768px) {
+    #section-evenement-accueil>p:first-child {
+        /* font-size: 40px; */
+        text-align: center;
+    }
+
     #section-evenement-accueil {
         margin-top: 0px;
     }
@@ -601,8 +647,8 @@ h1 {
 
 
 #section-galerie-accueil {
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 200px;
+    margin-right: 200px;
     font-family: "Montserrat";
     padding: 50px 50px 70px 50px;
 
@@ -658,9 +704,28 @@ h1 {
 
 @media (max-width: 1440px) {
     #section-galerie-accueil {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 70px;
+        margin-right: 70px;
     }
+
+    #section-galerie-accueil img {
+        width: 220px;
+        height: 220px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    #section-galerie-accueil {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #section-galerie-accueil img {
+        width: 200px;
+        height: 200px;
+    }
+
 }
 
 @media (max-width: 1024px) {
@@ -672,16 +737,17 @@ h1 {
     }
 
     #section-galerie-accueil img {
-        width: 200px;
-        height: 200px;
+        width: 170px;
+        height: 170px;
     }
 }
 
 @media (max-width: 768px) {
     #section-galerie-accueil img {
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
         border: 0;
+        border: black solid .1px;
     }
 
     #section-galerie-accueil {
@@ -691,6 +757,13 @@ h1 {
     #section-galerie-accueil .btn-accueil {
         margin-top: 40px;
 
+    }
+}
+
+@media (max-width: 650px) {
+    #section-galerie-accueil img {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -871,7 +944,7 @@ h1 {
     font-family: "Montserrat";
     flex-direction: column;
     align-items: center;
-    padding: 50px 50px 70px 50px;
+    padding: 50px 250px 70px 250px;
 }
 
 #section-produit-accueil a {
@@ -903,22 +976,23 @@ h1 {
 
 #produits-accueil {
     margin-top: 50px;
-    margin-left: 300px;
-    margin-right: 300px;
     display: flex;
+    width: 100%;
     flex-direction: row;
     height: 400px;
+    justify-content: space-between;
     /* background-color: white; */
 }
 
-.produit-accueil {
-    padding: 40px;
+.produit-accueil{
+    width: 250px;
 }
 
 .produit-accueil img {
     width: 250px;
     height: 250px;
     object-fit: cover;
+    border: black solid .1px;
 }
 
 .nom-produit-accueil {
@@ -933,14 +1007,35 @@ h1 {
 }
 
 @media (max-width: 1440px) {
-    .produit-accueil {
-        border-left: none;
-    }
 
     #section-produit-accueil .btn-accueil {
         margin-top: 40px;
     }
+
+    #section-produit-accueil {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .produit-accueil img {
+        width: 220px;
+        height: 220px;
+    }
 }
+
+
+@media (max-width: 1200px) {
+    #section-produit-accueil {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .produit-accueil img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 
 @media (max-width: 1024px) {
     #produits-accueil {
@@ -952,9 +1047,7 @@ h1 {
     }
 
     .produit-accueil {
-        width: 25%;
-        height: 260px;
-        padding: 0px;
+        width:auto;
     }
 
     .produit-accueil img {
@@ -962,30 +1055,64 @@ h1 {
         height: 170px;
         object-fit: cover;
     }
+
+    #section-produit-accueil {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 @media (max-width: 768px) {
     #produits-accueil {
         margin-left: 0px;
         margin-right: 0px;
-        height: 250px;
+        height: auto;
+    }
+
+    #section-produit-accueil>p:first-child {
+        /* font-size: 40px; */
+        text-align: center;
     }
 
     .produit-accueil {
         border-left: none;
-        width: 25%;
+        width: auto;
         padding: 0px;
     }
 
     .produit-accueil img {
-        width: 145px;
-        height: 145px;
-        object-fit: cover;
+        width: 130px;
+        height: 130px;
     }
 
     #section-produit-accueil .btn-accueil {
         margin-top: 40px;
+    }
 
+    .nom-produit-accueil {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .prix-produit-accueil {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .produit-accueil img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nom-produit-accueil {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .prix-produit-accueil {
+        font-size: 12px;
     }
 }
 
@@ -1111,8 +1238,8 @@ h1 {
 }
 
 #section-coach-accueil {
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 200px;
+    margin-right: 200px;
     font-family: "Montserrat";
     padding: 50px 50px 70px 50px;
 }
@@ -1158,31 +1285,33 @@ h1 {
 
 #coachs-accueil {
     display: flex;
-    gap: 5%;
+    /* gap: 5%; */
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .coach-accueil {
     display: flex;
-    width: 47%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 24%;
     margin-bottom: 30px;
-    gap: 20px;
-    justify-content: space-between;
 }
 
 .image-contact-coach-accueil {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 70%;
     border: #e9e9e9 solid .1px;
-    height: 285px;
 }
 
 .info-coach-accueil {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    /* width: 65%; */
     justify-content: center;
+    gap: 10px;
 }
 
 .image-coach-accueil {
@@ -1197,7 +1326,7 @@ h1 {
 
 .contact-coach-accueil {
     display: flex;
-    height: 50px;
+    /* height: 50px; */
     justify-content: center;
 }
 
@@ -1240,30 +1369,18 @@ h1 {
     text-transform: uppercase;
 }
 
-.description-coach-accueil {
-    height: 80%;
-    font-size: 14px;
-    line-height: 2;
-    text-align: center;
-    margin-top: 0;
-}
 
 /* 1440px */
 @media (max-width: 1440px) {
     #section-coach-accueil {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-
-    .image-contact-coach-accueil {
-        height: 260px;
+        margin-left: 85px;
+        margin-right: 85px;
     }
 
     #section-coach-accueil .btn-accueil {
         margin-top: 40px;
     }
 }
-
 /* 1024 */
 @media (max-width: 1024px) {
     #section-coach-accueil {
@@ -1273,27 +1390,26 @@ h1 {
         margin-bottom: 20px;
     }
 
-    .image-contact-coach-accueil {
-        height: 200px;
-    }
+    
 }
 
-@media (max-width: 768px) {
-    .image-contact-coach-accueil {
-        height: 270px;
-        width: 60%;
+@media (max-width: 840px) {
+
+    /* hide the 4th .coach-accueil */
+    .coach-accueil:nth-of-type(4) {
+        display: none;
     }
 
     .coach-accueil {
         flex-direction: column;
         align-items: center;
-        width: 45%;
+        width: 30%;
         justify-content: unset;
         margin-bottom: 0;
     }
 
     .nom-coach-accueil {
-        height: 30px;
+        margin-top: 10px;    
     }
 
     .titre-coach-accueil {
@@ -1304,6 +1420,18 @@ h1 {
         margin-bottom: 20px;
     }
 
+}
+
+@media (max-width: 600px) {
+
+    /* hide the 4th .coach-accueil */
+    .coach-accueil:nth-of-type(3) {
+        display: none;
+    }
+
+    .coach-accueil {
+        width: 48%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1336,11 +1464,10 @@ h1 {
 
     .coach-accueil {
         width: 100%;
-        flex-direction: row;
     }
 
     .image-contact-coach-accueil {
-        width: 100%;
+        width: 60%;
     }
 
     .info-coach-accueil {
@@ -1360,13 +1487,8 @@ h1 {
         width: 20px;
     }
 
-    .image-contact-coach-accueil {
-        height: 262px;
-    }
-
     .nom-coach-accueil,
-    .titre-coach-accueil,
-    .description-coach-accueil {
+    .titre-coach-accueil {
         text-align: center;
     }
 
@@ -1382,79 +1504,23 @@ h1 {
         margin-bottom: 0px;
     }
 
-    .description-coach-accueil {
-        height: 80%;
-        font-size: 12px;
-        line-height: 1.3;
-        text-align: center;
-        margin-top: 12px;
-        text-align: justify;
-    }
-
     .coach-accueil:nth-of-type(2) {
         display: none;
     }
 
-    #section-coach-accueil .btn-accueil {
-        margin-top: 40px;
+    .info-coach-accueil{
+        margin-top: 10px;
     }
+
 
 }
 
 @media (max-width: 375px) {
-    .description-coach-accueil {
-        display: none;
-    }
-
-    #section-coach-accueil>p:nth-child(3) {
-        padding: 0 10px;
-        text-align: justify;
-    }
-
-    .coach-accueil {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0px;
-    }
-
-    .image-contact-coach-accueil {
-        width: 60%;
-        height: auto;
-    }
 
     .info-coach-accueil {
-        width: 100%;
+        margin-top: 5px;
     }
-
-    .image-coach-accueil {
-        width: 100%;
-        height: 270px;
-    }
-
-    .contact-coach-accueil {
-        height: auto;
-    }
-
-    .contact-coach-accueil img {
-        width: 20px;
-    }
-
-    .nom-coach-accueil,
-    .titre-coach-accueil {
-        text-align: center;
-    }
-
-    .nom-coach-accueil {
-        font-size: 16px;
-        height: 20px;
-    }
-
-    .titre-coach-accueil {
-        font-size: 13px;
-        height: 20px;
-    }
-
+    
 }
 
 /* media 325 */
@@ -1490,11 +1556,11 @@ h1 {
 
     .info-coach-accueil {
         width: 100%;
+        margin-top: 0;
     }
 
     .image-coach-accueil {
         width: 100%;
-        height: 200px;
     }
 
     .contact-coach-accueil {
@@ -1506,8 +1572,7 @@ h1 {
     }
 
     .nom-coach-accueil,
-    .titre-coach-accueil,
-    .description-coach-accueil {
+    .titre-coach-accueil{
         text-align: center;
     }
 
@@ -1517,16 +1582,6 @@ h1 {
 
     .titre-coach-accueil {
         font-size: 13px;
-    }
-
-    .description-coach-accueil {
-        height: 80%;
-        font-size: 12px;
-        line-height: 1.5;
-        text-align: center;
-        margin-top: 12px;
-        text-align: justify;
-        padding: 0 10px;
     }
 
     .coach-accueil:nth-of-type(2) {
