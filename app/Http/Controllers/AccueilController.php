@@ -21,7 +21,7 @@ class AccueilController extends Controller
         $galeries = \App\Models\Galerie::inRandomOrder()->take(4)->get();
 
         // select 2 random coach from the table coach
-        $coachs = \App\Models\Coach::inRandomOrder()->take(2)->get();
+        $coachs = \App\Models\Coach::inRandomOrder()->take(4)->get();
 
         // select all event order by date_debut from the table evenement, and show the first
         $evenements = \App\Models\Evenement::orderBy('date_debut', 'asc')->take(2)->get();
