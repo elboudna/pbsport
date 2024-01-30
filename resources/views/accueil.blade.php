@@ -111,7 +111,7 @@
                 <div class="image-coach-accueil">
                     <img src="{{ asset('storage/coach_images/' . $coach->photo) }}" alt="{{ $coach->nom }}">
                 </div>
-                <div class="contact-coach-accueil">
+                <!-- <div class="contact-coach-accueil">
                     <a href="mailto:{{ $coach->email }}">
                         <img src="{{ asset('icone/mail.png') }}" alt="">
                     </a>
@@ -119,12 +119,11 @@
                     <a target="_blank" href="{{ $coach->facebook }}">
                         <img src="{{ asset('icone/fb.png') }}" alt="">
                     </a>
-                </div>
+                </div> -->
             </div>
             <div class="info-coach-accueil">
                 <p class="nom-coach-accueil">{{ $coach->prenom }}</p>
                 <p class="titre-coach-accueil">Coach</p>
-                <p class="description-coach-accueil">{{ $coach->description }}</p>
             </div>
         </div>
         @endforeach
