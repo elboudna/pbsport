@@ -97,11 +97,11 @@
         for (let i = 0; i < description.length; i++) {
             fullDescriptions.push(description[i].textContent);
 
-            // Trim and split to show only the first 14 words
+            // Trim and split to show only the first 10 words
             let descriptionText = description[i].textContent;
             let descriptionTextTrim = descriptionText.trim();
             let descriptionTextSplit = descriptionTextTrim.split(' ');
-            let descriptionTextSlice = descriptionTextSplit.slice(0, 14);
+            let descriptionTextSlice = descriptionTextSplit.slice(0, 10);
             let descriptionTextJoin = descriptionTextSlice.join(' ');
             descriptionCourte[i].textContent = descriptionTextJoin + '...';
         }
