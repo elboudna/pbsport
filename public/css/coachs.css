@@ -61,6 +61,7 @@
 
 .coach p {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .coach:nth-child(4n+3),
@@ -82,7 +83,7 @@
 .nom-coach-pro {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     padding-left: 35%;
     padding-right: 25%;
 }
@@ -90,7 +91,7 @@
 .nom-coach {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 
 .nom-coach-pro h3,
@@ -103,10 +104,10 @@
 }
 
 .nom-coach-pro span {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color: transparent;
-    background: linear-gradient(45deg, #ffe656, #ffba24, #ffe656, #ffba24, #ffe656, #ffba24);
+    background: linear-gradient(45deg, #fff1a3, #ffb10a, #fff1a3, #ffb10a, #fff1a3, #ffb10a);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     animation: gradientAnimation 10s infinite linear;
@@ -116,16 +117,17 @@
 
 .description-coach {
     display: flex;
-    height: 120px;
+    height: 105px;
     justify-content: center;
     padding: 0px 12px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .fleche-coach {
     display: flex;
     justify-content: flex-start;
     margin-top: 5px;
+    margin-left: 12px;
     /* border: red solid; */
 }
 
