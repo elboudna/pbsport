@@ -30,11 +30,11 @@
                     <div class="description-coach">
                         <p>{{ $coach->description }}</p>
                     </div>
+                    <a class="mailCoach" href="{{ $coach->email }}"></a>
+                    <a class="fbCoach" href="{{ $coach->facebook }}"></a>
                     <div class="fleche-coach">
                         <img src="{{ asset('icone/arrow.png') }}" alt="fleche">
                     </div>
-                    <a class="mailCoach" href="{{ $coach->email }}"></a>
-                    <a class="fbCoach" href="{{ $coach->facebook }}"></a>
                 </div>
             </div>
         </div>
@@ -80,13 +80,13 @@
         let imgCoach = document.querySelectorAll('.photo-coach img');
         let nomCoach = document.querySelectorAll('.info-coach h3');
         let nomCacheCoach = document.querySelectorAll('.nom-cache');
-        
+
         // Get the modal container
-        let fleche = document.querySelectorAll('.fleche-coach');
+        let fleche = document.querySelectorAll('.fleche-coach img');
         let modal = document.getElementById('myModal');
         let close = document.querySelector('.close-btn');
 
-        
+
         //modal elements
         let modalDescription = document.querySelector('.modal-container p');
         let mailCoachModal = document.querySelector('.modal-container .contact-coach a:first-child');
@@ -94,20 +94,7 @@
         let imgModal = document.querySelector('.modal-container img');
         let nomCoachModal = document.querySelector('.modal-container h2');
 
-        for (let i = 0; i < description.length; i++) {
-            fullDescriptions.push(description[i].textContent);
-
-            // Trim and split to show only the first 10 words
-            let descriptionText = description[i].textContent;
-            let descriptionTextTrim = descriptionText.trim();
-            let descriptionTextSplit = descriptionTextTrim.split(' ');
-            let descriptionTextSlice = descriptionTextSplit.slice(0, 10);
-            let descriptionTextJoin = descriptionTextSlice.join(' ');
-            descriptionCourte[i].textContent = descriptionTextJoin + '...';
-        }
-
-        // for screen between 1024px and 900px show only 10 words
-        if (window.matchMedia("(max-width: 1024px)").matches) {
+        if (window.matchMedia("(min-width: 1025px)").matches) {
             for (let i = 0; i < description.length; i++) {
                 fullDescriptions.push(description[i].textContent);
 
@@ -117,7 +104,69 @@
                 let descriptionTextSplit = descriptionTextTrim.split(' ');
                 let descriptionTextSlice = descriptionTextSplit.slice(0, 10);
                 let descriptionTextJoin = descriptionTextSlice.join(' ');
-                descriptionCourte[i].textContent = descriptionTextJoin + '...';
+                descriptionCourte[i].textContent = descriptionTextJoin + '..';
+            }
+        }
+
+        // for screen between 1024px and 900px show only 10 words
+        if (window.matchMedia("(max-width: 1024px)").matches && window.matchMedia("(min-width: 931px)").matches) {
+            for (let i = 0; i < description.length; i++) {
+                fullDescriptions.push(description[i].textContent);
+
+                // Trim and split to show only the first 10 words
+                let descriptionText = description[i].textContent;
+                let descriptionTextTrim = descriptionText.trim();
+                let descriptionTextSplit = descriptionTextTrim.split(' ');
+                let descriptionTextSlice = descriptionTextSplit.slice(0, 10);
+                let descriptionTextJoin = descriptionTextSlice.join(' ');
+                descriptionCourte[i].textContent = descriptionTextJoin + '..';
+            }
+        }
+
+        // for screen between 930 and 770px show only 5 words
+        if (window.matchMedia("(max-width: 930px)").matches && window.matchMedia("(min-width: 770px)").matches) {
+            for (let i = 0; i < description.length; i++) {
+                fullDescriptions.push(description[i].textContent);
+
+                // Trim and split to show only the first 5 words
+                let descriptionText = description[i].textContent;
+                let descriptionTextTrim = descriptionText.trim();
+                let descriptionTextSplit = descriptionTextTrim.split(' ');
+                let descriptionTextSlice = descriptionTextSplit.slice(0, 5);
+                let descriptionTextJoin = descriptionTextSlice.join(' ');
+                descriptionCourte[i].textContent = descriptionTextJoin + '..';
+            }
+        }
+
+
+        // for screen 768px and less show only 10 words
+        if (window.matchMedia("(max-width: 768px)").matches && window.matchMedia("(min-width: 441px)").matches) {
+            for (let i = 0; i < description.length; i++) {
+                fullDescriptions.push(description[i].textContent);
+
+                // Trim and split to show only the first 10 words
+                let descriptionText = description[i].textContent;
+                let descriptionTextTrim = descriptionText.trim();
+                let descriptionTextSplit = descriptionTextTrim.split(' ');
+                let descriptionTextSlice = descriptionTextSplit.slice(0, 12);
+                let descriptionTextJoin = descriptionTextSlice.join(' ');
+                descriptionCourte[i].textContent = descriptionTextJoin + '..';
+            }
+        }
+
+
+        // for screen 440px and less show 30 words
+        if (window.matchMedia("(max-width: 440px)").matches) {
+            for (let i = 0; i < description.length; i++) {
+                fullDescriptions.push(description[i].textContent);
+
+                // Trim and split to show only the first 30 words
+                let descriptionText = description[i].textContent;
+                let descriptionTextTrim = descriptionText.trim();
+                let descriptionTextSplit = descriptionTextTrim.split(' ');
+                let descriptionTextSlice = descriptionTextSplit.slice(0, 30);
+                let descriptionTextJoin = descriptionTextSlice.join(' ');
+                descriptionCourte[i].textContent = descriptionTextJoin + '.';
             }
         }
 
@@ -144,7 +193,7 @@
 
         let coachElements = document.querySelectorAll('.coach:nth-child(4n+2) .fleche-coach img, .coach:nth-child(4n+3) .fleche-coach img');
 
-        coachElements.forEach(function (img) {
+        coachElements.forEach(function(img) {
             img.src = "{{ asset('icone/arrow-white.png') }}";
         });
 
@@ -154,11 +203,11 @@
             let coachElementsEven = document.querySelectorAll('.coach:nth-child(even) .fleche-coach img');
             let coachElementsOdd = document.querySelectorAll('.coach:nth-child(odd) .fleche-coach img');
 
-            coachElementsEven.forEach(function (img) {
+            coachElementsEven.forEach(function(img) {
                 img.src = "{{ asset('icone/arrow-white.png') }}";
             });
 
-            coachElementsOdd.forEach(function (img) {
+            coachElementsOdd.forEach(function(img) {
                 img.src = "{{ asset('icone/arrow.png') }}";
             });
 
