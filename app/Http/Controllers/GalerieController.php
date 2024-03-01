@@ -20,8 +20,6 @@ class GalerieController extends Controller
     {
         $galerie = new Galerie();
 
-        $galerie->nom = request('nom');
-
         if (request()->hasFile('image')) {
             $file = request()->file('image');
             $extension = $file->getClientOriginalExtension(); // getting image extension
