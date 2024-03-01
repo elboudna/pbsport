@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 //import Evenement model
-use App\Models\Evenement;
 
 
 class AccueilController extends Controller
