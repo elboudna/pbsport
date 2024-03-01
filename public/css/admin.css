@@ -156,6 +156,7 @@
 
 #galerie-admin {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #galerie-admin .image-info {
@@ -178,4 +179,3 @@
 #btn-msg{
     font-size: 14px;
 }
-
