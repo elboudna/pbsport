@@ -9,38 +9,37 @@
 <section id="section-galerie">
 
     <div class="gallery">
-        <div class="photo" onclick="showImage('photo1.jpg')">
-            <img src="photo1.jpg" alt="Photo 1">
+        @foreach($images as $image)
+        <div class="photo">
+            <img src="{{ asset('storage/galerie/' . $image->image) }}" alt="">
         </div>
-        <div class="photo" onclick="showImage('photo2.jpg')">
-            <img src="photo2.jpg" alt="Photo 2">
-        </div>
-        <div class="photo" onclick="showImage('photo2.jpg')">
-            <img src="photo2.jpg" alt="Photo 2">
-        </div>
-        <div class="photo" onclick="showImage('photo2.jpg')">
-            <img src="photo2.jpg" alt="Photo 2">
-        </div>
-        <div class="photo" onclick="showImage('photo2.jpg')">
-            <img src="photo2.jpg" alt="Photo 2">
-        </div>
-        <!-- Ajoutez d'autres photos ici -->
+        @endforeach
     </div>
 
     <div id="overlay" onclick="hideImage()"></div>
     <div id="lightbox">
-        <span class="close" onclick="hideImage()">&times;</span>
+        <!-- <span class="close" onclick="hideImage()">&times;</span> -->
         <img id="expandedImg" src="" alt="Expanded Image">
     </div>
 
 </section>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var photos = document.querySelectorAll('.photo img');
+        photos.forEach(function(photo) {
+            photo.addEventListener('click', function() {
+                var src = this.getAttribute('src');
+                showImage(src);
+            });
+        });
+    });
+
     function showImage(src) {
         var expandedImg = document.getElementById("expandedImg");
         expandedImg.src = src;
         document.getElementById("overlay").style.display = "block";
-        document.getElementById("lightbox").style.display = "block";
+        document.getElementById("lightbox").style.display = "flex";
     }
 
     function hideImage() {
