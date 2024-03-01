@@ -79,6 +79,7 @@ Route::middleware(['role:3'])->group(function () {
     Route::get('/admin/modifier-coach/{id}', [AdminController::class, 'modifierCoach'])->name('admin.modifier-coach');
     Route::get('/admin/bannieres', [AdminController::class, 'bannieres'])->name('admin.bannieres');
     Route::get('/admin/galerie', [AdminController::class, 'galerie'])->name('admin.galerie');
+    Route::get('/admin/liste-equipe', [AdminController::class, 'equipe'])->name('admin.equipe');
 });
 
 // stock
