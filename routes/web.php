@@ -14,6 +14,7 @@ use App\Http\Controllers\GalerieController;
 use App\Http\Controllers\AbonnementController;
 use App\Http\Controllers\BanniereController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EquipeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -122,3 +123,6 @@ Route::get('/partenaires', function () {
 //contact 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'sendEmail'])->name('contact.send');
+
+//equipe 
+Route::get('/equipe', [EquipeController::class, 'index'])->name('equipe');
