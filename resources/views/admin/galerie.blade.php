@@ -10,8 +10,7 @@
     <table class="table-element">
         <thead>
             <tr>
-                <th>Image(s)</th>
-                <th>Nom</th>
+                <th>Image</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -21,7 +20,6 @@
                 @csrf
                 <div class="ajouter-produit">
                     <td><input type="file" class="form-control" id="image" name="image"></td>
-                    <td><input type="text" name="nom"></td>
                     <td><button type="submit" class="btn btn-primary">Ajouter image(s)</button></td>
                 </div>
             </form>
@@ -36,7 +34,6 @@
         @foreach($images as $image)
         <div class="image-info">
             <img src="{{ asset('storage/galerie/' . $image->image) }}" alt="">
-            <p>{{ $image->nom }}</p>
             <form action="{{ route('galerie.supprimer', $image->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
