@@ -1,0 +1,57 @@
+#section-equipe {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: "Montserrat";
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    flex: 1 0 25%; /* 4 colonnes par ligne */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    border: black 2px solid;
+    width: 100%;
+}
+
+.team-member h3,
+.team-member p {
+    text-align: left;
+}
+
+.team-member p{
+    color: #464646;
+    margin: 0;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    #section-equipe {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .team-member {
+        flex: 1 0 50%; /* 2 colonnes par ligne pour les écrans moyens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .team-member {
+        flex: 1 0 100%; /* 1 colonne par ligne pour les petits écrans */
+    }
+}
