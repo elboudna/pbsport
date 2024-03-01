@@ -108,7 +108,7 @@
             }
         }
 
-        // for screen between 1024px and 900px show only 10 words
+        // for screen between 1024px and 900px show only 10 words   
         if (window.matchMedia("(max-width: 1024px)").matches && window.matchMedia("(min-width: 931px)").matches) {
             for (let i = 0; i < description.length; i++) {
                 fullDescriptions.push(description[i].textContent);
@@ -148,7 +148,7 @@
                 let descriptionText = description[i].textContent;
                 let descriptionTextTrim = descriptionText.trim();
                 let descriptionTextSplit = descriptionTextTrim.split(' ');
-                let descriptionTextSlice = descriptionTextSplit.slice(0, 12);
+                let descriptionTextSlice = descriptionTextSplit.slice(0, 25);
                 let descriptionTextJoin = descriptionTextSlice.join(' ');
                 descriptionCourte[i].textContent = descriptionTextJoin + '..';
             }
