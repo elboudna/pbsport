@@ -59,12 +59,14 @@
     <p>Dernières photos</p>
     <p class="vert">Notre belle galerie de photos</p>
     <p>Notre Academie est fier de la réussite de ses membres et veut partager leurs meilleurs moments</p>
+
+
     <div id="galerie-images-accueil" class="image-slider">
-        <img src="" alt="Hello">
-        <img src="" alt="You">
-        <img src="" alt="World">
-        <img src="" alt="!">
-    </div>
+        @foreach($galeries as $galerie)
+            <img src="{{ asset('storage/galerie/' . $galerie->image) }}" alt="{{ $galerie->image }}">
+        @endforeach
+    </div> 
+
     <div class="btn-accueil button-center">
         <a class="bggris vert" href="{{ route('galerie') }}">Notre galerie</a>
     </div>
@@ -201,7 +203,6 @@
 
         const produitSlides = document.querySelectorAll('.produit-accueil');
         initializeSlider(produitSlides, 'produits-accueil');
-
 
     });
 </script>
