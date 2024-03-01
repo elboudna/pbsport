@@ -58,21 +58,21 @@
     object-fit: cover;
 }
 
-#magasin p{
+.empty p{
     font-size: 40px;
     font-family: "Montserrat";
     text-align: center;
     margin: 30px;
 }
 
-#magasin span p{
+.empty span p{
     font-size: 80px;
     font-family: "Montserrat";
     text-align: center;
     margin: 0;
 }
 
-#magasin div{
+.empty div{
     margin-top: 60px;
     display: flex;
     justify-content: center;
@@ -83,7 +83,7 @@
         margin: 100px 200px;
     }
 
-    #magasin .lien-retour{
+    .empty .lien-retour{
         width: 100%;
         margin: 50px 0px;
     }
@@ -94,11 +94,11 @@
         margin: 100px 100px;
     }
 
-    #magasin span p{
+    .empty span p{
         font-size: 50px;
     }
 
-    #magasin p{
+    .empty p{
         font-size: 35px;
     }
 
@@ -109,11 +109,11 @@
         margin: 100px 50px;
     }
 
-    #magasin span p{
+    .empty span p{
         font-size: 40px;
     }
 
-    #magasin p{
+    .empty p{
         font-size: 30px;
     }
 
@@ -124,11 +124,11 @@
         margin: 100px 20px;
     }
 
-    #magasin span p{
+    .empty span p{
         font-size: 30px;
     }
 
-    #magasin p{
+    .empty p{
         font-size: 20px;
     }
 
@@ -139,11 +139,11 @@
         margin: 100px 20px;
     }
 
-    #magasin span p{
+    .empty span p{
         font-size: 30px;
     }
 
-    #magasin p{
+    .empty p{
         font-size: 20px;
     }
 
