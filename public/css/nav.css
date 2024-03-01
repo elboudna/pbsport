@@ -364,7 +364,7 @@ nav a:hover {
 
     /* Styles pour le contenu du burger menu */
     #burger-menu-content {
-        padding: 15px;
+        padding: 0 15px;
         width: 100%;
         margin: 50px auto;
     }
@@ -374,6 +374,16 @@ nav a:hover {
         font-size: 24px;
         cursor: pointer;
         margin-left: 15px;
+        color: black;
+    }
+
+    #mobile-nav .user-menu div {
+        margin-top: 20px;
+    }
+
+    #mobile-nav .user-menu p{
+        margin-bottom: 0;
+        padding: 0;
     }
 
     /* Ajouter cette classe pour masquer le menu lorsqu'il est caché */
@@ -401,7 +411,7 @@ nav a:hover {
         margin-top: 30px;
         padding-top: 20px;
         border-top: #ccc solid 1px;
-        width: 395px;
+        width: 90%;
     }
 
     nav a {
