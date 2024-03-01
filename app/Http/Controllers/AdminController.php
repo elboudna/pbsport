@@ -99,4 +99,11 @@ class AdminController extends Controller
         $images = DB::table('galeries')->get();
         return view('admin.galerie', compact('images'));
     }
+
+    public function equipe()
+    {
+        $equipes = DB::table('equipe')->get();
+        return view('admin.liste-equipe', compact('equipes'));
+    }
 }
+
