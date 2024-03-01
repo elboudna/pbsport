@@ -71,7 +71,7 @@
                             <a href="{{ route('magasin') }}">Produits</a>
                             <a href="#">Académie</a>
                             <a href="{{ route('coachs') }}">Coachs</a>
-                            <a href="">Équipe</a>
+                            <a href="{{ route('equipe') }}">Équipe</a>
                             <a href="{{ route('partenaires') }}">Partenaires</a>
                             <a href="{{ route('galerie') }}">Galerie</a>
                             <a href="#">Blog</a>
@@ -111,7 +111,7 @@
             <a href="#">Académie</a>
             <div class="dropdown-content">
                 <a href="{{ route('coachs') }}">Coachs</a>
-                <a href="">Équipe</a>
+                <a href="{{ route('equipe') }}">Équipe</a>
                 <a href="{{ route('partenaires') }}">Partenaires</a>
                 <a href="{{ route('galerie') }}">Galerie</a>
                 <a href="#">Blog</a>
@@ -139,13 +139,16 @@
 
         burgerIcon.addEventListener("click", function() {
             if (burgerMenu.style.display == "block") {
+                burgerIcon.innerHTML = "&#9776;";
                 burgerMenu.style.display = "none";
                 burgerIcon.style.zIndex = "1";
                 burgerIcon.style.color = "black";
             } else {
                 burgerMenu.style.display = "block";
-                burgerIcon.style.color = "white";
+                // changer le burgerIcon en croix avec le code &#x2715
+                burgerIcon.innerHTML = "&#x2715;";
                 burgerIcon.style.zIndex = "1000";
+                burgerIcon.style.color = "white";
             }
         });
 
