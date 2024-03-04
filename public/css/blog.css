@@ -1,0 +1,30 @@
+#section-blogs{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: "Montserrat";
+}
+
+
+@media (max-width: 1440px) {
+    #section-blogs{
+        margin: 50px 200px;
+    }
+
+    
+}
+
+@media (max-width: 1024px) {
+    #section-blogs{
+        margin: 50px 70px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #section-blogs{
+        margin: 50px 20px;
+    }
+
+}
