@@ -18,7 +18,6 @@
 
     <div id="overlay" onclick="hideImage()"></div>
     <div id="lightbox">
-        <!-- <span class="close" onclick="hideImage()">&times;</span> -->
         <img id="expandedImg" src="" alt="Expanded Image">
     </div>
 
