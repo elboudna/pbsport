@@ -15,6 +15,7 @@ use App\Http\Controllers\AbonnementController;
 use App\Http\Controllers\BanniereController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EquipeController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,7 +80,7 @@ Route::middleware(['role:3'])->group(function () {
     Route::get('/admin/modifier-coach/{id}', [AdminController::class, 'modifierCoach'])->name('admin.modifier-coach');
     Route::get('/admin/bannieres', [AdminController::class, 'bannieres'])->name('admin.bannieres');
     Route::get('/admin/galerie', [AdminController::class, 'galerie'])->name('admin.galerie');
-    Route::get('/admin/liste-equipe', [AdminController::class, 'equipe'])->name('admin.equipe');
+    Route::get('/admin/liste-equipe', [AdminController::class, 'listeEquipe'])->name('admin.liste-equipe');
 });
 
 // stock
@@ -127,3 +128,10 @@ Route::post('/contact', [ContactController::class, 'sendEmail'])->name('contact.
 
 //equipe 
 Route::get('/equipe', [EquipeController::class, 'index'])->name('equipe');
+Route::post('/equipe', [EquipeController::class, 'store'])->name('equipe.store');
+Route::put('/equipe/modifier/{id}', [EquipeController::class, 'modifier'])->name('equipe.modifier');
+Route::delete('/equipe/supprimer/{id}', [EquipeController::class, 'supprimer'])->name('equipe.supprimer');
+Route::put('/equipe/modifier/{id}', [EquipeController::class, 'modifier'])->name('equipe.modifier');
+
+//blogs
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
