@@ -4,7 +4,7 @@
 <div class="lien-retour">
     <a href="{{ route('admin.liste-produit') }}">Retour à la liste des produits</a>
 </div>
-<div class="form-section">
+<div class="form-admin">
     <h1>Stock de {{ $produit->nom }}</h1>
 
     <p>Type du produit : {{ $produit->type->type }}</p>
