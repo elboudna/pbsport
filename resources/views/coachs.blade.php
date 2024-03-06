@@ -6,7 +6,7 @@
     <h2>Coachs</h2>
 </div>
 <section id="section-coachs">
-
+    <h1>Nos coachs</h1>
 
     <div id="coachs-flex">
         @foreach($coachs as $coach)
