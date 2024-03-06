@@ -135,3 +135,8 @@ Route::put('/equipe/modifier/{id}', [EquipeController::class, 'modifier'])->name
 
 //blogs
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
+
+//academie
+Route::get('/academie', function () {
+    return view('academie');
+})->name('academie');
