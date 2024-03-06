@@ -6,7 +6,7 @@
     <h2>Contact</h2>
 </div>
 
-<section id="contact" class="form-section">
+<section id="contact" class="form-contact">
 
     <div class="form-pbsport">
 
