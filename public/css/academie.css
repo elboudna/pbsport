@@ -1,0 +1,452 @@
+#section-academie {
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: "Montserrat";
+}
+
+#section-academie .img-heading {
+    width: 100%;
+    margin-top: 60px;
+}
+
+
+#section-academie h1 {
+    color: #e4a81e;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+}
+
+#section-academie h2 {
+    color: #10a87d;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px;
+    position: relative;
+    animation: textEffect 1s ease infinite alternate; /* Animation effect */
+}
+
+@keyframes textEffect {
+    from {
+        color: #14d69f; /* Starting color */
+        transform: translateX(-.5px); /* Starting position */
+    }
+    to {
+        color: #0e8362; /* Ending color */
+        transform: translateX(.5px); /* Ending position */
+    }
+}
+
+#section-academie h2:before {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 5px;
+    background: #10a87d;
+    left: 0;
+    top: 50%;
+    position: absolute;
+}
+
+#section-academie h2:after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 5px;
+    background: #10a87d;
+    right: 0;
+    top: 50%;
+    position: absolute;
+}
+
+
+
+
+#section-academie h3 {
+    color: #464646;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+#section-academie p {
+    color: #000;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.academie-description {
+    color: #464646;
+    text-align: justify;
+}
+
+#pourquoi,
+#programme,
+#equipe {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#pourquoi>div:first-of-type {
+    width: 50%;
+}
+
+#pourquoi>div:last-of-type {
+    width: 50%;
+}
+
+#programme>div:first-of-type {
+    width: 50%;
+}
+
+#programme>div:last-of-type {
+    width: 50%;
+}
+
+#equipe>div:first-of-type {
+    width: 50%;
+}
+
+#equipe>div:last-of-type {
+    width: 50%;
+}
+
+#programme img {
+    height: 50%;
+    width: 100%;
+}
+
+#equipe img {
+    height: 50%;
+    width: 100%;
+}
+
+#img-flex-academie {
+    display: flex;
+    gap: 5px;
+}
+
+/* img-flex-academie  div first of type */
+#img-flex-academie div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 60%;
+}
+
+/* img-flex-academie  div first of type img*/
+#img-flex-academie div:first-of-type img {
+    width: 100%;
+    height: 50%;
+}
+
+/* img-flex-academie  div last of type */
+#img-flex-academie div:last-of-type {
+    width: 40%;
+}
+
+/* img-flex-academie  div last of type img*/
+#img-flex-academie div:last-of-type img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#joignez-nous>div:last-of-type {
+    display: flex;
+    gap: 80px;
+}
+
+#joignez-nous>div:first-of-type {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#joignez-nous img {
+    width: 25%;
+    height: 25%;
+}
+
+@media screen and (max-width: 1440px) {
+    #section-academie {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .academie-description {
+        font-size: .8em;
+    }
+
+    #section-academie h1 {
+        font-size: 2.5em;
+    }
+
+    #section-academie h2 {
+        font-size: 2em;
+        margin: 30px;
+    }
+
+    #section-academie h3 {
+        font-size: 1.3em;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    #section-academie {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .academie-description {
+        font-size: .7em;
+    }
+
+    #section-academie h1 {
+        font-size: 2em;
+    }
+
+    #section-academie h2 {
+        font-size: 1.5em;
+        margin: 20px;
+    }
+
+    #section-academie h3 {
+        font-size: 1.1em;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #section-academie {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 0px;
+        margin-top: 40px;
+    }
+
+    #section-academie .img-heading {
+        margin-top: 20px;
+    }
+
+    .academie-description {
+        font-size: .6em;
+    }
+
+    #section-academie h1 {
+        font-size: 1.5em;
+    }
+
+    #section-academie h2 {
+        font-size: 1.3em;
+        margin: 20px 0px 20px 0px;
+    }
+
+    #section-academie h3 {
+        font-size: 1em;
+    }
+
+    #pourquoi,
+    #programme,
+    #equipe {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #pourquoi>div:first-of-type>div:last-of-type {
+        display: none;
+    }
+
+    #pourquoi>div:first-of-type>div:first-of-type img:last-of-type {
+        display: none;
+    }
+
+    #pourquoi>div:first-of-type {
+        width: 100%;
+    }
+
+    #pourquoi>div:last-of-type {
+        width: 100%;
+    }
+
+    #programme>div:first-of-type {
+        width: 100%;
+    }
+
+    #programme>div:last-of-type {
+        width: 100%;
+    }
+
+    #equipe>div:first-of-type {
+        width: 100%;
+    }
+
+    #equipe>div:last-of-type {
+        width: 100%;
+    }
+
+    #img-flex-academie {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #programme {
+        /* inverse */
+        flex-direction: column-reverse;
+    }
+
+    #img-flex-academie div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    #img-flex-academie div:first-of-type img {
+        width: 100%;
+        height: 50%;
+    }
+
+    #img-flex-academie div:last-of-type {
+        width: 100%;
+    }
+
+    #img-flex-academie div:last-of-type img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #joignez-nous>div:last-of-type {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    #joignez-nous div:first-of-type {
+        text-align: center;
+    }
+
+    #joignez-nous img {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #section-academie {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #section-academie .img-heading {
+        margin-top: 10px;
+    }
+
+    .academie-description {
+        font-size: .5em;
+    }
+
+    #section-academie h1 {
+        font-size: 1.3em;
+    }
+
+    #section-academie h2 {
+        font-size: 1em;
+        margin: 20px 0px 20px 0px;
+    }
+
+    #section-academie h3 {
+        font-size: .8em;
+    }
+
+    #pourquoi,
+    #programme,
+    #equipe {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #pourquoi>div:first-of-type {
+        width: 100%;
+    }
+
+    #pourquoi>div:last-of-type {
+        width: 100%;
+    }
+
+    #programme>div:first-of-type {
+        width: 100%;
+    }
+
+    #programme>div:last-of-type {
+        width: 100%;
+    }
+
+    #programme {
+        /* inverse */
+        flex-direction: column-reverse;
+    }
+
+    #equipe>div:first-of-type {
+        width: 100%;
+    }
+
+    #equipe>div:last-of-type {
+        width: 100%;
+    }
+
+    #img-flex-academie {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #img-flex-academie div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    #img-flex-academie div:first-of-type img {
+        width: 100%;
+        height: 50%;
+    }
+
+    #img-flex-academie div:last-of-type {
+        width: 100%;
+    }
+
+    #img-flex-academie div:last-of-type img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #joignez-nous>div:last-of-type {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    #joignez-nous div:first-of-type {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    #joignez-nous img {
+        width: 50%;
+        height: 50%;
+    }
+}
