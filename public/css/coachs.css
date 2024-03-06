@@ -6,6 +6,14 @@
     font-family: "Montserrat";
 }
 
+#section-coachs h1 {
+    color: #e4a81e;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+
+}
+
 #coachs-flex {
     display: flex;
     flex-wrap: wrap;
@@ -449,7 +457,8 @@
         height: 100%;
     }
 
-    .nom-coach-pro h3, .nom-coach h3 {
+    .nom-coach-pro h3,
+    .nom-coach h3 {
         font-size: 20px;
     }
 
@@ -463,18 +472,20 @@
 }
 
 @media (max-width: 440px) {
-    
+
     #section-coachs {
-        margin: 50px 0px ;
+        margin: 50px 0px;
     }
 
-    .coach, .coach:nth-child(even), .coach:nth-child(4n+3) {
+    .coach,
+    .coach:nth-child(even),
+    .coach:nth-child(4n+3) {
         width: 100%;
         flex-direction: column;
         margin-bottom: 0;
     }
 
-    .info-coach{
+    .info-coach {
         width: 100%;
     }
 
@@ -490,11 +501,12 @@
         width: 100%;
     }
 
-    .nom-coach-pro, .nom-coach{
+    .nom-coach-pro,
+    .nom-coach {
         padding-left: 0px;
         padding-right: 0px;
         margin-top: 30px;
-    }    
+    }
 
     .nom-coach-pro span {
         font-size: 14px;
@@ -504,7 +516,7 @@
         margin-bottom: 50px;
     }
 
-    .fleche-coach{
+    .fleche-coach {
         display: none;
     }
 
