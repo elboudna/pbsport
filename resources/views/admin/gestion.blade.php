@@ -36,7 +36,7 @@
         <div class="div-admin">
             <h3>Equipe</h3>
             <div>
-                <a href="{{ route('admin.equipe') }}">Liste des membres d'équipe</a>
+                <a href="{{ route('admin.liste-equipe') }}">Liste des membres d'équipe</a>
             </div>
         </div>
 
