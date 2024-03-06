@@ -4,7 +4,7 @@
 <div class="lien-retour">
     <a href="{{ route('admin.gestion') }}">Retour à la page de gestion</a>
 </div>
-<section class="form-section">
+<section class="form-admin">
 
     <h1>Ajouter un coach</h1>
     <div class="form-pbsport">
