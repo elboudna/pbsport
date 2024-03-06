@@ -9,32 +9,14 @@
 <section id="section-equipe">
 
     <div class="team">
+
+        @foreach($membres as $membre)
         <div class="team-member">
-            <img src="photo1.jpg" alt="Membre 1">
-            <h3>Nom Prénom</h3>
-            <p>Poste</p>
+            <img src="{{ asset('storage/equipe_images/' . $membre->image) }}" alt="$membre->nom">
+            <h3>{{ $membre->nom }} {{ $membre->prenom }}</h3>
+            <p>{{ $membre->poste }}</p>
         </div>
-        <div class="team-member">
-            <img src="photo2.jpg" alt="Membre 2">
-            <h3>Nom Prénom</h3>
-            <p>Poste</p>
-        </div>
-        <div class="team-member">
-            <img src="photo2.jpg" alt="Membre 2">
-            <h3>Nom Prénom</h3>
-            <p>Poste</p>
-        </div>
-        <div class="team-member">
-            <img src="photo2.jpg" alt="Membre 2">
-            <h3>Nom Prénom</h3>
-            <p>Poste</p>
-        </div>
-        <div class="team-member">
-            <img src="photo2.jpg" alt="Membre 2">
-            <h3>Nom Prénom</h3>
-            <p>Poste</p>
-        </div>
-        <!-- Ajoutez d'autres membres de l'équipe ici -->
+        @endforeach
     </div>
 
 </section>
