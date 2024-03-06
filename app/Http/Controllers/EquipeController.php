@@ -11,31 +11,64 @@ class EquipeController extends Controller
 
     public function index()
     {
-        $equipes = Equipe::all();
-        return view('equipe', compact('equipes'));
+        $membres = Equipe::orderBy('position', 'asc')->get();
+        return view('equipe', compact('membres'));
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image',
-            'nom' => 'required',
-            'prenom' => 'required',
-            'poste' => 'required'
-        ]);
+        $membre = new Equipe();
 
-        $image = $request->file('image');
-        $nomImage = $image->hashName();
-        $image->storePublicly('public');
+        $membre->nom = $request->nom;
+        $membre->prenom = $request->prenom;
+        $membre->poste = $request->poste;
+        $membre->position = $request->position;
 
-        $equipe = new Equipe();
-        $equipe->image = $nomImage;
-        $equipe->nom = $request->nom;
-        $equipe->prenom = $request->prenom;
-        $equipe->poste = $request->poste;
-        $equipe->save();
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = time() . '.' . $extension;
+            $file->move('storage/equipe_images/', $filename);
+            $membre->image = $filename;
+        } else {
+            $membre->image = ''; // or set it to null or any default value
+        }
 
-        return redirect()->route('admin.equipe');
+        $membre->save();
+
+        return redirect()->route('admin.liste-equipe');
+
+    }
+
+    public function supprimer($id)
+    {
+        $membre = Equipe::find($id);
+        $membre->delete();
+
+        return redirect()->route('admin.liste-equipe');
+    }
+
+    public function modifier(Request $request, $id)
+    {
+        $membre = Equipe::findOrFail($id);
+
+        $membre->nom = $request->nom;
+        $membre->prenom = $request->prenom;
+        $membre->poste = $request->poste;
+        $membre->position = $request->position;
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = time() . '.' . $extension;
+            $file->move('storage/equipe_images/', $filename);
+
+            $membre->image = $filename;
+        } 
+
+        $membre->save();
+
+        return redirect()->route('admin.liste-equipe');
     }
 
     
