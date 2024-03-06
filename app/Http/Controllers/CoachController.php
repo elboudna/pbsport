@@ -60,9 +60,8 @@ class CoachController extends Controller
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $filename = time() . '.' . $extension;
             $file->move('storage/coach_images/', $filename);
+
             $coach->photo = $filename;
-        } else {
-            $coach->photo = ''; // or set it to null or any default value
         }
 
         $coach->save();
