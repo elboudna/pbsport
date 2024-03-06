@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="form-section">
+<section class="form-admin">
 
     <h1>Modifier le produit</h1>
 
