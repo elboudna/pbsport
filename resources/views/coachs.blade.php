@@ -6,6 +6,8 @@
     <h2>Coachs</h2>
 </div>
 <section id="section-coachs">
+    <h1 class="titre-page">Nos coachs</h1>
+    <h4 class="sous-titre-page">Rencontrez nos coachs expérimentés qui sont là pour vous aider à améliorer votre jeu.</h4>
 
     <div id="coachs">
 
