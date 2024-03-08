@@ -9,6 +9,10 @@
 </div>
 
 <section id="magasin">
+
+    <!-- <h1 class="titre-page">Magasin</h1>
+    <h4 class="sous-titre-page">Découvrez notre sélection de produits dans notre magasin en ligne.</h4> -->
+
     <div class="empty">
         <span>
             <p>Aucun produit trouvé!</p>
