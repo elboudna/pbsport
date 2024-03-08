@@ -18,19 +18,19 @@
                     @endauth
                 </p>
 
+                @auth
                 <div class="menu-options">
-                    @auth
                     @if(auth()->user()->role_id == 3)
                     <a href="{{ route('admin.gestion') }}">Gestion</a>
-                    @endif <a href="{{ route('profil') }}">Profil</a>
+                    @endif
+                    <a href="{{ route('profil') }}">Profil</a>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                    @else
-                    <a href="{{ route('showregister') }}">Nouveau compte</a>
-                    @endauth
+
                 </div>
+                @endauth
             </div>
 
             <div id="panier-desktop">
@@ -69,12 +69,12 @@
                             <a href="/">Accueil</a>
                             <a href="{{ route('evenements') }}">Évènements</a>
                             <a href="{{ route('magasin') }}">Produits</a>
-                            <a href="#">Académie</a>
+                            <a href="{{ route('academie') }}">Académie</a>
                             <a href="{{ route('coachs') }}">Coachs</a>
                             <a href="{{ route('equipe') }}">Équipe</a>
                             <a href="{{ route('partenaires') }}">Partenaires</a>
                             <a href="{{ route('galerie') }}">Galerie</a>
-                            <a href="#">Blog</a>
+                            <a href="{{ route('blogs') }}">Blog</a>
                             <a href="{{ route('contact') }}">Contact</a>
                         </nav>
                     </div>
@@ -108,13 +108,13 @@
         <a href="{{ route('evenements') }}">Évènements</a>
         <a href="{{ route('magasin') }}">Produits</a>
         <div class="dropdown">
-            <a href="#">Académie</a>
+            <a href="{{ route('academie') }}">Académie</a>
             <div class="dropdown-content">
                 <a href="{{ route('coachs') }}">Coachs</a>
                 <a href="{{ route('equipe') }}">Équipe</a>
                 <a href="{{ route('partenaires') }}">Partenaires</a>
                 <a href="{{ route('galerie') }}">Galerie</a>
-                <a href="#">Blog</a>
+                <a href="{{ route('blogs') }}">Blog</a>
             </div>
         </div>
         <a href="{{ route('contact') }}">Contact</a>
@@ -179,5 +179,4 @@
         }, 0)
 
     });
-
 </script>
