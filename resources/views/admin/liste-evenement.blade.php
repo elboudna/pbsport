@@ -21,7 +21,8 @@
                 <th>Categorie</th>
                 <th>Niveau</th>
 
-                <th>Action</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +40,12 @@
                 <td>
                     <a href="{{ route('admin.modifier-evenement', $evenement->id) }}" class="btn btn-primary">Modifier</a>
                 </td>
+                <td>
+                    <form action="{{ route('evenement.supprimer', $evenement->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                    </form>
             </tr>
             @endforeach
         </tbody>
