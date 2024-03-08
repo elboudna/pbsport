@@ -38,13 +38,8 @@
             <div class="form-groupe">
                 <label for="niveau">Niveau</label>
                 <select class="form_select" id="niveau" name="niveau">
-                    <option value="2.0" @if($coach->niveau === '2.0') selected @endif>2.0</option>
-                    <option value="2.5" @if($coach->niveau === '2.5') selected @endif>2.5</option>
-                    <option value="3.0" @if($coach->niveau === '3.0') selected @endif>3.0</option>
-                    <option value="3.5" @if($coach->niveau === '3.5') selected @endif>3.5</option>
-                    <option value="4.0" @if($coach->niveau === '4.0') selected @endif>4.0</option>
-                    <option value="4.5" @if($coach->niveau === '4.5') selected @endif>4.5</option>
-                    <option value="5.0" @if($coach->niveau === '5.0') selected @endif>5.0</option>
+                    <option value="oui" {{ $coach->niveau == 'oui' ? 'selected' : '' }}>Oui</option>
+                    <option value="non" {{ $coach->niveau == 'non' ? 'selected' : '' }}>Non</option>
                 </select><br><br>
             </div>
 
