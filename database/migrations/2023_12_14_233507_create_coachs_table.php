@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('telephone');
             $table->string('niv_pro');
-            $table->string('description', 1000);
+            $table->text('description');
             $table->string('facebook');
             $table->string('photo');
 
