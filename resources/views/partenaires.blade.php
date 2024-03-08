@@ -7,6 +7,9 @@
 </div>
 
 <section id="section-partenaires">
+    <h1 class="titre-page">Partenaires</h1>
+    <h4 class="sous-titre-page">Découvrez nos partenaires et collaborateurs qui contribuent à notre succès.</h4>
+
     <div id="partenaire-majeur">
         <h2>Partenaire majeur</h2>
         <a target="_blank" href="https://tennis13.com/en/pickleball-2/"><img src="{{ asset('image/partenaires/tennis13.png') }}" alt=""></a>
