@@ -100,10 +100,10 @@ class AdminController extends Controller
         return view('admin.galerie', compact('images'));
     }
 
-    public function equipe()
+    public function listeEquipe()
     {
-        $equipes = DB::table('equipe')->get();
-        return view('admin.liste-equipe', compact('equipes'));
+        $membres = DB::table('equipe')->get();
+        return view('admin.liste-equipe', compact('membres'));
     }
 }
 
