@@ -16,8 +16,9 @@
                 <th>Nom</th>
                 <th>Prenom</th>
                 <th>Email</th>
-                <th>Niveau</th>
+                <th>Pro</th>
                 <th>Modifier</th>
+                <th>Supprimer</th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +32,12 @@
                 <td>
                 <a href="{{ route('admin.modifier-coach', $coach->id) }}" class="btn btn-primary">Modifier</a>
                 </td>
+                <td>
+                <form action="{{ route('coach.supprimer', $coach->id) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                </form>
             </tr>
             @endforeach
         </tbody>
