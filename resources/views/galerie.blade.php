@@ -7,6 +7,8 @@
 </div>
 
 <section id="section-galerie">
+    <h1 class="titre-page">Galerie</h1>
+    <h4 class="sous-titre-page">Explorez notre galerie de photos et vidéos pour voir nos activités passées.</h4>
 
     <div class="gallery">
         @foreach($images as $image)
