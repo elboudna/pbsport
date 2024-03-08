@@ -6,212 +6,28 @@
     <h2>Coachs</h2>
 </div>
 <section id="section-coachs">
-    <h1>Nos coachs</h1>
 
-    <div id="coachs-flex">
+    <div id="coachs">
+
         @foreach($coachs as $coach)
         <div class="coach">
-            <div class="photo-coach">
+            <div>
                 <img src="{{ asset('storage/coach_images/' . $coach->photo) }}" alt="{{ $coach->prenom }}">
             </div>
-            <div class="info-coach">
+            <div class="coach-info">
                 <div>
-                    @if($coach->niveau == 'Oui')
-                    <div class="nom-coach-pro">
-                        <h3>{{ $coach->prenom }}</h3>
-                        <span>Pro</span>
-                    </div>
-                    @else
-                    <div class="nom-coach">
-                        <h3>{{ $coach->prenom }}</h3>
-                    </div>
-                    @endif
-                    <div class="nom-cache">{{ $coach->nom}}</div>
-                    <div class="description-coach">
-                        <p>{{ $coach->description }}</p>
-                    </div>
-                    <a class="mailCoach" href="{{ $coach->email }}"></a>
-                    <a class="fbCoach" href="{{ $coach->facebook }}"></a>
-                    <div class="fleche-coach">
-                        <img src="{{ asset('icone/arrow.png') }}" alt="fleche">
-                    </div>
+                    <p class="coach-prenom">{{ $coach->prenom }}</p>
+                    <p class="coach-nom">{{ $coach->nom }}</p>
+                </div>
+                <p class="coach-poste">Coach</p>
+                <p class="coach-description">{{ $coach->description }}</p>
+                <div class="coach-contact">
+                    <a href="{{ $coach->mail }}">Contacter <span>&#10148;</span> </a>
                 </div>
             </div>
         </div>
         @endforeach
     </div>
 
-
-    <div class="modal-container" id="myModal">
-        <span class="close-btn">&times;</span>
-        <div class="modal-top">
-            <div class="modal-nom">
-                <h2></h2>
-            </div>
-            <div class="modal-img">
-                <img src="" alt="">
-            </div>
-        </div>
-        <div class="modal-bottom">
-            <!-- <div>
-                Coach
-            </div> -->
-            <div class="modal-description">
-                <p></p>
-            </div>
-            <div class="contact-coach">
-                <a href=""><img src="{{ asset('icone/mail.png') }}" alt="mail"></a>
-                <a href=""><img src="{{ asset('icone/fb.png') }}" alt="fb"></a>
-            </div>
-        </div>
-    </div>
-
 </section>
 @endsection
-
-<script>
-    window.onload = function() {
-
-        let description = document.querySelectorAll('.description-coach p');
-        let descriptionCourte = document.querySelectorAll('.description-coach p');
-        let fullDescriptions = []; // Array to store full descriptions
-        let mailCoach = document.querySelectorAll('.mailCoach');
-        let fbCoach = document.querySelectorAll('.fbCoach');
-        let imgCoach = document.querySelectorAll('.photo-coach img');
-        let nomCoach = document.querySelectorAll('.info-coach h3');
-        let nomCacheCoach = document.querySelectorAll('.nom-cache');
-
-        // Get the modal container
-        let fleche = document.querySelectorAll('.fleche-coach img');
-        let modal = document.getElementById('myModal');
-        let close = document.querySelector('.close-btn');
-
-
-        //modal elements
-        let modalDescription = document.querySelector('.modal-container p');
-        let mailCoachModal = document.querySelector('.modal-container .contact-coach a:first-child');
-        let fbCoachModal = document.querySelector('.modal-container .contact-coach a:last-child');
-        let imgModal = document.querySelector('.modal-container img');
-        let nomCoachModal = document.querySelector('.modal-container h2');
-
-        if (window.matchMedia("(min-width: 1025px)").matches) {
-            for (let i = 0; i < description.length; i++) {
-                fullDescriptions.push(description[i].textContent);
-
-                // Trim and split to show only the first 10 words
-                let descriptionText = description[i].textContent;
-                let descriptionTextTrim = descriptionText.trim();
-                let descriptionTextSplit = descriptionTextTrim.split(' ');
-                let descriptionTextSlice = descriptionTextSplit.slice(0, 10);
-                let descriptionTextJoin = descriptionTextSlice.join(' ');
-                descriptionCourte[i].textContent = descriptionTextJoin + '..';
-            }
-        }
-
-        // for screen between 1024px and 900px show only 10 words   
-        if (window.matchMedia("(max-width: 1024px)").matches && window.matchMedia("(min-width: 931px)").matches) {
-            for (let i = 0; i < description.length; i++) {
-                fullDescriptions.push(description[i].textContent);
-
-                // Trim and split to show only the first 10 words
-                let descriptionText = description[i].textContent;
-                let descriptionTextTrim = descriptionText.trim();
-                let descriptionTextSplit = descriptionTextTrim.split(' ');
-                let descriptionTextSlice = descriptionTextSplit.slice(0, 10);
-                let descriptionTextJoin = descriptionTextSlice.join(' ');
-                descriptionCourte[i].textContent = descriptionTextJoin + '..';
-            }
-        }
-
-        // for screen between 930 and 770px show only 5 words
-        if (window.matchMedia("(max-width: 930px)").matches && window.matchMedia("(min-width: 770px)").matches) {
-            for (let i = 0; i < description.length; i++) {
-                fullDescriptions.push(description[i].textContent);
-
-                // Trim and split to show only the first 5 words
-                let descriptionText = description[i].textContent;
-                let descriptionTextTrim = descriptionText.trim();
-                let descriptionTextSplit = descriptionTextTrim.split(' ');
-                let descriptionTextSlice = descriptionTextSplit.slice(0, 5);
-                let descriptionTextJoin = descriptionTextSlice.join(' ');
-                descriptionCourte[i].textContent = descriptionTextJoin + '..';
-            }
-        }
-
-
-        // for screen 768px and less show only 10 words
-        if (window.matchMedia("(max-width: 768px)").matches && window.matchMedia("(min-width: 441px)").matches) {
-            for (let i = 0; i < description.length; i++) {
-                fullDescriptions.push(description[i].textContent);
-
-                // Trim and split to show only the first 10 words
-                let descriptionText = description[i].textContent;
-                let descriptionTextTrim = descriptionText.trim();
-                let descriptionTextSplit = descriptionTextTrim.split(' ');
-                let descriptionTextSlice = descriptionTextSplit.slice(0, 25);
-                let descriptionTextJoin = descriptionTextSlice.join(' ');
-                descriptionCourte[i].textContent = descriptionTextJoin + '..';
-            }
-        }
-
-
-        // for screen 440px and less show 30 words
-        if (window.matchMedia("(max-width: 440px)").matches) {
-            for (let i = 0; i < description.length; i++) {
-                fullDescriptions.push(description[i].textContent);
-
-                // Trim and split to show only the first 30 words
-                let descriptionText = description[i].textContent;
-                let descriptionTextTrim = descriptionText.trim();
-                let descriptionTextSplit = descriptionTextTrim.split(' ');
-                let descriptionTextSlice = descriptionTextSplit.slice(0, 30);
-                let descriptionTextJoin = descriptionTextSlice.join(' ');
-                descriptionCourte[i].textContent = descriptionTextJoin + '.';
-            }
-        }
-
-        for (let i = 0; i < fleche.length; i++) {
-            fleche[i].addEventListener('click', function() {
-                modal.style.display = 'flex';
-
-                //disallow scrolling
-                document.body.style.overflow = 'hidden';
-
-                modalDescription.textContent = fullDescriptions[i];
-                mailCoachModal.href = 'mailto:' + mailCoach[i].href;
-                fbCoachModal.href = fbCoach[i].href;
-                imgModal.src = imgCoach[i].src;
-                imgModal.alt = imgCoach[i].alt;
-                nomCoachModal.textContent = nomCoach[i].textContent + ' ' + nomCacheCoach[i].textContent;
-            });
-        }
-
-        close.addEventListener('click', function() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-
-        let coachElements = document.querySelectorAll('.coach:nth-child(4n+2) .fleche-coach img, .coach:nth-child(4n+3) .fleche-coach img');
-
-        coachElements.forEach(function(img) {
-            img.src = "{{ asset('icone/arrow-white.png') }}";
-        });
-
-        // for screen 768px and less, even coachs img are white arrow 
-
-        if (window.matchMedia("(max-width: 768px)").matches) {
-            let coachElementsEven = document.querySelectorAll('.coach:nth-child(even) .fleche-coach img');
-            let coachElementsOdd = document.querySelectorAll('.coach:nth-child(odd) .fleche-coach img');
-
-            coachElementsEven.forEach(function(img) {
-                img.src = "{{ asset('icone/arrow-white.png') }}";
-            });
-
-            coachElementsOdd.forEach(function(img) {
-                img.src = "{{ asset('icone/arrow.png') }}";
-            });
-
-        }
-
-    }
-</script>
