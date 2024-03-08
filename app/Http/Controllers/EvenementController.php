@@ -102,4 +102,12 @@ class EvenementController extends Controller
 
         return redirect()->route('admin.liste-evenement');
     }
+
+    public function supprimer($id)
+    {
+        $evenement = Evenement::findOrFail($id);
+        $evenement->delete();
+
+        return redirect()->route('admin.liste-evenement');
+    }
 }
