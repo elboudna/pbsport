@@ -9,6 +9,8 @@
 </div>
 
 <section id="section-evenements">
+    <h1 class="titre-page">Événements</h1>
+    <h4 class="sous-titre-page">Consultez notre calendrier d'événements à venir et ne manquez aucune activité.</h4>
 
     @if($evenements->isEmpty())
     <div class="empty">
