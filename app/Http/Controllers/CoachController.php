@@ -70,6 +70,14 @@ class CoachController extends Controller
 
     }
 
+    public function supprimer($id)
+    {
+        $coach = Coach::findOrFail($id);
+        $coach->delete();
+
+        return redirect()->route('admin.liste-coach');
+    }
+
     
 
 }
