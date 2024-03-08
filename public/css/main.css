@@ -133,6 +133,7 @@ body{
 
 .sous-titre-page{
     color: #e4a81e;
+    margin-bottom: 30px;
 }
 
 @keyframes titreEffect {
