@@ -71,7 +71,7 @@ input[type="file"] {
     transition: background-color 0.3s;
 }
 
-.form-section{
+.form-admin{
     margin-left: 300px;
     margin-right: 300px;
     margin-top: 100px;
@@ -84,20 +84,44 @@ input[type="file"] {
 
 }
 
-.form-section h1{
+.form-admin h1{
     text-align: center;
     margin-bottom: 50px;
 }
 
-.form-section input[type="checkbox"]{
+.form-admin input[type="checkbox"]{
     width: 20px;
 }
 
-.form-section .checkbox-group{
+.form-admin .checkbox-group{
     margin-top: 10px;
     display: flex;
 }
 
-.form-section .checkbox-group label{
+.form-admin .checkbox-group label{
     margin-right: 30px;
+}
+
+
+.form-contact{
+    margin-top: 50px;
+    font-family: "Montserrat";
+    margin-bottom: 100px;
+    border: solid .1px #eee;
+    border-radius: 5px;
+    background-color: #fafafa;
+    padding: 20px 20px 30px 20px;
+}
+
+.form-contact input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+button{
+    cursor: pointer;
 }
