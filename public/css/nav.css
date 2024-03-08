@@ -94,7 +94,7 @@ nav a:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #464646;
+    background-color: #10a87d;
     color: #fff;
     /* Adjust the background color on hover as needed */
 }
@@ -460,7 +460,7 @@ nav a:hover {
 
 .divBande {
     display: flex;
-    background-color: #10a87d;
+    background-color: #464646;
     height: 60px;
     width: 100%;
     font-family: "Montserrat";
@@ -468,7 +468,7 @@ nav a:hover {
 
 .divBande a{
     text-decoration: underline;
-    color: #464646;
+    color: #10a87d;
 }
 
 .bandeDef {
