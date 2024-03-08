@@ -106,10 +106,7 @@
 
 @media screen and (max-width: 500px) {
     #section-galerie {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin : 50px 20px 50px 20px;
     }
 
     .photo {
