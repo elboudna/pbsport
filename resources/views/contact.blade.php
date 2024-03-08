@@ -6,8 +6,12 @@
     <h2>Contact</h2>
 </div>
 
-<section id="contact" class="form-contact">
 
+<section id="contact" class="form-contact">
+    
+    <h1 class="titre-page">Contactez-nous</h1>
+    <h4 class="sous-titre-page">Besoin de nous contacter ? Remplissez simplement le formulaire ci-dessous ou utilisez nos coordonnées.</h4>
+    
     <div class="form-pbsport">
 
         <form action="{{ route('contact.send') }}" method="POST">
