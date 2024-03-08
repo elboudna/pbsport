@@ -96,12 +96,14 @@ Route::get('/evenements', [EvenementController::class, 'index'])->name('evenemen
 Route::get('/evenement/{id}', [EvenementController::class, 'show'])->name('evenement.show');
 Route::post('/evenement', [EvenementController::class, 'store'])->name('evenement.store');
 Route::put('/evenement/modifier/{id}', [EvenementController::class, 'modifier'])->name('evenement.modifier');
+Route::delete('/evenement/supprimer/{id}', [EvenementController::class, 'supprimer'])->name('evenement.supprimer');
 
 
 // coach
 Route::get('/coachs', [CoachController::class, 'index'])->name('coachs');
 Route::post('/coach', [CoachController::class, 'store'])->name('coach.store');
 Route::put('/coach/modifier/{id}', [CoachController::class, 'modifier'])->name('coach.modifier');
+Route::delete('/coach/supprimer/{id}', [CoachController::class, 'supprimer'])->name('coach.supprimer');
 
 
 // galerie
@@ -131,7 +133,6 @@ Route::get('/equipe', [EquipeController::class, 'index'])->name('equipe');
 Route::post('/equipe', [EquipeController::class, 'store'])->name('equipe.store');
 Route::put('/equipe/modifier/{id}', [EquipeController::class, 'modifier'])->name('equipe.modifier');
 Route::delete('/equipe/supprimer/{id}', [EquipeController::class, 'supprimer'])->name('equipe.supprimer');
-Route::put('/equipe/modifier/{id}', [EquipeController::class, 'modifier'])->name('equipe.modifier');
 
 //blogs
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
