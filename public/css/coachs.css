@@ -8,14 +8,16 @@
 
 #coachs{
     display: flex;
-    gap: 10%;
+    gap: 6%;
 }
 
 .coach{
-    width: 45%;
+    width: 47%;
     display: flex;
-    background-color: #0c422f;
-    box-shadow: 0 0 5px #0c422f;
+    box-shadow: 0 0 5px #115943;
+    /* background-color: #53635d; */
+    background-color: #115943;
+    /* background-color: #0c422f; */
 }
 
 .coach img{
@@ -24,7 +26,8 @@
 }
 
 .coach-prenom, .coach-nom{
-    color:  #ffbc03;
+    color:  #e4a81e;
+    animation: coachEffect 1s ease infinite alternate; /* Animation effect */
     font-size: 34px;
     margin: 0;
     font-weight: 600;
@@ -67,7 +70,16 @@
 
 .coach-contact a{
     text-decoration: none;
-    color: #0c422f;
+    color: #115943;
     font-size: 13px;
     font-weight: 700;
+}
+
+@keyframes coachEffect {
+    from {
+        color: #ffbd22; /* Starting color */
+    }
+    to {
+        color: #ca951a; /* Ending color */
+    }
 }
