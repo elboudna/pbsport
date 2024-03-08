@@ -7,3 +7,13 @@
   font-family: 'Montserrat';
   src: url('/font/Montserrat/Montserrat-VariableFont_wght.ttf');
 }
+
+@font-face {
+  font-family: 'Didot';
+  src: url('/font/GFSDidot-Regular/GFSDidot-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Cookie';
+  src: url('/font/Cookie/Cookie-Regular.ttf');
+}
